@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-// import { MainNav } from "./MainNav";
-import MainNav from "./MainNav";
+import { MainNav } from "./MainNav";
+// import MainNav from "./MainNav";
 import { RFooter } from "./RFooter";
 import Login from "./Login";
 import Signup from "./Signup";
@@ -13,8 +13,8 @@ export default class Home extends Component {
 				<MainNav />
 				<div>
 					<Switch>
-						<Route exact path="/login" component={Login} />
-						<Route exact path="/signup" component={Signup} />
+						<Route path="/login" component={Login} />
+						<Route path="/signup" component={Signup} />
 					</Switch>
 				</div>
 
