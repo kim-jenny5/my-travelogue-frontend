@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export const MainNav = (props) => {
+export const MainNav = () => {
 	return (
-		<div id="nav1">
+		<div id="main-nav">
 			<p>my travelogue</p>
 			<ul>
 				<li>
