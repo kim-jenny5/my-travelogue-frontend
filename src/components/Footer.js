@@ -1,6 +1,6 @@
 import React from "react";
 
-export const RFooter = () => {
+export const Footer = () => {
 	return (
 		<div>
 			<span>Email </span>
