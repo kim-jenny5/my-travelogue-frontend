@@ -13,7 +13,7 @@ export default class Signup extends Component {
 					<input type="text" placeholder="Last Name" />
 					<input type="text" placeholder="Email Address" />
 					<input type="password" placeholder="Password" />
-					<button>Sign Up</button>
+					<button type="submit">Sign Up</button>
 				</form>
 				<p>
 					Already have an account? <NavLink to="/login">Log in</NavLink>

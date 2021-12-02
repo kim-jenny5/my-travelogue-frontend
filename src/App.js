@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 // import Home from "./components/Home";
-import GenContainer from "./containers/GenContainer";
+import UserContainer from "./containers/UserContainer";
 
 export default class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<GenContainer />
+				<UserContainer />
+				{/* <UserContainer url="http://localhost:3000" /> */}
 			</div>
 		);
 	}

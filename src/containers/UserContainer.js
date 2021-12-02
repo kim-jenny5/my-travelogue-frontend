@@ -4,8 +4,13 @@ import Home from "../components/Home";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
 
-export default class GenContainer extends Component {
+export default class UserContainer extends Component {
+	state = {
+		users: []
+	};
+
 	render() {
+		// console.log(this.props.url);
 		return (
 			<div>
 				<div>
@@ -18,4 +23,10 @@ export default class GenContainer extends Component {
 			</div>
 		);
 	}
+
+	// componentDidMount() {
+	// 	fetch("http://localhost:3000/users")
+	// 		.then((resp) => resp.json())
+	// 		.then((data) => this.setState({ users: data }, console.log(this.state)));
+	// }
 }

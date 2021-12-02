@@ -12,7 +12,7 @@ export default class Login extends Component {
 				<form>
 					<input type="text" placeholder="Email Address" />
 					<input type="password" placeholder="Password" />
-					<button>Log In</button>
+					<button type="submit">Log In</button>
 				</form>
 				<p>
 					Don't have an account? <NavLink to="/signup">Sign Up</NavLink>
