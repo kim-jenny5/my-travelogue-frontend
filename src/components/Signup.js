@@ -3,16 +3,57 @@ import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 
 export default class Signup extends Component {
+	state = {
+		first_name: "",
+		last_name: "",
+		email: "",
+		password: ""
+	};
+
+	handleChange = (e) => {
+		this.setState(
+			{
+				[e.target.name]: e.target.value
+			},
+			() => console.log(this.state)
+		);
+	};
+
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(this.state);
+	};
+
 	render() {
 		return (
 			<div>
 				<SecondNav />
 				<h1>Sign Up</h1>
-				<form>
-					<input type="text" placeholder="First Name" />
-					<input type="text" placeholder="Last Name" />
-					<input type="text" placeholder="Email Address" />
-					<input type="password" placeholder="Password" />
+				<form onSubmit={this.handleSubmit}>
+					<input
+						type="text"
+						placeholder="First Name"
+						name="first_name"
+						onChange={this.handleChange}
+					/>
+					<input
+						type="text"
+						placeholder="Last Name"
+						name="last_name"
+						onChange={this.handleChange}
+					/>
+					<input
+						type="text"
+						placeholder="Email Address"
+						name="email"
+						onChange={this.handleChange}
+					/>
+					<input
+						type="password"
+						placeholder="Password"
+						name="password"
+						onChange={this.handleChange}
+					/>
 					<button type="submit">Sign Up</button>
 				</form>
 				<p>
