@@ -1,10 +1,14 @@
 export const fetchUsers = (data) => {
-	debugger;
+	// debugger;
 	return (dispatch) => {
+		// dispatch({ type: "START_LOGGING_IN_USERS" }, { payload: data });
 		dispatch({ type: "START_LOGGING_IN_USERS" });
 		fetch("http://localhost:3000/users")
-			.then((resp) => resp.json())
-			.then((users) => dispatch({ type: "LOGIN_USER", users }));
+			.then((resp) => {
+				debugger;
+				return resp.json();
+			})
+			.then(() => dispatch({ type: "LOGIN_USER", data }));
 	};
 };
 
