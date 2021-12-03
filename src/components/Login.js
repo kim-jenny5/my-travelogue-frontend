@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchUsers } from "../actions/fetchUsers";
+// import { fetchUsers } from "../actions/fetchUsers";
+import { fetchUsers } from "../thunk/fetchUser";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
