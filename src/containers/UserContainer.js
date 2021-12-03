@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { currentUser } from "../thunk/fetchUser";
+import { currentUser } from "../api/fetchUser";
 import Home from "../components/Home";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
@@ -11,12 +11,15 @@ export default class UserContainer extends Component {
 	};
 
 	componentDidMount() {
-		console.log(localStorage);
+		// debugger;
+		// console.log(localStorage);
 		let token = localStorage.token;
 		if (token) {
+			// currentUser();
+			// debugger;
 			currentUser().then((user) => {
 				debugger;
-				this.setState({ user: user });
+				this.setState({ user: { user } });
 			});
 			// debugger;
 		}

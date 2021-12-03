@@ -32,12 +32,17 @@ export const fetchUsers = (user) => {
 };
 
 export const currentUser = () => {
+	// debugger;
 	return fetch("http://localhost:3000/authorized", {
 		headers: {
 			"Content-Type": "application/json",
-			Accept: "application/json"
+			Accept: "application/json",
+			token: localStorage.token
 		}
-	}).then((resp) => resp.json());
+	}).then((resp) => {
+		// debugger;
+		resp.json();
+	});
 };
 
 // will need to change data retrieval on line 6
