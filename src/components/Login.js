@@ -31,6 +31,10 @@ class Login extends Component {
 		// console.log(this.props);
 		// console.log(this.props.fetchUsers(this.state));
 		this.props.fetchUsers(this.state);
+		// this.setState({}, () => {
+		// 	console.log(this.state);
+		// 	debugger;
+		// });
 		// console.log(this.state);
 		// debugger;
 		// this.setState({});

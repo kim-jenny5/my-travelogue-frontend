@@ -13,18 +13,18 @@ export const fetchUsers = (user) => {
 			},
 			body: JSON.stringify(user)
 		})
-			.then((resp) => {
-				// debugger;
-				return resp.json();
-			})
+			.then((resp) => resp.json())
 			.then((data) => {
-				// let user_json = JSON.parse(data.user);
-				localStorage.setItem("user", JSON.stringify(data.user));
-				localStorage.setItem("token", data.jwt);
+				if (data.error) {
+					alert(data.error);
+				} else {
+					localStorage.setItem("user", JSON.stringify(data.user));
+					localStorage.setItem("token", data.jwt);
+					dispatch({ type: "LOGIN_SUCCESS", data });
+				}
 				// console.log(user_json);
 				// console.log(localStorage);
 				// debugger;
-				return dispatch({ type: "LOGIN_SUCCESS", data });
 			});
 	};
 };

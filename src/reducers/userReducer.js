@@ -25,7 +25,7 @@ const userReducer = (
 			};
 
 		case "LOGIN_SUCCESS":
-			debugger;
+			// debugger;
 
 			return {
 				// email: action.user.email,
