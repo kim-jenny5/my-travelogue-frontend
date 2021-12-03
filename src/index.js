@@ -9,6 +9,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // let store = createStore(rootReducer, applyMiddleware(thunk));
 
+// NOTE: THIS IS THE FILE WHERE YOU IMPORT THE REDUCERS (COMBINEREDUCER) so provider has access to it
+
 ReactDOM.render(
 	// <Provider store={store}>
 	<Router>

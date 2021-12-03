@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 
+// TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
+
 export default class Login extends Component {
 	state = {
 		email: "",
