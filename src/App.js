@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import UserContainer from "./containers/UserContainer";
 
 class App extends Component {
-	componentDidMount() {}
+	// componentDidMount() {}
 
 	render() {
 		return (
@@ -15,8 +15,8 @@ class App extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({});
+// const mapStateToProps = (state) => ({});
 
-const mapDispatchToProps = {};
+// const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
