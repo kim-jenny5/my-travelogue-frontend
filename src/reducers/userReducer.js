@@ -1,3 +1,3 @@
-export default function userReducer() {
-	return <div></div>;
-}
+const userReducer = () => {};
+
+export default userReducer;

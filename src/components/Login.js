@@ -24,6 +24,7 @@ class Login extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(this.state);
+		console.log(this.props);
 	};
 
 	render() {
@@ -55,9 +56,7 @@ class Login extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({
-
-// })
+const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => {
 	return { fetchUsers: () => dispatch(fetchUsers()) };
