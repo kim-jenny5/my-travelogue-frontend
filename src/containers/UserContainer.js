@@ -11,6 +11,7 @@ export default class UserContainer extends Component {
 
 	render() {
 		// console.log(this.props.url);
+		console.log(this.props);
 		return (
 			<div>
 				<div>

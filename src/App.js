@@ -2,7 +2,9 @@ import React, { Component } from "react";
 // import Home from "./components/Home";
 import UserContainer from "./containers/UserContainer";
 
-export default class App extends Component {
+class App extends Component {
+	componentDidMount() {}
+
 	render() {
 		return (
 			<div className="App">
@@ -12,3 +14,9 @@ export default class App extends Component {
 		);
 	}
 }
+
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

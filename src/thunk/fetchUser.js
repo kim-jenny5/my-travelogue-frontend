@@ -21,6 +21,7 @@ export const fetchUsers = (user) => {
 					localStorage.setItem("user", JSON.stringify(data.user));
 					localStorage.setItem("token", data.jwt);
 					// return dispatch({ type: "LOGIN_SUCCESS", data });
+					// dispatch({ type: "LOGIN_SUCCESS", data });
 					dispatch({ type: "LOGIN_SUCCESS", data });
 				}
 				// console.log(user_json);
