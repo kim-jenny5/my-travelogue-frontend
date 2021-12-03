@@ -18,6 +18,7 @@ const userReducer = (
 			// console.log(action);
 			// debugger;
 			return {
+				...state,
 				user: null,
 				logging_in: true,
 				logged_in: false
@@ -29,6 +30,7 @@ const userReducer = (
 			return {
 				// email: action.user.email,
 				// password: action.user.password,
+				...state,
 				user: action.data.user,
 				logging_in: true,
 				logged_in: true
@@ -36,6 +38,7 @@ const userReducer = (
 
 		case "LOGIN_FAIL":
 			return {
+				...state,
 				user: action.data.user,
 				logging_in: false,
 				logged_in: false
