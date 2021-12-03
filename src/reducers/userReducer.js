@@ -5,6 +5,9 @@ const userReducer = (
 ) => {
 	// console.log(action);
 
+	// const { email, password, logging_in, logged_in } = state;
+	// console.log(email, password, logging_in, logged_in);
+
 	// debugger;
 	switch (action.type) {
 		// case "START_LOGGING_IN_USER":
@@ -16,15 +19,15 @@ const userReducer = (
 			console.log(action);
 			debugger;
 			return {
-				email: action.data.email,
-				password: action.data.password,
+				email: state.email,
+				password: state.password,
 				logging_in: true,
 				logged_in: false
 			};
 
 		// case "LOGIN_SUCCESS":
 		// 	return {
-		// 		email: action.data.email,
+		// 		email: state.email,
 		// 		password: action.data.password,
 		// 		logging_in: true,
 		// 		logged_in: true
