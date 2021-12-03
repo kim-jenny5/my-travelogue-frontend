@@ -3,10 +3,8 @@ const userReducer = (
 	state = { email: "", password: "", logging_in: false, logged_in: false },
 	action
 ) => {
-	// console.log(action);
-
-	// const { email, password, logging_in, logged_in } = state;
-	// console.log(email, password, logging_in, logged_in);
+	const { email, password } = action;
+	console.log(email, password);
 
 	// debugger;
 	switch (action.type) {
@@ -19,8 +17,8 @@ const userReducer = (
 			console.log(action);
 			debugger;
 			return {
-				email: state.email,
-				password: state.password,
+				email,
+				password,
 				logging_in: true,
 				logged_in: false
 			};
