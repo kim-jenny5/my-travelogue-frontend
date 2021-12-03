@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
-export default class Login extends Component {
+class Login extends Component {
 	state = {
 		email: "",
 		password: ""
@@ -52,3 +53,13 @@ export default class Login extends Component {
 		);
 	}
 }
+
+// const mapStateToProps = (state) => ({
+
+// })
+
+const mapDispatchToProps = (dispatch) => {
+	return { fetchUsers: () => dispatch(fetchUsers()) };
+};
+
+export default connect(null, mapDispatchToProps)(Login);
