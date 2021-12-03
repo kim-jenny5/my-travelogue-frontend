@@ -1,7 +1,1 @@
-// export const loginUser = () => {
-// 	return;
-// };
-
-// export const logoutUser = () => {
-// 	return;
-// };
+export const fetchCurrentUser = () => {};

@@ -25,7 +25,10 @@ const userReducer = (
 			};
 
 		case "LOGIN_SUCCESS":
-			// debugger;
+			localStorage.setItem("user", JSON.stringify(action.data.user));
+			localStorage.setItem("token", action.data.jwt);
+
+			debugger;
 
 			return {
 				// email: action.user.email,

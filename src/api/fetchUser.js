@@ -20,9 +20,9 @@ export const fetchUsers = (login_info) => {
 				if (data.error) {
 					alert(data.error);
 				} else {
-					localStorage.setItem("user", JSON.stringify(data.user));
-					localStorage.setItem("token", data.jwt);
-					debugger;
+					// localStorage.setItem("user", JSON.stringify(data.user));
+					// localStorage.setItem("token", data.jwt);
+					// debugger;
 					// return dispatch({ type: "LOGIN_SUCCESS", data });
 					// dispatch({ type: "LOGIN_SUCCESS", data });
 					dispatch({ type: "LOGIN_SUCCESS", data });
@@ -40,11 +40,11 @@ export const currentUser = () => {
 		headers: {
 			"Content-Type": "application/json",
 			Accept: "application/json",
-			token: localStorage.token
+			Authorization: localStorage.token
 		}
 	})
 		.then((resp) => {
-			// debugger;
+			debugger;
 			return resp.json();
 		})
 		.then((data) => {

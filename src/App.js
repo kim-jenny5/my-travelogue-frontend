@@ -1,15 +1,25 @@
+// have this be the parent component
 import React, { Component } from "react";
-// import Home from "./components/Home";
+import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import Home from "./components/Home";
 import UserContainer from "./containers/UserContainer";
+import { fetchCurrentUser } from "./actions/userActions";
 
-export default class App extends Component {
+// export default class App extends Component {
+class App extends Component {
 	// componentDidMount() {}
 
 	render() {
 		return (
-			<div className="App">
-				<UserContainer />
-				{/* <UserContainer url="http://localhost:3000" /> */}
+			<div>
+				<div>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/login" component={UserContainer} />
+						<Route path="/signup" component={UserContainer} />
+					</Switch>
+				</div>
 			</div>
 		);
 	}
@@ -17,6 +27,10 @@ export default class App extends Component {
 
 // const mapStateToProps = (state) => ({});
 
-// const mapDispatchToProps = {};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		fetchCurrentUser: () => dispatch(fetchCurrentUser())
+	};
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

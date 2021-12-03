@@ -66,12 +66,13 @@ class Login extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
-	user: state.user
-});
+// const mapStateToProps = (state) => ({
+// 	user: state.user
+// });
 
 const mapDispatchToProps = (dispatch) => {
 	return { fetchUsers: (login_info) => dispatch(fetchUsers(login_info)) };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+// export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);
