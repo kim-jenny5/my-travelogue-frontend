@@ -3,12 +3,19 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
+import LoginForm from "./containers/LoginForm";
 import UserContainer from "./containers/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 
 // export default class App extends Component {
 class App extends Component {
-	// componentDidMount() {}
+	state = {
+		user: {}
+	};
+
+	componentDidMount() {
+		this.props.fetchCurrentUser();
+	}
 
 	render() {
 		return (
@@ -16,8 +23,9 @@ class App extends Component {
 				<div>
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/login" component={UserContainer} />
+						<Route path="/login" component={LoginForm} />
 						<Route path="/signup" component={UserContainer} />
+						<Route path="/myprofile" component={UserContainer} />
 					</Switch>
 				</div>
 			</div>
@@ -25,7 +33,9 @@ class App extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({});
+// const mapStateToProps = (state) => ({
+// 	loggedIn: state.user.loggedIn
+// });
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -33,4 +43,5 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
 export default connect(null, mapDispatchToProps)(App);

@@ -4,10 +4,6 @@ const userReducer = (
 	state = { user: null, logging_in: false, logged_in: false },
 	action
 ) => {
-	// const { user } = action;
-	// console.log(user);
-
-	// debugger;
 	switch (action.type) {
 		// case "START_LOGGING_IN_USER":
 		// 	console.log({ ...state, loading: true });

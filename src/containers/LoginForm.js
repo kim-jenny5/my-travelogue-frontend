@@ -3,7 +3,8 @@ import { SecondNav } from "../components/SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { fetchUsers } from "../actions/fetchUsers";
-import { fetchUsers } from "../api/fetchUser";
+// import { fetchUsers } from "../api/fetchUser";
+import { logInUser } from "../actions/userActions";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
@@ -22,19 +23,7 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(this.state);
-		// console.log(this.props);
-		// console.log(this.props.fetchUsers(this.state));
-		this.props.fetchUsers(this.state);
-		// this.setState(this.state);
-		// this.setState({}, () => {
-		// 	console.log(this.state);
-		// 	debugger;
-		// });
-		// console.log(this.state);
-		// debugger;
-		// this.setState({});
-		// console.log(this.props);
+		this.props.logInUser(this.state);
 	};
 
 	render() {
@@ -71,7 +60,7 @@ class Login extends Component {
 // });
 
 const mapDispatchToProps = (dispatch) => {
-	return { fetchUsers: (login_info) => dispatch(fetchUsers(login_info)) };
+	return { logInUser: (login_info) => dispatch(logInUser(login_info)) };
 };
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Login);

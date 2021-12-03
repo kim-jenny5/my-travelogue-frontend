@@ -20,3 +20,27 @@ export const fetchCurrentUser = () => {
 		}
 	};
 };
+
+export const logInUser = (login_info) => {
+	debugger;
+	return (dispatch) => {
+		console.log(login_info);
+		// debugger;
+		dispatch({ type: "LOGIN_ATTEMPTING", login_info });
+		fetch("http://localhost:3000/login", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				Authorization: localStorage.token
+			},
+			body: JSON.stringify(login_info)
+		})
+			.then((resp) => {
+				console.log(resp);
+				debugger;
+				return resp.json();
+			})
+			.then();
+	};
+};
