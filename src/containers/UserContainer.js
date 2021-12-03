@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { currentUser } from "../api/fetchUser";
 import Home from "../components/Home";
-import Login from "../components/Login";
+import Login from "./LoginForm";
 import Signup from "../components/Signup";
 
 export default class UserContainer extends Component {
@@ -10,23 +10,24 @@ export default class UserContainer extends Component {
 		user: {}
 	};
 
-	componentDidMount() {
-		// debugger;
-		// console.log(localStorage);
-		let token = localStorage.token;
-		if (token) {
-			// currentUser();
-			// debugger;
-			currentUser().then((user) => {
-				debugger;
-				this.setState({ user: { user } });
-			});
-			// debugger;
-		}
-		// 	console.log(localStorage);
-		// 	console.log(localStorage.getItem("token"));
-		// 	// const token =
-	}
+	// componentDidMount() {
+	// 	// debugger;
+	// 	// console.log(localStorage);
+	// 	let token = localStorage.token;
+	// 	if (token) {
+	// 		currentUser();
+	// 		// debugger;
+	// 		// currentUser().then((user) => {
+	// 		// 	console.log(user);
+	// 		// 	debugger;
+	// 		// 	this.setState({ user: { user } });
+	// 		// });
+	// 		// debugger;
+	// 	}
+	// 	// 	console.log(localStorage);
+	// 	// 	console.log(localStorage.getItem("token"));
+	// 	// 	// const token =
+	// }
 
 	render() {
 		// console.log(this.props.url);
@@ -38,7 +39,8 @@ export default class UserContainer extends Component {
 						<Route exact path="/" component={Home} />
 						<Route
 							path="/login"
-							render={(props) => <Login user={this.state.user} />}
+							component={Login}
+							// render={(props) => <Login user={this.state.user} />}
 						/>
 						<Route path="/signup" component={Signup} />
 					</Switch>

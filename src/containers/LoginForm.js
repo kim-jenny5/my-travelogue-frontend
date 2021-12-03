@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SecondNav } from "./SecondNav";
+import { SecondNav } from "../components/SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { fetchUsers } from "../actions/fetchUsers";
@@ -32,7 +32,7 @@ class Login extends Component {
 		// console.log(this.props);
 		// console.log(this.props.fetchUsers(this.state));
 		this.props.fetchUsers(this.state);
-		this.setState(this.state);
+		// this.setState(this.state);
 		// this.setState({}, () => {
 		// 	console.log(this.state);
 		// 	debugger;
