@@ -45,7 +45,7 @@ export const currentUser = () => {
 	})
 		.then((resp) => {
 			// debugger;
-			resp.json();
+			return resp.json();
 		})
 		.then((data) => {
 			console.log(data);

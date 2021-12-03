@@ -15,12 +15,6 @@ class Login extends Component {
 	};
 
 	handleChange = (e) => {
-		// this.setState(
-		// 	{
-		// 		[e.target.name]: e.target.value
-		// 	},
-		// 	() => console.log(this.state)
-		// );
 		this.setState({
 			[e.target.name]: e.target.value
 		});
@@ -44,7 +38,7 @@ class Login extends Component {
 	};
 
 	render() {
-		console.log(this.props);
+		console.log(this.props.user);
 		return (
 			<div>
 				<SecondNav />
@@ -72,10 +66,12 @@ class Login extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+	user: state.user
+});
 
 const mapDispatchToProps = (dispatch) => {
 	return { fetchUsers: (login_info) => dispatch(fetchUsers(login_info)) };
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
