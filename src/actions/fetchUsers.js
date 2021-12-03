@@ -1,14 +1,26 @@
 export const fetchUsers = (data) => {
+	// const configObj = {
+	// 	method: "GET",
+	// 	headers: {
+	// 		"Content-Type": "application/json",
+	// 		Accept: "application/json"
+	// 	},
+	// 	body: JSON.stringify()
+	// };
+
 	// debugger;
 	return (dispatch) => {
 		// dispatch({ type: "START_LOGGING_IN_USERS" }, { payload: data });
-		dispatch({ type: "START_LOGGING_IN_USERS" });
+		// dispatch({ type: "START_LOGGING_IN_USER" });
 		fetch("http://localhost:3000/users")
 			.then((resp) => {
-				debugger;
+				// debugger;
 				return resp.json();
 			})
-			.then(() => dispatch({ type: "LOGIN_USER", data }));
+			.then(() => {
+				debugger;
+				return dispatch({ type: "LOGIN_USER", data });
+			});
 	};
 };
 
