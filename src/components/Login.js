@@ -7,24 +7,30 @@ import { fetchUsers } from "../actions/fetchUsers";
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
 class Login extends Component {
+	// this state is for login form
 	state = {
 		email: "",
 		password: ""
 	};
 
 	handleChange = (e) => {
-		this.setState(
-			{
-				[e.target.name]: e.target.value
-			},
-			() => console.log(this.state)
-		);
+		// this.setState(
+		// 	{
+		// 		[e.target.name]: e.target.value
+		// 	},
+		// 	() => console.log(this.state)
+		// );
+		this.setState({
+			[e.target.name]: e.target.value
+		});
 	};
 
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(this.state);
 		console.log(this.props);
+		// console.log(this.props.fetchUsers(this.state));
+		this.props.fetchUsers(this.state);
 	};
 
 	render() {
@@ -59,7 +65,7 @@ class Login extends Component {
 const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => {
-	return { fetchUsers: () => dispatch(fetchUsers()) };
+	return { fetchUsers: (state) => dispatch(fetchUsers(state)) };
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

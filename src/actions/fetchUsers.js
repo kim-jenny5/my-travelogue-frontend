@@ -1,4 +1,5 @@
-export const fetchUsers = () => {
+export const fetchUsers = (data) => {
+	debugger;
 	return (dispatch) => {
 		dispatch({ type: "START_LOGGING_IN_USERS" });
 		fetch("http://localhost:3000/users")
