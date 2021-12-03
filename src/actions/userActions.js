@@ -1,3 +1,5 @@
+import { Redirect } from "react-router-dom";
+
 export const fetchCurrentUser = () => {
 	return (dispatch) => {
 		let token = localStorage.token;
@@ -22,7 +24,7 @@ export const fetchCurrentUser = () => {
 };
 
 export const logInUser = (login_info) => {
-	debugger;
+	// debugger;
 	return (dispatch) => {
 		console.log(login_info);
 		// debugger;
@@ -38,9 +40,13 @@ export const logInUser = (login_info) => {
 		})
 			.then((resp) => {
 				console.log(resp);
-				debugger;
+				// debugger;
 				return resp.json();
 			})
-			.then();
+			.then((data) => {
+				if (data.error) alert(data.error);
+				dispatch({ type: "LOGIN_SUCCESS", data });
+				return <Redirect to="/myprofile" />;
+			});
 	};
 };

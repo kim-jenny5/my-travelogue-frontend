@@ -5,14 +5,7 @@ const userReducer = (
 	action
 ) => {
 	switch (action.type) {
-		// case "START_LOGGING_IN_USER":
-		// 	console.log({ ...state, loading: true });
-		// 	return { ...state, loading: true };
-
 		case "LOGIN_ATTEMPTING":
-			// console.log(state);
-			// console.log(action);
-			// debugger;
 			return {
 				...state,
 				user: null,
@@ -24,7 +17,7 @@ const userReducer = (
 			localStorage.setItem("user", JSON.stringify(action.data.user));
 			localStorage.setItem("token", action.data.jwt);
 
-			debugger;
+			// debugger;
 
 			return {
 				// email: action.user.email,

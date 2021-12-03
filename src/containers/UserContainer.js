@@ -8,5 +8,9 @@ import LoginForm from "./LoginForm";
 import Signup from "../components/Signup";
 
 export default function UserContainer() {
-	return <div></div>;
+	return (
+		<div>
+			<p>This is my profile.</p>
+		</div>
+	);
 }

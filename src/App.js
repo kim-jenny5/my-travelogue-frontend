@@ -9,9 +9,10 @@ import { fetchCurrentUser } from "./actions/userActions";
 
 // export default class App extends Component {
 class App extends Component {
-	state = {
-		user: {}
-	};
+	// state = {
+	// 	// user: {}
+	// 	isLoggedIn: false
+	// };
 
 	componentDidMount() {
 		this.props.fetchCurrentUser();
@@ -34,7 +35,7 @@ class App extends Component {
 }
 
 // const mapStateToProps = (state) => ({
-// 	loggedIn: state.user.loggedIn
+// 	isloggedIn: state.isLoggedIn
 // });
 
 const mapDispatchToProps = (dispatch) => {
