@@ -3,8 +3,8 @@ const userReducer = (
 	state = { email: "", password: "", logging_in: false, logged_in: false },
 	action
 ) => {
-	const { email, password } = action;
-	console.log(email, password);
+	// const { user } = action;
+	// console.log(user);
 
 	// debugger;
 	switch (action.type) {
@@ -13,31 +13,33 @@ const userReducer = (
 		// 	return { ...state, loading: true };
 
 		case "LOGIN_ATTEMPTING":
-			console.log(state);
-			console.log(action);
-			debugger;
+			// console.log(state);
+			// console.log(action);
+			// debugger;
 			return {
-				email,
-				password,
+				email: action.user.email,
+				password: action.user.password,
 				logging_in: true,
 				logged_in: false
 			};
 
-		// case "LOGIN_SUCCESS":
-		// 	return {
-		// 		email: state.email,
-		// 		password: action.data.password,
-		// 		logging_in: true,
-		// 		logged_in: true
-		// 	};
+		case "LOGIN_SUCCESS":
+			debugger;
 
-		// case "LOGIN_FAIL":
-		// 	return {
-		// 		email: action.data.email,
-		// 		password: action.data.password,
-		// 		logging_in: false,
-		// 		logged_in: false
-		// 	};
+			return {
+				email: action.user.email,
+				password: action.user.password,
+				logging_in: true,
+				logged_in: true
+			};
+
+		case "LOGIN_FAIL":
+			return {
+				email: action.user.email,
+				password: action.user.password,
+				logging_in: false,
+				logged_in: false
+			};
 
 		default:
 			return state;

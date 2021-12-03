@@ -14,12 +14,17 @@ export const fetchUsers = (user) => {
 			body: JSON.stringify(user)
 		})
 			.then((resp) => {
-				debugger;
+				// debugger;
 				return resp.json();
 			})
-			.then(() => {
+			.then((data) => {
+				// let user_json = JSON.parse(data.user);
+				localStorage.setItem("user", JSON.stringify(data.user));
+				localStorage.setItem("token", data.jwt);
+				// console.log(user_json);
+				console.log(localStorage);
 				debugger;
-				return dispatch({ type: "LOGIN_USER" });
+				return dispatch({ type: "LOGIN_SUCCESS", data });
 			});
 	};
 };
