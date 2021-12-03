@@ -37,16 +37,22 @@ export const logInUser = (login_info) => {
 				Authorization: localStorage.token
 			},
 			body: JSON.stringify(login_info)
-		})
-			.then((resp) => {
-				console.log(resp);
-				// debugger;
-				return resp.json();
-			})
-			.then((data) => {
-				if (data.error) alert(data.error);
-				dispatch({ type: "LOGIN_SUCCESS", data });
-				return <Redirect to="/myprofile" />;
-			});
+		}).then((resp) => {
+			console.log(resp);
+			// debugger;
+			return resp.json();
+		});
+		// .then((data) => {
+		// 	if (data.error) alert(data.error);
+		// 	dispatch({ type: "LOGIN_SUCCESS", data });
+		// 	// return <Redirect push to="/myprofile" />;
+		// });
 	};
 };
+
+// export const api = {
+// 	loggingIn: {
+// 		logInUser,
+// 		fetchCurrentUser
+// 	}
+// };

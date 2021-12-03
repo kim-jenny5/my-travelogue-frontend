@@ -3,7 +3,9 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
-import LoginForm from "./containers/LoginForm";
+// import Login from "./containers/Login";
+// import Login from "./components/Login";
+import LoginContainer from "./containers/LoginContainer";
 import UserContainer from "./containers/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 
@@ -24,7 +26,7 @@ class App extends Component {
 				<div>
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/login" component={LoginForm} />
+						<Route path="/login" component={LoginContainer} />
 						<Route path="/signup" component={UserContainer} />
 						<Route path="/myprofile" component={UserContainer} />
 					</Switch>

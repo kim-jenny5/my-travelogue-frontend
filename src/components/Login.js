@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SecondNav } from "../components/SecondNav";
+import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { fetchUsers } from "../actions/fetchUsers";
@@ -23,7 +23,7 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.logInUser(this.state);
+		logInUser(this.state).then();
 	};
 
 	render() {
@@ -64,4 +64,5 @@ class Login extends Component {
 // };
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Login);
-export default connect(null, { logInUser })(Login);
+// export default connect(null, { logInUser })(Login);
+export default Login;

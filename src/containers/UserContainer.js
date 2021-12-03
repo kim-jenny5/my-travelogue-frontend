@@ -4,7 +4,7 @@ import { currentUser } from "../api/fetchUser";
 import { connect } from "react-redux";
 import Home from "../components/Home";
 
-import LoginForm from "./LoginForm";
+import LoginForm from "../components/Login";
 import Signup from "../components/Signup";
 
 export default function UserContainer() {
