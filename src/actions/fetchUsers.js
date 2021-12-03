@@ -6,3 +6,5 @@ export const fetchUsers = () => {
 			.then((users) => dispatch({ type: "LOGIN_USER", users }));
 	};
 };
+
+// will need to change data retrieval on line 6
