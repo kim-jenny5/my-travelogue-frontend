@@ -31,4 +31,13 @@ export const fetchUsers = (user) => {
 	};
 };
 
+export const currentUser = () => {
+	return fetch("http://localhost:3000/authorized", {
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		}
+	}).then((resp) => resp.json());
+};
+
 // will need to change data retrieval on line 6

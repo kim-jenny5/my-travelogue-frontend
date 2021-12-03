@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Home from "./components/Home";
 import UserContainer from "./containers/UserContainer";
 
-class App extends Component {
+export default class App extends Component {
 	// componentDidMount() {}
 
 	render() {
