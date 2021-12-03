@@ -1,28 +1,17 @@
 export const fetchUsers = (user) => {
-	// const configObj = {
-	// method: "POST",
-	// headers: {
-	// 	"Content-Type": "application/json",
-	// 	Accept: "application/json"
-	// },
-	// body: JSON.stringify()
-	// };
-
-	const { email, password } = user;
-	// console.log(email, password);
 	// debugger;
 	return (dispatch) => {
 		// dispatch({ type: "START_LOGGING_IN_USERS" }, { payload: user });
 		// dispatch({ type: "LOGIN_ATTEMPTING", user });
-		dispatch({ type: "LOGIN_ATTEMPTING", email, password });
-		debugger;
-		fetch("http://localhost:3000/users", {
+		dispatch({ type: "LOGIN_ATTEMPTING", user });
+		// debugger;
+		fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json"
 			},
-			body: JSON.stringify(email, password)
+			body: JSON.stringify(user)
 		})
 			.then((resp) => {
 				debugger;
