@@ -1,6 +1,7 @@
 const userReducer = (
 	// state = { email: "", password: "", loading: false },
-	state = { email: "", password: "", logging_in: false, logged_in: false },
+	// state = { email: "", password: "", logging_in: false, logged_in: false },
+	state = { user: null, logging_in: false, logged_in: false },
 	action
 ) => {
 	// const { user } = action;
@@ -17,8 +18,7 @@ const userReducer = (
 			// console.log(action);
 			// debugger;
 			return {
-				email: action.user.email,
-				password: action.user.password,
+				user: null,
 				logging_in: true,
 				logged_in: false
 			};
@@ -27,16 +27,16 @@ const userReducer = (
 			debugger;
 
 			return {
-				email: action.user.email,
-				password: action.user.password,
+				// email: action.user.email,
+				// password: action.user.password,
+				user: action.data.user,
 				logging_in: true,
 				logged_in: true
 			};
 
 		case "LOGIN_FAIL":
 			return {
-				email: action.user.email,
-				password: action.user.password,
+				user: action.data.user,
 				logging_in: false,
 				logged_in: false
 			};
