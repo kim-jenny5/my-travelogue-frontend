@@ -3,6 +3,9 @@ const tripReducer = (
 	action
 ) => {
 	switch (action.type) {
+		case "FETCHING_TRIPS":
+			return;
+
 		case "CREATING_TRIP":
 			// console.log(state);
 			// console.log(action);

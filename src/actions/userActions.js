@@ -1,5 +1,3 @@
-// import { Redirect } from "react-router-dom";
-
 // export const fetchCurrentUser = () => {
 // 	return (dispatch) => {
 // 		let token = localStorage.token;
