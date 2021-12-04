@@ -8,25 +8,26 @@ import Home from "./components/Home";
 import LoginContainer from "./containers/LoginContainer";
 import UserContainer from "./containers/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
+import Login from "./components/Login";
 
 // export default class App extends Component {
 class App extends Component {
-	// state = {
-	// 	// user: {}
-	// 	isLoggedIn: false
-	// };
-
 	componentDidMount() {
 		this.props.fetchCurrentUser();
 	}
 
 	render() {
+		console.log(this.props);
 		return (
 			<div>
 				<div>
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/login" component={LoginContainer} />
+						{/* <Route
+							path="/login"
+							render={() => <LoginContainer isLoggedIn={this.props.user} />}
+						/> */}
 						<Route path="/signup" component={UserContainer} />
 						<Route path="/myprofile" component={UserContainer} />
 					</Switch>
@@ -37,7 +38,7 @@ class App extends Component {
 }
 
 // const mapStateToProps = (state) => ({
-// 	isloggedIn: state.isLoggedIn
+// 	user: state.user
 // });
 
 const mapDispatchToProps = (dispatch) => {

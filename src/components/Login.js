@@ -23,7 +23,7 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		logInUser(this.state).then();
+		logInUser(this.state);
 	};
 
 	render() {

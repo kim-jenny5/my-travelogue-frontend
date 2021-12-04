@@ -1,7 +1,7 @@
 const userReducer = (
 	// state = { email: "", password: "", loading: false },
 	// state = { email: "", password: "", logging_in: false, logged_in: false },
-	state = { user: null, logging_in: false, logged_in: false },
+	state = { user: null, isLoggingIn: false, isLoggedIn: false },
 	action
 ) => {
 	switch (action.type) {
@@ -9,8 +9,8 @@ const userReducer = (
 			return {
 				...state,
 				user: null,
-				logging_in: true,
-				logged_in: false
+				isLoggingIn: true,
+				isLoggedIn: false
 			};
 
 		case "LOGIN_SUCCESS":
@@ -24,16 +24,16 @@ const userReducer = (
 				// password: action.user.password,
 				...state,
 				user: action.data.user,
-				logging_in: true,
-				logged_in: true
+				isLoggingIn: true,
+				isLoggedIn: true
 			};
 
 		case "LOGIN_FAIL":
 			return {
 				...state,
 				user: action.data.user,
-				logging_in: false,
-				logged_in: false
+				isLoggingIn: false,
+				isLoggedIn: false
 			};
 
 		default:
