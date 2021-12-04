@@ -22,12 +22,12 @@ export const fetchCurrentUser = () => {
 	};
 };
 
-export const logInUser = (login_info, props) => {
+export const logInUser = (user_info) => {
 	// debugger;
 	return (dispatch) => {
-		console.log(login_info);
+		// console.log(user_info);
 		// debugger;
-		dispatch({ type: "LOGIN_ATTEMPTING", login_info });
+		dispatch({ type: "LOGIN_ATTEMPTING", user_info });
 		fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {
@@ -35,27 +35,19 @@ export const logInUser = (login_info, props) => {
 				Accept: "application/json",
 				Authorization: localStorage.token
 			},
-			body: JSON.stringify(login_info)
+			body: JSON.stringify(user_info)
 		})
 			.then((resp) => {
-				console.log(resp);
+				// console.log(resp);
 				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
 				if (data.error) alert(data.error);
 				dispatch({ type: "LOGIN_SUCCESS", data });
-				console.log(props);
-				// debugger;
-
-				// return <Redirect push to="/myprofile" />;
+				// console.log(props);
 			});
 	};
 };
 
-// export const api = {
-// 	loggingIn: {
-// 		logInUser,
-// 		fetchCurrentUser
-// 	}
-// };
+export const signUpUser = (user_info) => {};
