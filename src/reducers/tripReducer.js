@@ -1,7 +1,11 @@
-import React from "react";
+const tripReducer = (state = { trips: [] }, action) => {
+	switch (action.type) {
+		case "CREATING_TRIP":
+			return { ...state };
 
-const tripReducer = () => {
-	return <div></div>;
+		default:
+			return state;
+	}
 };
 
 export default tripReducer;

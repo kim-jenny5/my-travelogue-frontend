@@ -1,6 +1,4 @@
 const userReducer = (
-	// state = { email: "", password: "", loading: false },
-	// state = { email: "", password: "", logging_in: false, logged_in: false },
 	state = { user: null, isLoggingIn: false, isLoggedIn: false },
 	action
 ) => {
