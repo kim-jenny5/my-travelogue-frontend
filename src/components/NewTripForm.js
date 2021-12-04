@@ -5,7 +5,7 @@ import { createTrip } from "../actions/tripActions";
 
 class NewTripForm extends Component {
 	state = {
-		// user_id: "",
+		user_id: this.props.user_id,
 		trip_name: "",
 		start_date: "",
 		end_date: ""
@@ -20,9 +20,7 @@ class NewTripForm extends Component {
 		// 		console.log(this.state);
 		// 	}
 		// );
-		this.setState({
-			[e.target.name]: e.target.value
-		});
+		this.setState({ ...this.state, [e.target.name]: e.target.value });
 	};
 
 	connectUser = (e) => {};
@@ -30,7 +28,8 @@ class NewTripForm extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		// console.log(this.props);
-		this.props.createTrip(this.state, this.props.user_id);
+		// this.props.createTrip(this.state, this.props.user_id);
+		this.props.createTrip(this.state);
 	};
 
 	render() {
@@ -74,7 +73,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		createTrip: (trip_info, user_id) => dispatch(createTrip(trip_info, user_id))
+		// createTrip: (trip_info, user_id) => dispatch(createTrip(trip_info, user_id))
+		createTrip: (trip_info) => dispatch(createTrip(trip_info))
 	};
 };
 
