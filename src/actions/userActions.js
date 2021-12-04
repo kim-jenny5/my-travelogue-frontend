@@ -1,26 +1,29 @@
 // import { Redirect } from "react-router-dom";
 
-export const fetchCurrentUser = () => {
-	return () => {
-		let token = localStorage.token;
-		if (token) {
-			return fetch("http://localhost:3000/authorized", {
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-					Authorization: localStorage.token
-				}
-			})
-				.then((resp) => resp.json())
-				.then((data) => {
-					console.log(data);
-					if (data.error) alert(data.error);
-					// dispatch();
-					// debugger;
-				});
-		}
-	};
-};
+// export const fetchCurrentUser = () => {
+// 	return (dispatch) => {
+// 		let token = localStorage.token;
+// 		if (token) {
+// 			return fetch("http://localhost:3000/authorized", {
+// 				headers: {
+// 					"Content-Type": "application/json",
+// 					Accept: "application/json",
+// 					Authorization: localStorage.token
+// 				}
+// 			})
+// 				.then((resp) => resp.json())
+// 				.then((data) => {
+// 					console.log(data);
+// 					if (data.error) {
+// 						alert(data.error);
+// 						localStorage.removeItem("token");
+// 					} else {
+// 						dispatch({ type: "LOGIN_SUCCESS", data });
+// 					}
+// 				});
+// 		}
+// 	};
+// };
 
 export const logInUser = (user_info) => {
 	// debugger;

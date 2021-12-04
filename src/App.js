@@ -8,14 +8,14 @@ import Home from "./components/Home";
 // import LoginContainer from "./containers/LoginContainer";
 import DashboardContainer from "./containers/DashboardContainer";
 import UserContainer from "./containers/UserContainer";
-import { fetchCurrentUser } from "./actions/userActions";
+// import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
 
 // export default class App extends Component {
 class App extends Component {
-	componentDidMount() {
-		this.props.fetchCurrentUser();
-	}
+	// componentDidMount() {
+	// 	this.props.fetchCurrentUser();
+	// }
 
 	render() {
 		console.log(this.props);
@@ -38,11 +38,12 @@ const mapStateToProps = (state) => ({
 	user: state.user
 });
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		fetchCurrentUser: () => dispatch(fetchCurrentUser())
-	};
-};
+// const mapDispatchToProps = (dispatch) => {
+// 	return {
+// 		fetchCurrentUser: () => dispatch(fetchCurrentUser())
+// 	};
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
 // export default connect(null, mapDispatchToProps)(App);
