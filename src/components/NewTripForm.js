@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { createTrip } from "../actions/tripActions";
 // import DateRangePicker from "react-daterange-picker";
 
 class NewTripForm extends Component {
@@ -25,6 +26,9 @@ class NewTripForm extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+		// console.log(this.props);
+		const user_id = this.props.user_id;
+		this.props.createTrip(this.state, user_id);
 	};
 
 	render() {
@@ -59,12 +63,12 @@ class NewTripForm extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({
-
-// })
+const mapStateToProps = (state) => ({
+	user_id: state.user.user.id
+});
 
 const mapDispatchToProps = (dispatch) => {
-	// createTrip: state.
+	return { createTrip: (trip_info) => dispatch(createTrip(trip_info)) };
 };
 
-export default connect(null, mapDispatchToProps)(NewTripForm);
+export default connect(mapStateToProps, mapDispatchToProps)(NewTripForm);
