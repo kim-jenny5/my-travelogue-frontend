@@ -46,7 +46,7 @@ export const logInUser = (login_info, props) => {
 				if (data.error) alert(data.error);
 				dispatch({ type: "LOGIN_SUCCESS", data });
 				console.log(props);
-				debugger;
+				// debugger;
 
 				// return <Redirect push to="/myprofile" />;
 			});

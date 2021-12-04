@@ -6,6 +6,7 @@ import Home from "./components/Home";
 // import Login from "./containers/Login";
 // import Login from "./components/Login";
 // import LoginContainer from "./containers/LoginContainer";
+import ProfileContainer from "./containers/ProfileContainer";
 import UserContainer from "./containers/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 import Login from "./components/Login";
@@ -30,7 +31,7 @@ class App extends Component {
 							render={() => <LoginContainer isLoggedIn={this.props.user} />}
 						/> */}
 						<Route path="/signup" component={UserContainer} />
-						<Route path="/myprofile" component={UserContainer} />
+						<Route path="/dashboard" component={ProfileContainer} />
 					</Switch>
 				</div>
 			</div>
