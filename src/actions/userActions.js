@@ -54,5 +54,21 @@ export const logInUser = (user_info) => {
 };
 
 export const createUser = (user_info) => {
-	return (dispatch) => {};
+	return (dispatch) => {
+		dispatch({ type: "USER_CREATING", user_info });
+		fetch("http://localhost:3000/signup", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				Authorization: localStorage.token
+			},
+			body: JSON.stringify(user_info)
+		})
+			.then((resp) => {
+				debugger;
+				return resp.json();
+			})
+			.then();
+	};
 };

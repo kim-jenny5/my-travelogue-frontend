@@ -13,12 +13,6 @@ class Signup extends Component {
 	};
 
 	handleChange = (e) => {
-		// this.setState(
-		// 	{
-		// 		[e.target.name]: e.target.value
-		// 	},
-		// 	() => console.log(this.state)
-		// );
 		this.setState({
 			[e.target.name]: e.target.value
 		});
@@ -27,6 +21,7 @@ class Signup extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(this.state);
+		this.props.createUser(this.state);
 	};
 
 	render() {
@@ -71,6 +66,7 @@ class Signup extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.user,
+	isLoggingIn: state.isLoggingIn,
 	isLoggedIn: state.isLoggedIn
 });
 
