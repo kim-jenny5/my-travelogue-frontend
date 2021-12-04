@@ -22,7 +22,7 @@ export const fetchCurrentUser = () => {
 	};
 };
 
-export const logInUser = (login_info) => {
+export const logInUser = (login_info, props) => {
 	// debugger;
 	return (dispatch) => {
 		console.log(login_info);
@@ -45,6 +45,9 @@ export const logInUser = (login_info) => {
 			.then((data) => {
 				if (data.error) alert(data.error);
 				dispatch({ type: "LOGIN_SUCCESS", data });
+				console.log(props);
+				debugger;
+
 				// return <Redirect push to="/myprofile" />;
 			});
 	};

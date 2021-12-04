@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Login from "../components/Login";
-import UserContainer from "./UserContainer";
+// import UserContainer from "./UserContainer";
 
 class LoginContainer extends Component {
 	render() {
@@ -10,8 +10,8 @@ class LoginContainer extends Component {
 		// return <Login isLoggedIn={this.props.isLoggedIn} />;
 		return (
 			<div>
-				<Login />
-				<UserContainer isLoggedIn={this.props.isLoggedIn} />
+				<Login isLoggedIn={this.props.isLoggedIn} />
+				{/* <UserContainer isLoggedIn={this.props.isLoggedIn} /> */}
 			</div>
 		);
 	}
