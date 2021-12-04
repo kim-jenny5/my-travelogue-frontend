@@ -10,27 +10,27 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { logOutUser } from "../actions/userActions";
 
 class UserHeader extends Component {
-	logOut = () => {
-		console.log("Button clicked!");
+	logOutUser = () => {
+		// console.log("Button clicked!");
+		this.props.logOutUser(this.props.user);
 	};
 
 	render() {
 		return (
 			<div>
-				<button onClick={this.logOut}>Log Out</button>
+				<button onClick={this.logOutUser}>Log Out</button>
 			</div>
 		);
 	}
 }
 
-// const mapStateToProps = (state) => ({
-
-// })
+const mapStateToProps = (state) => ({ user: state.user.user });
 
 const mapDispatchToProps = (dispatch) => {
-	return { logOut: (user_info) => dispatch(logOut(user_info)) };
+	return { logOutUser: (user_info) => dispatch(logOutUser(user_info)) };
 };
 
-export default connect(null, mapDispatchToProps)(UserHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(UserHeader);

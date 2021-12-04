@@ -71,6 +71,10 @@ export const createUser = (user_info) => {
 	};
 };
 
-export const logOut = (user_info) => {
-	console.log(user_info);
+export const logOutUser = (user_info) => {
+	// console.log(user_info);
+	return (dispatch) => {
+		dispatch({ type: "LOGGING_OUT", user_info });
+		debugger;
+	};
 };

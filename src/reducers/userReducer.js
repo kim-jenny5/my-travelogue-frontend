@@ -6,17 +6,17 @@ const userReducer = (
 		case "USER_CREATING":
 			return {
 				...state,
-				user: null,
-				isLoggingIn: true,
-				isLoggedIn: false
+				// user: null,
+				isLoggingIn: true
+				// isLoggedIn: false
 			};
 
 		case "LOGIN_ATTEMPTING":
 			return {
 				...state,
-				user: null,
-				isLoggingIn: true,
-				isLoggedIn: false
+				// user: null,
+				isLoggingIn: true
+				// isLoggedIn: false
 			};
 
 		case "LOGIN_SUCCESS":
@@ -26,15 +26,23 @@ const userReducer = (
 			return {
 				...state,
 				user: action.data.user,
-				isLoggingIn: true,
+				// isLoggingIn: true,
 				isLoggedIn: true
 			};
 
 		case "LOGGING_OUT":
-			return;
+			console.log(localStorage);
+			localStorage.removeItem("token");
+			return {
+				...state,
+				user: null,
+				isLoggingIn: false
+				// isLoggedIn: true
+			};
 
 		case "LOGGED_OUT":
-			return;
+			debugger;
+			return { ...state, isLoggedIn: false };
 
 		// case "LOGIN_FAIL":
 		// 	return {
