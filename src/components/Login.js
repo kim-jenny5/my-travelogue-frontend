@@ -26,7 +26,7 @@ class Login extends Component {
 		e.preventDefault();
 		// console.log(this.state);
 		console.log(this.props);
-		this.props.logInUser(this.state, this.props);
+		this.props.logInUser(this.state);
 		// if
 		// logInUser(this.state);
 	};
