@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import Home from "./components/Home";
 // import Login from "./containers/Login";
 // import Login from "./components/Login";
-import LoginContainer from "./containers/LoginContainer";
+// import LoginContainer from "./containers/LoginContainer";
 import UserContainer from "./containers/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 import Login from "./components/Login";
@@ -23,7 +23,8 @@ class App extends Component {
 				<div>
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/login" component={LoginContainer} />
+						{/* <Route path="/login" component={LoginContainer} /> */}
+						<Route path="/login" component={UserContainer} />
 						{/* <Route
 							path="/login"
 							render={() => <LoginContainer isLoggedIn={this.props.user} />}

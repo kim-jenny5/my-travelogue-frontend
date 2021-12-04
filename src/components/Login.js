@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { fetchUsers } from "../actions/fetchUsers";
 // import { fetchUsers } from "../api/fetchUser";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 import { logInUser } from "../actions/userActions";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
