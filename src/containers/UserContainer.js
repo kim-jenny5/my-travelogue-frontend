@@ -3,8 +3,8 @@ import { Redirect } from "react-router";
 // import { Route, Switch } from "react-router-dom";
 // import { currentUser } from "../api/fetchUser";
 import { connect } from "react-redux";
-import Home from "../components/Home";
-import ProfileContainer from "./DashboardContainer";
+// import Home from "../components/Home";
+// import ProfileContainer from "./DashboardContainer";
 import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
 
@@ -27,14 +27,16 @@ class UserContainer extends Component {
 			// return <ProfileContainer />;
 			// const name = usersName();
 			// return <Redirect push to="/dashboard" />;
-			return <Redirect to="/dashboard" />;
-			// return <DashboardContainer />;
 			// return <Redirect to="/dashboard" />;
-		} else if (this.props.match.path === "/login") {
+			return <DashboardContainer />;
+			// return <Redirect to="/dashboard" />;
+		} else if (this.props.match.path === "/login" || this.props.user === null) {
+			// debugger;
 			return <Login />;
-		} else {
-			<Redirect to="/" />;
 		}
+		// } else {
+		// 	<Redirect to="/" />;
+		// }
 		// } else {
 		// 	return <Home />;
 		// }
@@ -48,20 +50,10 @@ class UserContainer extends Component {
 		console.log(this.state);
 		// debugger;
 		// return <Login isLoggedIn={this.props.isLoggedIn} />;
-		return (
-			// <div>
-			<>{this.primaryRender}</>
-			// </div>
-		);
+		return <>{this.primaryRender()}</>;
 	}
 }
 
-{
-	/* <Login isLoggedIn={this.props.isLoggedIn} /> */
-}
-{
-	/* <UserContainer isLoggedIn={this.props.isLoggedIn} /> */
-}
 const mapStateToProps = (state) => ({
 	user: state.user,
 	isLoggedIn: state.isLoggedIn

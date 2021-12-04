@@ -1,4 +1,4 @@
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 export const fetchCurrentUser = () => {
 	return (dispatch) => {
