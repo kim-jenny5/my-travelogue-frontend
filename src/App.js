@@ -19,7 +19,7 @@ class App extends Component {
 	// }
 
 	render() {
-		console.log(this.props);
+		// console.log(this.props);
 		return (
 			<div>
 				<div>
@@ -28,9 +28,7 @@ class App extends Component {
 						<Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} />
 						<Route path="/dashboard" component={DashboardContainer} />
-						{/* <Route path="/newtrip" component={NewTripForm} /> */}
 						<Route path="/newtrip" component={NewTripForm} />
-						{/* <Route path="/newtrip" component={UserContainer} /> */}
 					</Switch>
 				</div>
 			</div>
