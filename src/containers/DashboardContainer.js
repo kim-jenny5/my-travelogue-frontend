@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
+import { UserFooter } from "../components/UserFooter";
 
 class DashboardContainer extends Component {
 	primaryRender() {
@@ -14,6 +15,7 @@ class DashboardContainer extends Component {
 				<div>Upcoming Trips</div>
 				<div>Past Trips</div>
 				<button>+ New Trip</button>
+				<UserFooter user={this.props.user} />
 			</div>
 		);
 	}
