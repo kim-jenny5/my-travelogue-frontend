@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { UserFooter } from "../components/UserFooter";
+import UserHeader from "../components/UserHeader";
 import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
@@ -16,6 +17,7 @@ class DashboardContainer extends Component {
 		const { first_name, last_name, joined } = this.props.user;
 		return (
 			<div>
+				<UserHeader />
 				<span>
 					{first_name} {last_name}
 				</span>
