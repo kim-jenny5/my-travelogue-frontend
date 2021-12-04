@@ -70,3 +70,7 @@ export const createUser = (user_info) => {
 			.then();
 	};
 };
+
+export const logOut = (user_info) => {
+	console.log(user_info);
+};

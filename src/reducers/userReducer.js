@@ -3,6 +3,14 @@ const userReducer = (
 	action
 ) => {
 	switch (action.type) {
+		case "USER_CREATING":
+			return {
+				...state,
+				user: null,
+				isLoggingIn: true,
+				isLoggedIn: false
+			};
+
 		case "LOGIN_ATTEMPTING":
 			return {
 				...state,
@@ -15,16 +23,18 @@ const userReducer = (
 			localStorage.setItem("user", JSON.stringify(action.data.user));
 			localStorage.setItem("token", action.data.jwt);
 
-			// debugger;
-
 			return {
-				// email: action.user.email,
-				// password: action.user.password,
 				...state,
 				user: action.data.user,
 				isLoggingIn: true,
 				isLoggedIn: true
 			};
+
+		case "LOGGING_OUT":
+			return;
+
+		case "LOGGED_OUT":
+			return;
 
 		// case "LOGIN_FAIL":
 		// 	return {
@@ -33,14 +43,6 @@ const userReducer = (
 		// 		isLoggingIn: false,
 		// 		isLoggedIn: false
 		// 	};
-
-		case "USER_CREATING":
-			return {
-				...state,
-				user: null,
-				isLoggingIn: true,
-				isLoggedIn: false
-			};
 
 		default:
 			return state;

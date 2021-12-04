@@ -9,8 +9,9 @@
 // };
 
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class UserHeader extends Component {
+class UserHeader extends Component {
 	logOut = () => {
 		console.log("Button clicked!");
 	};
@@ -23,3 +24,13 @@ export default class UserHeader extends Component {
 		);
 	}
 }
+
+// const mapStateToProps = (state) => ({
+
+// })
+
+const mapDispatchToProps = (dispatch) => {
+	return { logOut: (user_info) => dispatch(logOut(user_info)) };
+};
+
+export default connect(null, mapDispatchToProps)(UserHeader);
