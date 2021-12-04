@@ -1,6 +1,6 @@
 // export const createTrip = (trip_info, user_id) => {
 export const createTrip = (trip_info) => {
-	console.log(trip_info);
+	// console.log(trip_info);
 	// console.log(user_id);
 	// debugger;
 	return (dispatch) => {
@@ -19,6 +19,8 @@ export const createTrip = (trip_info) => {
 			})
 			.then((data) => {
 				console.log(data);
+				if (data.error) alert(data.error);
+				dispatch({ type: "TRIP_CREATION_SUCCESS", data });
 			});
 	};
 };
