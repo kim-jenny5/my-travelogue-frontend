@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Footer = () => {
+export const MainFooter = () => {
 	return (
 		<div>
 			<span>Email </span>

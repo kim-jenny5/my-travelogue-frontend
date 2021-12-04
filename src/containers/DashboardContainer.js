@@ -11,6 +11,9 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
+				<div>Upcoming Trips</div>
+				<div>Past Trips</div>
+				<button>+ New Trip</button>
 			</div>
 		);
 	}

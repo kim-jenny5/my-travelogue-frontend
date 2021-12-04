@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MainNav } from "./MainNav";
-import { Footer } from "./Footer";
+import { MainFooter } from "./MainFooter";
 
 export default class Home extends Component {
 	render() {
@@ -10,7 +10,7 @@ export default class Home extends Component {
 				<h1>
 					What's on my bucket list? <br /> <i>Everywhere.</i>
 				</h1>
-				<Footer />
+				<MainFooter />
 			</div>
 		);
 	}
