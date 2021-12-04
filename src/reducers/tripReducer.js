@@ -1,5 +1,5 @@
 const tripReducer = (
-	state = { user: null, trips: [], creatingTrip: null, createdTrip: null },
+	state = { user_id: null, trips: [], creatingTrip: null, createdTrip: null },
 	action
 ) => {
 	switch (action.type) {
@@ -9,7 +9,7 @@ const tripReducer = (
 			// debugger;
 			return {
 				...state,
-				user: action.trip_info.user_id,
+				user_id: action.trip_info.user_id,
 				trips: [...state.trips, action.trip_info],
 				creatingTrip: true,
 				createdTrip: false
@@ -19,8 +19,23 @@ const tripReducer = (
 			console.log(state);
 			console.log(action);
 			debugger;
-			return state;
-		// return {...state, user: };
+			// return state;
+			return {
+				...state,
+				user_id: action.trip_info.user_id,
+				trips: [...state.trips, action.trip_info],
+				creatingTrip: true,
+				createdTrip: true
+			};
+
+		// case "TRIP_CREATION_FAIL":
+		// 	return {
+		// 		...state,
+		// 		user_id: action.trip_info.user_id,
+		// 		trips: [...state.trips],
+		// 		creatingTrip: false,
+		// 		createdTrip: false
+		// 	};
 
 		default:
 			return state;
