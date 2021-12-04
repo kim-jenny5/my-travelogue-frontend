@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
+import { Redirect, Link } from "react-router-dom";
 import { UserFooter } from "../components/UserFooter";
+import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
+	produceNewTripForm = () => {
+		// e.preventDefault();
+		// return <Redirect to="/newtrip" />;
+		// return <NewTripForm />;
+		return <Link to="/newtrip" />;
+	};
+
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
 		return (
@@ -14,7 +22,8 @@ class DashboardContainer extends Component {
 				<div>Joined {joined}</div>
 				<div>Upcoming Trips</div>
 				<div>Past Trips</div>
-				<button>+ New Trip</button>
+				<Link to="/newtrip">+ New Trip</Link>
+				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
 				<UserFooter user={this.props.user} />
 			</div>
 		);

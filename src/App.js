@@ -8,6 +8,7 @@ import Home from "./components/Home";
 // import LoginContainer from "./containers/LoginContainer";
 import DashboardContainer from "./containers/DashboardContainer";
 import UserContainer from "./containers/UserContainer";
+import NewTripForm from "./components/NewTripForm";
 // import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
 
@@ -27,6 +28,8 @@ class App extends Component {
 						<Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} />
 						<Route path="/dashboard" component={DashboardContainer} />
+						{/* <Route path="/newtrip" component={NewTripForm} /> */}
+						<Route path="/newtrip" component={NewTripForm} />
 					</Switch>
 				</div>
 			</div>
