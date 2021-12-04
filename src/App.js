@@ -18,7 +18,7 @@ class App extends Component {
 	}
 
 	render() {
-		// console.log(this.props);
+		console.log(this.props);
 		return (
 			<div>
 				<div>
@@ -32,6 +32,10 @@ class App extends Component {
 						/> */}
 						<Route path="/signup" component={UserContainer} />
 						<Route path="/dashboard" component={DashboardContainer} />
+						{/* <Route
+							path="/dashboard"
+							render={() => <DashboardContainer user={this.props.user} />}
+						/> */}
 					</Switch>
 				</div>
 			</div>
@@ -39,9 +43,9 @@ class App extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({
-// 	user: state.user
-// });
+const mapStateToProps = (state) => ({
+	user: state.user
+});
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -49,5 +53,5 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(null, mapDispatchToProps)(App);
