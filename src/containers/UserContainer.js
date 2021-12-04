@@ -4,7 +4,7 @@ import { Redirect } from "react-router";
 // import { currentUser } from "../api/fetchUser";
 import { connect } from "react-redux";
 // import Home from "../components/Home";
-import ProfileContainer from "./ProfileContainer";
+import ProfileContainer from "./DashboardContainer";
 import Login from "../components/Login";
 
 // import Signup from "../components/Signup";
@@ -25,7 +25,8 @@ class UserContainer extends Component {
 			// debugger;
 			// return <ProfileContainer />;
 			// const name = usersName();
-			return (<ProfileContainer />), (<Redirect push to="/dashboard" />);
+			// return <Redirect push to="/dashboard" />;
+			return <Redirect to="/dashboard" />;
 		} else {
 			return <Login />;
 		}
