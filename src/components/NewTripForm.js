@@ -5,6 +5,7 @@ import { createTrip } from "../actions/tripActions";
 
 class NewTripForm extends Component {
 	state = {
+		// user_id: "",
 		trip_name: "",
 		start_date: "",
 		end_date: ""
@@ -24,11 +25,12 @@ class NewTripForm extends Component {
 		});
 	};
 
+	connectUser = (e) => {};
+
 	handleSubmit = (e) => {
 		e.preventDefault();
 		// console.log(this.props);
-		const user_id = this.props.user_id;
-		this.props.createTrip(this.state, user_id);
+		this.props.createTrip(this.state, this.props.user_id);
 	};
 
 	render() {
@@ -37,6 +39,7 @@ class NewTripForm extends Component {
 				<div>When's your new trip?</div>
 				<form onSubmit={this.handleSubmit}>
 					<div>Name of your trip</div>
+					{/* <input type="hidden" name="user_id" value={this.props.user_id} /> */}
 					<input
 						type="text"
 						name="trip_name"
@@ -56,7 +59,9 @@ class NewTripForm extends Component {
 						name="end_date"
 						onChange={this.handleChange}
 					/>
-					<button type="submit">Let's Go!</button>
+					<button type="submit" onClick={this.connectUser}>
+						Let's Go!
+					</button>
 				</form>
 			</div>
 		);
@@ -68,7 +73,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-	return { createTrip: (trip_info) => dispatch(createTrip(trip_info)) };
+	return {
+		createTrip: (trip_info, user_id) => dispatch(createTrip(trip_info, user_id))
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewTripForm);
