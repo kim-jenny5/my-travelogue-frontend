@@ -31,12 +31,10 @@ class UserContainer extends Component {
 			// return <Redirect to="/dashboard" />;
 			// return <DashboardContainer />;
 			return <Redirect to="/dashboard" />;
-		} else if (this.props.match.path === "/login") {
-			// } else if (this.props.match.path === "/login") {
-			// debugger;
-			return <Login />;
 		} else if (this.props.match.path === "/signup") {
 			return <Signup />;
+		} else {
+			return <Login />;
 		}
 		// } else {
 		// 	return <Home />;

@@ -30,6 +30,7 @@ class App extends Component {
 						<Route path="/dashboard" component={DashboardContainer} />
 						{/* <Route path="/newtrip" component={NewTripForm} /> */}
 						<Route path="/newtrip" component={NewTripForm} />
+						{/* <Route path="/newtrip" component={UserContainer} /> */}
 					</Switch>
 				</div>
 			</div>
