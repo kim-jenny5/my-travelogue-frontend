@@ -64,7 +64,7 @@ class NewTripForm extends Component {
 // })
 
 const mapDispatchToProps = (dispatch) => {
-    createTrip: state.
+	// createTrip: state.
 };
 
 export default connect(null, mapDispatchToProps)(NewTripForm);
