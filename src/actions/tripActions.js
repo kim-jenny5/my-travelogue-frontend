@@ -5,7 +5,21 @@ export const createTrip = (trip_info) => {
 	// debugger;
 	return (dispatch) => {
 		dispatch({ type: "CREATING_TRIP", trip_info });
-		// fetch()
+		fetch("http://localhost:3000/newtrip", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				Authorization: localStorage.token
+			},
+			body: JSON.stringify(trip_info)
+		})
+			.then((resp) => {
+				return resp.json();
+			})
+			.then((data) => {
+				console.log(data);
+			});
 	};
 };
 
