@@ -3,7 +3,7 @@ import { Redirect } from "react-router";
 // import { Route, Switch } from "react-router-dom";
 // import { currentUser } from "../api/fetchUser";
 import { connect } from "react-redux";
-// import Home from "../components/Home";
+import Home from "../components/Home";
 // import ProfileContainer from "./DashboardContainer";
 import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
@@ -28,12 +28,16 @@ class UserContainer extends Component {
 			// const name = usersName();
 			// return <Redirect push to="/dashboard" />;
 			// return <Redirect to="/dashboard" />;
-			return <DashboardContainer />;
-			// return <Redirect to="/dashboard" />;
+			// return <DashboardContainer />;
+			return <Redirect to="/dashboard" />;
 		} else if (this.props.match.path === "/login" || this.props.user === null) {
+			// } else if (this.props.match.path === "/login") {
 			// debugger;
 			return <Login />;
 		}
+		// } else {
+		// 	return <Home />;
+		// }
 		// } else {
 		// 	<Redirect to="/" />;
 		// }
