@@ -7,6 +7,7 @@ import Home from "../components/Home";
 // import ProfileContainer from "./DashboardContainer";
 import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
+import Signup from "../components/Signup";
 
 // import Signup from "../components/Signup";
 
@@ -30,10 +31,12 @@ class UserContainer extends Component {
 			// return <Redirect to="/dashboard" />;
 			// return <DashboardContainer />;
 			return <Redirect to="/dashboard" />;
-		} else if (this.props.match.path === "/login" || this.props.user === null) {
+		} else if (this.props.match.path === "/login") {
 			// } else if (this.props.match.path === "/login") {
 			// debugger;
 			return <Login />;
+		} else if (this.props.match.path === "/signup") {
+			return <Signup />;
 		}
 		// } else {
 		// 	return <Home />;
