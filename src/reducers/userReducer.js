@@ -28,11 +28,19 @@ const userReducer = (
 				isLoggedIn: true
 			};
 
-		case "LOGIN_FAIL":
+		// case "LOGIN_FAIL":
+		// 	return {
+		// 		...state,
+		// 		user: action.data.user,
+		// 		isLoggingIn: false,
+		// 		isLoggedIn: false
+		// 	};
+
+		case "USER_CREATING":
 			return {
 				...state,
-				user: action.data.user,
-				isLoggingIn: false,
+				user: null,
+				isLoggingIn: true,
 				isLoggedIn: false
 			};
 

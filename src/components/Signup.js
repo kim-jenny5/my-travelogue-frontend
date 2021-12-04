@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { signUpUser } from "../actions/userActions";
+import { createUser } from "../actions/userActions";
 
 class Signup extends Component {
 	state = {
@@ -75,7 +75,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-	return { signUpUser: (user_info) => dispatch(signUpUser(user_info)) };
+	return { createUser: (user_info) => dispatch(createUser(user_info)) };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);

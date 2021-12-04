@@ -3,9 +3,9 @@ import { Redirect } from "react-router";
 // import { Route, Switch } from "react-router-dom";
 // import { currentUser } from "../api/fetchUser";
 import { connect } from "react-redux";
-import Home from "../components/Home";
+// import Home from "../components/Home";
 // import ProfileContainer from "./DashboardContainer";
-import DashboardContainer from "./DashboardContainer";
+// import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
 

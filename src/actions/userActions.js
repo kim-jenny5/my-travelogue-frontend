@@ -53,4 +53,6 @@ export const logInUser = (user_info) => {
 	};
 };
 
-export const signUpUser = (user_info) => {};
+export const createUser = (user_info) => {
+	return (dispatch) => {};
+};
