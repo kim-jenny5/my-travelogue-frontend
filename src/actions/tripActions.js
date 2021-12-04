@@ -8,7 +8,10 @@ export const fetchTrips = () => {
 				Authorization: localStorage.token
 			}
 		})
-			.then((resp) => resp.json())
+			.then((resp) => {
+				debugger;
+				return resp.json();
+			})
 			.then(() => dispatch({ type: "FETCHING_TRIPS" }));
 	};
 };
