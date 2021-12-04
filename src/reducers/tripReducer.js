@@ -16,14 +16,13 @@ const tripReducer = (
 			};
 
 		case "TRIP_CREATION_SUCCESS":
-			console.log(state);
-			console.log(action);
-			debugger;
+			// console.log(state);
+			// console.log(action);
 			// return state;
 			return {
 				...state,
-				user_id: action.trip_info.user_id,
-				trips: [...state.trips, action.trip_info],
+				user_id: action.data.user_id,
+				trips: [...state.trips, action.data],
 				creatingTrip: true,
 				createdTrip: true
 			};

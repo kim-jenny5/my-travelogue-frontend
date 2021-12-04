@@ -17,10 +17,10 @@ export const createTrip = (trip_info) => {
 			.then((resp) => {
 				return resp.json();
 			})
-			.then((data) => {
-				console.log(data);
-				if (data.error) alert(data.error);
-				dispatch({ type: "TRIP_CREATION_SUCCESS", data });
+			.then((trip_info) => {
+				// console.log(trip_info);
+				if (trip_info.error) alert(trip_info.error);
+				dispatch({ type: "TRIP_CREATION_SUCCESS", trip_info });
 			});
 	};
 };
