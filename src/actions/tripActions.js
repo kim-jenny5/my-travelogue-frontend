@@ -2,9 +2,10 @@
 export const createTrip = (trip_info) => {
 	console.log(trip_info);
 	// console.log(user_id);
-	debugger;
+	// debugger;
 	return (dispatch) => {
 		dispatch({ type: "CREATING_TRIP", trip_info });
+		// fetch()
 	};
 };
 
