@@ -7,10 +7,10 @@ import Home from "../components/Home";
 import LoginForm from "../components/Login";
 import Signup from "../components/Signup";
 
-export default function UserContainer() {
-	return (
-		<div>
-			<p>This is my profile.</p>
-		</div>
-	);
+export default class UserContainer extends Component {
+	render() {
+		console.log(this.props);
+
+		return <div>Test profile.</div>;
+	}
 }

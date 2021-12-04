@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 // import { fetchUsers } from "../actions/fetchUsers";
 // import { fetchUsers } from "../api/fetchUser";
+import { Redirect } from "react-router";
 import { logInUser } from "../actions/userActions";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
@@ -23,11 +24,15 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		logInUser(this.state);
+		// console.log(this.state);
+		console.log(this.props);
+		this.props.logInUser(this.state);
+		// if
+		// logInUser(this.state);
 	};
 
 	render() {
-		console.log(this.props.user);
+		console.log(this.props);
 		return (
 			<div>
 				<SecondNav />
@@ -55,14 +60,16 @@ class Login extends Component {
 	}
 }
 
-// const mapStateToProps = (state) => ({
-// 	user: state.user
-// });
+const mapStateToProps = (state) => ({
+	user: state.user,
+	isLoggedIn: state.isLoggedIn
+});
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return { logInUser: (login_info) => dispatch(logInUser(login_info)) };
-// };
+const mapDispatchToProps = (dispatch) => {
+	return { logInUser: (login_info) => dispatch(logInUser(login_info)) };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);
+// export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 // export default connect(null, { logInUser })(Login);
-export default Login;
+// export default Login;

@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Login from "../components/Login";
+import UserContainer from "./UserContainer";
 
 class LoginContainer extends Component {
-	// export default class LoginContainer extends Component {
-	// state = {
-	// 	isLoggedIn: ""
-	// };
-
 	render() {
-		console.log(this.props.user);
+		// console.log(this.props.user);
 		// debugger;
 		// return <Login isLoggedIn={this.props.isLoggedIn} />;
-		return <Login />;
+		return (
+			<div>
+				<Login />
+				<UserContainer isLoggedIn={this.props.isLoggedIn} />
+			</div>
+		);
 	}
 }
 
