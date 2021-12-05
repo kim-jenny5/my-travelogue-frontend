@@ -6,6 +6,7 @@ import { UserFooter } from "../components/UserFooter";
 import UserHeader from "../components/UserHeader";
 import UpcomingTrips from "../components/UpcomingTrips";
 import PastTrips from "../components/PastTrips";
+import { formatISO, isFuture, isPast } from "date-fns";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -21,6 +22,31 @@ class DashboardContainer extends Component {
 		return <Link to="/newtrip" />;
 	};
 
+	upcomingOrPastTrip = () => {
+		let upcomingTrips = [];
+		let pastTrips = [];
+
+		this.props.trips.map(
+			(trip) => {
+				// const today = formatISO(new Date());
+
+				// if (isFuture(trip.start_date)) {
+				// 	upcomingTrips = [...upcomingTrips, trip];
+				// } else {
+				// 	pastTrips = [...pastTrips, trip];
+				// }
+
+				return (
+					(<UpcomingTrips trips={upcomingTrips} />),
+					(<PastTrips trips={pastTrips} />)
+				);
+			}
+			// (console.log(trip), (<TripCard trip={trip} />))
+		);
+		console.log(upcomingTrips);
+		console.log(pastTrips);
+	};
+
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
 		// const today = new Date();
@@ -33,10 +59,9 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
-				<UpcomingTrips />
-				<PastTrips />
-				{/* <div>Upcoming Trips</div>
-				<div>Past Trips</div> */}
+				{this.upcomingOrPastTrip()}
+				{/* <UpcomingTrips trips={this.upcomingOrPastTrip()} />
+				<PastTrips trips={this.upcomingOrPastTrip()} /> */}
 				<Link to="/newtrip">+ New Trip</Link>
 				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
 				<UserFooter user={this.props.user} />
@@ -61,8 +86,8 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user
-	// trips: state.trips.trips
+	user: state.user.user,
+	trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
