@@ -1,17 +1,32 @@
 const tripReducer = (
-	state = { user_id: null, trips: [], creatingTrip: null, createdTrip: null },
+	state = {
+		user_id: null,
+		trips: [],
+		fetchingTrip: null,
+		creatingTrip: null,
+		createdTrip: null
+	},
 	action
 ) => {
 	switch (action.type) {
 		case "FETCHING_TRIPS":
+			// console.log(state);
+			// console.log(action);
+			// debugger;
+			return { ...state, user_id: action.user_info.id, fetchingTrip: true };
+
+		case "TRIPS_FETCHED":
+			console.log(state);
+			console.log(action);
+			debugger;
 			return;
-		// return { ...state };
 
 		case "CREATING_TRIP":
 			// console.log(state);
 			// console.log(action);
 			// debugger;
 			return {
+				...state,
 				user_id: action.trip_info.user_id,
 				trips: [...state.trips, action.trip_info],
 				creatingTrip: true,

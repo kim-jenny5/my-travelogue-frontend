@@ -1,20 +1,21 @@
 export const fetchTrips = (user_info) => {
-	console.log(user_info);
-	debugger;
+	// console.log(user_info);
+	// debugger;
 	return (dispatch) => {
-		dispatch({ type: "FETCHING_TRIPS" });
-		fetch("http://localhost:3000/dashboard", {
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-				Authorization: localStorage.token
-			}
-		})
+		dispatch({ type: "FETCHING_TRIPS", user_info });
+		fetch("http://localhost:3000/dashboard")
 			.then((resp) => {
-				debugger;
+				console.log(resp);
+				// debugger;
 				return resp.json();
 			})
-			.then(() => dispatch({ type: "FETCHING_TRIPS" }));
+			.then((data) => {
+				// debugger;
+				// console.log(data);
+				const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
+				dispatch({ type: "FETCHED_TRIPS", usersTrips });
+			});
+		// .then((trips) => dispatch({ type: "TRIPS_FETCHED", trips }));
 	};
 };
 
