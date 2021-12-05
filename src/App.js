@@ -8,13 +8,14 @@ import Home from "./components/Home";
 import NewTripForm from "./components/NewTripForm";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import AppContainer from "./components/AppContainer";
+// import AppContainer from "./components/AppContainer";
 import DashboardContainer from "./components/DashboardContainer";
+import TripDetails from "./components/TripDetails";
 // import UserContainer from "./components/UserContainer";
 // import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
-import { MainFooter } from "./components/MainFooter";
-import { MainNav } from "./components/MainNav";
+// import { MainFooter } from "./components/MainFooter";
+// import { MainNav } from "./components/MainNav";
 
 // export default class App extends Component {
 class App extends Component {
@@ -40,9 +41,12 @@ class App extends Component {
 						/> */}
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={Signup} />
-
 						<Route path="/dashboard" component={DashboardContainer} />
-						<Route path="/newtrip" component={NewTripForm}></Route>
+						<Route path="/newtrip" component={NewTripForm} />
+
+						{/* NOTE: for now will just make a standing route and nest it later
+						into trips */}
+						<Route path="tripdetails" component={TripDetails} />
 
 						{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
