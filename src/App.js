@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
 // import LoginContainer from "./containers/LoginContainer";
@@ -8,6 +8,9 @@ import Home from "./components/Home";
 // import NewTripForm from "./components/NewTripForm";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import AppContainer from "./components/AppContainer";
+import DashboardContainer from "./components/DashboardContainer";
+// import UserContainer from "./components/UserContainer";
 // import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
 
@@ -19,11 +22,21 @@ class App extends Component {
 
 	render() {
 		console.log(this.props);
+
+		if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+
 		return (
 			<div>
 				<div>
 					<Switch>
-						<Route exact path="/" component={Home} />
+						{/* <Route exact path="/" component={Home} /> */}
+						{/* <Route exact path="/" component={AppContainer} /> */}
+						<Route
+							exact
+							path="/"
+							render={(props) => <AppContainer props={props} />}
+						/>
+						<Route path="/dashboard" component={DashboardContainer} />
 						{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
 						<Route path="/login" component={Login} />
