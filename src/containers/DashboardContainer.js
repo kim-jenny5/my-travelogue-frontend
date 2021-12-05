@@ -26,22 +26,25 @@ class DashboardContainer extends Component {
 		let upcomingTrips = [];
 		let pastTrips = [];
 
-		this.props.trips.forEach(
+		this.props.trips.map(
 			(trip) => {
 				const dateFormatted = new Date(trip.start_date);
 				const isBeforeAns = isBefore(new Date(), dateFormatted);
 				if (isBeforeAns) {
 					// [...upcomingTrips, trip];
-					upcomingTrips.push(trip);
+					upcomingTrips = [...upcomingTrips, trip];
+					// trips = upcomingTrips.push(trip);
 				} else {
-					pastTrips.push(trip);
-					// [...pastTrips, trip];
+					// trips = pastTrips.push(trip);
+					pastTrips = [...pastTrips, trip];
 				}
 			}
 			// (console.log(trip), (<TripCard trip={trip} />))
 		);
-		console.log(`Upcoming: `, upcomingTrips);
-		console.log(`Past: `, pastTrips);
+		return (
+			(<UpcomingTrips trips={upcomingTrips} />),
+			(<PastTrips trips={pastTrips} />)
+		);
 	};
 
 	primaryRender() {
