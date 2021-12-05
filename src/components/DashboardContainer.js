@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
-import { UserFooter } from "../components/UserFooter";
-import UserHeader from "../components/UserHeader";
-import UpcomingTrips from "../components/UpcomingTrips";
-import PastTrips from "../components/PastTrips";
+import { UserFooter } from "./UserFooter";
+import UserHeader from "./UserHeader";
+import UpcomingTrips from "./UpcomingTrips";
+import PastTrips from "./PastTrips";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 

@@ -19,14 +19,14 @@ class UserContainer extends Component {
 			// return <Link to="/dashboard" />;
 		} else if (this.props.match.path === "/signup") {
 			return <Signup />;
+			// return <Redirect to="/signup" />;
 		} else {
 			return <Login />;
+			// return <Redirect to="/login" />;
 		}
 	}
 
 	render() {
-		console.log(this.props);
-		console.log(this.state);
 		return <>{this.primaryRender()}</>;
 	}
 }
