@@ -4,6 +4,8 @@ import { Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "../components/UserFooter";
 import UserHeader from "../components/UserHeader";
+import UpcomingTrips from "../components/UpcomingTrips";
+import PastTrips from "../components/PastTrips";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -31,8 +33,10 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
-				<div>Upcoming Trips</div>
-				<div>Past Trips</div>
+				<UpcomingTrips />
+				<PastTrips />
+				{/* <div>Upcoming Trips</div>
+				<div>Past Trips</div> */}
 				<Link to="/newtrip">+ New Trip</Link>
 				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
 				<UserFooter user={this.props.user} />
