@@ -33,6 +33,7 @@ const userReducer = (
 		case "LOGGING_OUT":
 			console.log(localStorage);
 			localStorage.removeItem("token");
+			localStorage.removeItem("user");
 			return {
 				...state,
 				user: null,
