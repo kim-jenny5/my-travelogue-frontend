@@ -67,7 +67,7 @@ export const createUser = (user_info) => {
 				debugger;
 				return resp.json();
 			})
-			.then();
+			.then((data) => console.log(data));
 	};
 };
 

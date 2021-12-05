@@ -11,7 +11,6 @@ const tripReducer = (
 			// console.log(action);
 			// debugger;
 			return {
-				...state,
 				user_id: action.trip_info.user_id,
 				trips: [...state.trips, action.trip_info],
 				creatingTrip: true,
@@ -22,11 +21,12 @@ const tripReducer = (
 			// console.log(state);
 			// console.log(action);
 			// return state;
+			// debugger;
 			return {
 				...state,
-				user_id: action.data.user_id,
-				trips: [...state.trips, action.data],
-				creatingTrip: true,
+				// user_id: action.data.user_id,
+				// trips: [...state.trips, action.data],
+				// creatingTrip: true,
 				createdTrip: true
 			};
 

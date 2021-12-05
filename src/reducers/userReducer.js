@@ -4,6 +4,10 @@ const userReducer = (
 ) => {
 	switch (action.type) {
 		case "USER_CREATING":
+			// debugger;
+			// localStorage.setItem("user", JSON.stringify(action.user_info.user));
+			// localStorage.setItem("token", action.user_info.jwt);
+
 			return {
 				...state,
 				// user: null,
