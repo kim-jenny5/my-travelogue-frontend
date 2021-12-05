@@ -1,6 +1,6 @@
 import { isSameMonth, isSameYear, format } from "date-fns";
 
-export default function dateFormatting(trip) {
+export default function DateFormatting(trip) {
 	const start_date = new Date(trip.start_date);
 	const end_date = new Date(trip.end_date);
 	if (isSameMonth(start_date, end_date) && isSameYear(start_date, end_date)) {

@@ -1,5 +1,5 @@
 import React from "react";
-import dateFormatting from "./dateFormatting";
+import DateFormatting from "./DateFormatting";
 
 export default function PastTrips(props) {
 	return (
@@ -8,7 +8,7 @@ export default function PastTrips(props) {
 			{props.trips.map((trip) => (
 				<div>
 					<div>{trip.trip_name}</div>
-					<div>{dateFormatting(trip)}</div>
+					<div>{DateFormatting(trip)}</div>
 				</div>
 			))}
 		</div>
