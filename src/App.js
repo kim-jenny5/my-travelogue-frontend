@@ -13,6 +13,8 @@ import DashboardContainer from "./components/DashboardContainer";
 // import UserContainer from "./components/UserContainer";
 // import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
+import { MainFooter } from "./components/MainFooter";
+import { MainNav } from "./components/MainNav";
 
 // export default class App extends Component {
 class App extends Component {
