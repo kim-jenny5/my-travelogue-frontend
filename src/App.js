@@ -23,20 +23,20 @@ class App extends Component {
 	render() {
 		console.log(this.props);
 
-		if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 
 		return (
 			<div>
 				<div>
 					<Switch>
 						{/* <Route exact path="/" component={Home} /> */}
-						{/* <Route exact path="/" component={AppContainer} /> */}
-						<Route
+						<Route exact path="/" component={AppContainer} />
+						{/* <Route
 							exact
 							path="/"
 							render={(props) => <AppContainer props={props} />}
-						/>
-						<Route path="/dashboard" component={DashboardContainer} />
+						/> */}
+						{/* <Route path="/dashboard" component={DashboardContainer} /> */}
 						{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
 						<Route path="/login" component={Login} />

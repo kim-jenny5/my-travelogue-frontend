@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { logInUser } from "../actions/userActions";
+import DashboardContainer from "./DashboardContainer";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
@@ -26,6 +27,10 @@ class Login extends Component {
 
 	render() {
 		console.log(this.props);
+		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+		// if (this.props.isLoggedIn)
+		// 	return <Route to="/dashboard" component={DashboardContainer} />;
+
 		return (
 			<div>
 				<SecondNav />
