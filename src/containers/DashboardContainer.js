@@ -4,6 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "../components/UserFooter";
 import UserHeader from "../components/UserHeader";
+import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
@@ -29,7 +30,7 @@ class DashboardContainer extends Component {
 				<div>Joined {joined}</div>
 				<div>Upcoming Trips</div>
 				{this.props.trips.map((trip) => (
-					<div>{trip.trip_name}</div>
+					<TripCard trip={trip} />
 				))}
 				<div>Past Trips</div>
 				<Link to="/newtrip">+ New Trip</Link>
