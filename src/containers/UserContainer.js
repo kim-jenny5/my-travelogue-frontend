@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 // import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+import { format, compareAsc } from "date-fns";
 // import { Link } from "react-router-dom";
 
 // import Signup from "../components/Signup";
@@ -30,6 +31,23 @@ class UserContainer extends Component {
 			// return <Redirect push to="/dashboard" />;
 			// return <Redirect to="/dashboard" />;
 			// return <DashboardContainer />;
+			{
+				this.props.trips.map(
+					(trip) => {
+						const today = format(new Date(), "t");
+						const start_date = format(trip.start_date, "t");
+						const compare = compareAsc(today, start_date);
+						if (compare < 0) {
+						}
+
+						// console.log(compare);
+						// console.log(trip);
+						debugger;
+					}
+					// (console.log(trip), (<TripCard trip={trip} />))
+				);
+			}
+
 			return <Redirect to="/dashboard" />;
 			// return <Link to="/dashboard" />;
 		} else if (this.props.match.path === "/signup") {
@@ -64,7 +82,8 @@ const mapStateToProps = (state) => ({
 	// user: state.user,
 	// isLoggedIn: state.isLoggedIn
 	user: state.user.user,
-	isLoggedIn: state.user.isLoggedIn
+	isLoggedIn: state.user.isLoggedIn,
+	trips: state.trips.trips
 });
 
 // const mapDispatchToProps = {};

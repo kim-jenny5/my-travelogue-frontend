@@ -4,7 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "../components/UserFooter";
 import UserHeader from "../components/UserHeader";
-import TripCard from "../components/TripCard";
+// import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
@@ -21,7 +21,8 @@ class DashboardContainer extends Component {
 
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
-		const today = new Date();
+		// const today = new Date();
+		// format(today, "PPPP");
 
 		return (
 			<div>
@@ -31,12 +32,6 @@ class DashboardContainer extends Component {
 				</span>
 				<div>Joined {joined}</div>
 				<div>Upcoming Trips</div>
-				{this.props.trips.map(
-					(trip) => {
-						debugger;
-					}
-					// (console.log(trip), (<TripCard trip={trip} />))
-				)}
 				<div>Past Trips</div>
 				<Link to="/newtrip">+ New Trip</Link>
 				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
@@ -62,8 +57,8 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user,
-	trips: state.trips.trips
+	user: state.user.user
+	// trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
