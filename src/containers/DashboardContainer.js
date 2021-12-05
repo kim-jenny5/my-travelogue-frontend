@@ -21,6 +21,7 @@ class DashboardContainer extends Component {
 
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
+		const today = new Date();
 		return (
 			<div>
 				<UserHeader />
@@ -29,9 +30,12 @@ class DashboardContainer extends Component {
 				</span>
 				<div>Joined {joined}</div>
 				<div>Upcoming Trips</div>
-				{this.props.trips.map((trip) => (
-					<TripCard trip={trip} />
-				))}
+				{this.props.trips.map(
+					(trip) => {
+						debugger;
+					}
+					// (console.log(trip), (<TripCard trip={trip} />))
+				)}
 				<div>Past Trips</div>
 				<Link to="/newtrip">+ New Trip</Link>
 				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
