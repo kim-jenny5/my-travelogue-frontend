@@ -23,45 +23,25 @@ class DashboardContainer extends Component {
 	};
 
 	upcomingOrPastTrip = () => {
-		// let upcomingTrips = [];
-		// let pastTrips = [];
-		let allTrips = [];
-		let answers = [];
-
-		const today = formatISO(new Date());
+		let upcomingTrips = [];
+		let pastTrips = [];
 
 		this.props.trips.forEach(
 			(trip) => {
-				// const today = formatISO(new Date());
-
-				// if (isFuture(trip.start_date)) {
-				// 	upcomingTrips = [...upcomingTrips, trip];
-				// } else {
-				// 	pastTrips = [...pastTrips, trip];
-				// }
-				const date = trip.start_date.split("T")[0];
-				const dateFormatted = new Date(date);
-				const answer = isBefore(new Date(), dateFormatted);
-
-				// const answer = isFuture(trip.start_date);
-				// allTrips.push(trip.start_date);
-
-				allTrips.push(dateFormatted);
-				answers.push(answer);
-				// console.log(trip.start_date);
-				// console.log(answer);
-
-				// return (
-				// 	(<UpcomingTrips trips={upcomingTrips} />),
-				// 	(<PastTrips trips={pastTrips} />)
-				// );
+				const dateFormatted = new Date(trip.start_date);
+				const isBeforeAns = isBefore(new Date(), dateFormatted);
+				if (isBeforeAns) {
+					// [...upcomingTrips, trip];
+					upcomingTrips.push(trip);
+				} else {
+					pastTrips.push(trip);
+					// [...pastTrips, trip];
+				}
 			}
 			// (console.log(trip), (<TripCard trip={trip} />))
 		);
-		// console.log(today);
-		console.log(new Date());
-		console.log(allTrips);
-		console.log(answers);
+		console.log(`Upcoming: `, upcomingTrips);
+		console.log(`Past: `, pastTrips);
 	};
 
 	primaryRender() {
