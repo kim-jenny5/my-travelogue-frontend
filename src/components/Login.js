@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
-import { NavLink, Route, Redirect } from "react-router-dom";
+import { NavLink, Route, Redirect, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { logInUser } from "../actions/userActions";
 import DashboardContainer from "./DashboardContainer";
+import NewTripForm from "./NewTripForm";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
@@ -27,12 +28,20 @@ class Login extends Component {
 
 	render() {
 		console.log(this.props);
-		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+		// if (this.props.isLoggedIn) {
+		// 	// debugger;
+		// 	return <Redirect to="/dashboard" />;
+		// }
 		// if (this.props.isLoggedIn)
 		// 	return <Route to="/dashboard" component={DashboardContainer} />;
 
 		return (
 			<div>
+				{/* <Switch>
+					<Route to="/dashboard" component={DashboardContainer} />
+					<Route to="/newtrip" component={NewTripForm} />
+				</Switch> */}
+
 				<SecondNav />
 				<h1>Log In</h1>
 				<form onSubmit={this.handleSubmit}>

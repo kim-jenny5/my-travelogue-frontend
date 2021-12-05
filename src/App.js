@@ -5,7 +5,7 @@ import Home from "./components/Home";
 // import LoginContainer from "./containers/LoginContainer";
 // import DashboardContainer from "./components/DashboardContainer";
 // import UserContainer from "./components/UserContainer";
-// import NewTripForm from "./components/NewTripForm";
+import NewTripForm from "./components/NewTripForm";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AppContainer from "./components/AppContainer";
@@ -31,18 +31,21 @@ class App extends Component {
 			<div>
 				<div>
 					<Switch>
-						{/* <Route exact path="/" component={Home} /> */}
-						<Route exact path="/" component={AppContainer} />
+						<Route exact path="/" component={Home} />
+						{/* <Route exact path="/" component={AppContainer} /> */}
 						{/* <Route
 							exact
 							path="/"
 							render={(props) => <AppContainer props={props} />}
 						/> */}
-						{/* <Route path="/dashboard" component={DashboardContainer} /> */}
-						{/* <Route path="/login" component={UserContainer} />
-						<Route path="/signup" component={UserContainer} /> */}
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={Signup} />
+
+						<Route path="/dashboard" component={DashboardContainer} />
+						<Route path="/newtrip" component={NewTripForm}></Route>
+
+						{/* <Route path="/login" component={UserContainer} />
+						<Route path="/signup" component={UserContainer} /> */}
 						{/* <Route path="/dashboard" component={DashboardContainer} />
 						<Route path="/newtrip" component={NewTripForm} /> */}
 					</Switch>
