@@ -1,8 +1,10 @@
+import { isBefore } from "date-fns";
+
 const tripReducer = (
 	state = {
 		user_id: null,
-		// trips: { upcomingTrips: [], pastTrips: [] },
-		trips: [],
+		trips: { upcomingTrips: [], pastTrips: [] },
+		// trips: [],
 		fetchingTrip: null,
 		creatingTrip: null,
 		createdTrip: null
@@ -17,10 +19,22 @@ const tripReducer = (
 			return { ...state, user_id: action.user_info.id, fetchingTrip: true };
 
 		case "TRIPS_FETCHED":
-			console.log(state);
-			console.log(action);
-			// debugger;
-			return { ...state, trips: [...action.usersTrips] };
+			// console.log(state);
+			// console.log(action);
+			let { upcomingTrips, pastTrips } = state.trips;
+
+			for (const trip of action.usersTrips) {
+				const dateFormatted = new Date(trip.start_date);
+				const isBeforeAns = isBefore(new Date(), dateFormatted);
+				isBeforeAns
+					? (upcomingTrips = [...upcomingTrips, trip])
+					: (pastTrips = [...pastTrips, trip]);
+			}
+
+			return { ...state, trips: { upcomingTrips, pastTrips } };
+
+		// debugger;
+		// return { ...state, trips: [...action.usersTrips] };
 
 		case "CREATING_TRIP":
 			// console.log(state);
@@ -29,7 +43,11 @@ const tripReducer = (
 			return {
 				...state,
 				user_id: action.trip_info.user_id,
-				trips: [...state.trips, action.trip_info],
+				// trips: [...state.trips, action.trip_info],
+				trips: {
+					...state.trips,
+					upcomingTrips: [...state.trips.upcomingTrips, action.trip_info]
+				},
 				creatingTrip: true,
 				createdTrip: false
 			};

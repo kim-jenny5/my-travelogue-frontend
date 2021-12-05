@@ -13,16 +13,28 @@ export const fetchTrips = (user_info) => {
 				// debugger;
 				// console.log(data);
 				const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
-				upcomingOrPastTrip(usersTrips);
+				// upcomingOrPastTrip(usersTrips);
 				dispatch({ type: "TRIPS_FETCHED", usersTrips });
 			});
 		// .then((trips) => dispatch({ type: "TRIPS_FETCHED", trips }));
 	};
 };
 
-const upcomingOrPastTrip = (trips) => {
-	debugger;
-};
+// const upcomingOrPastTrip = (trips) => {
+// 	for (const trip of trips) {
+// 		const dateFormatted = new Date(trip.start_date);
+// 		const isBeforeAns = isBefore(new Date(), dateFormatted);
+// 		if (isBeforeAns) {
+// 			// [...upcomingTrips, trip];
+// 			upcomingTrips = [...upcomingTrips, trip];
+// 			// trips = upcomingTrips.push(trip);
+// 		} else {
+// 			// trips = pastTrips.push(trip);
+// 			pastTrips = [...pastTrips, trip];
+// 		}
+// 	}
+// 	debugger;
+// };
 
 export const createTrip = (trip_info) => {
 	// console.log(trip_info);
