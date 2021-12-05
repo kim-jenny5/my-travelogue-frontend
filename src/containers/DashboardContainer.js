@@ -22,6 +22,7 @@ class DashboardContainer extends Component {
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
 		const today = new Date();
+
 		return (
 			<div>
 				<UserHeader />
