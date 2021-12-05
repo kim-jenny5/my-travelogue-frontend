@@ -42,7 +42,7 @@ const userReducer = (
 			};
 
 		case "LOGGED_OUT":
-			debugger;
+			// debugger;
 			return { ...state, isLoggedIn: false };
 
 		// case "LOGIN_FAIL":
