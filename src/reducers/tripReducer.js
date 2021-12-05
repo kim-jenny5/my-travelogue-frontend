@@ -1,6 +1,7 @@
 const tripReducer = (
 	state = {
 		user_id: null,
+		// trips: { upcomingTrips: [], pastTrips: [] },
 		trips: [],
 		fetchingTrip: null,
 		creatingTrip: null,

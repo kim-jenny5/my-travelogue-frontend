@@ -47,6 +47,9 @@ class DashboardContainer extends Component {
 		);
 	};
 
+	renderPastTrip = () => {};
+	renderUpcomingTrip = () => {};
+
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
 		// const today = new Date();

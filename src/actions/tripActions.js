@@ -13,10 +13,15 @@ export const fetchTrips = (user_info) => {
 				// debugger;
 				// console.log(data);
 				const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
+				upcomingOrPastTrip(usersTrips);
 				dispatch({ type: "TRIPS_FETCHED", usersTrips });
 			});
 		// .then((trips) => dispatch({ type: "TRIPS_FETCHED", trips }));
 	};
+};
+
+const upcomingOrPastTrip = (trips) => {
+	debugger;
 };
 
 export const createTrip = (trip_info) => {
