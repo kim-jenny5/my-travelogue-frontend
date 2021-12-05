@@ -15,44 +15,13 @@ class DashboardContainer extends Component {
 	}
 
 	produceNewTripForm = () => {
-		// e.preventDefault();
 		// return <Redirect to="/newtrip" />;
 		// return <NewTripForm />;
 		return <Link to="/newtrip" />;
 	};
 
-	// upcomingOrPastTrip = () => {
-	// 	let upcomingTrips = [];
-	// 	let pastTrips = [];
-
-	// 	this.props.trips.map(
-	// 		(trip) => {
-	// 			const dateFormatted = new Date(trip.start_date);
-	// 			const isBeforeAns = isBefore(new Date(), dateFormatted);
-	// 			if (isBeforeAns) {
-	// 				// [...upcomingTrips, trip];
-	// 				upcomingTrips = [...upcomingTrips, trip];
-	// 				// trips = upcomingTrips.push(trip);
-	// 			} else {
-	// 				// trips = pastTrips.push(trip);
-	// 				pastTrips = [...pastTrips, trip];
-	// 			}
-	// 		}
-	// 		// (console.log(trip), (<TripCard trip={trip} />))
-	// 	);
-	// 	return (
-	// 		(<UpcomingTrips trips={upcomingTrips} />),
-	// 		(<PastTrips trips={pastTrips} />)
-	// 	);
-	// };
-
-	// renderPastTrip = () => {};
-	// renderUpcomingTrip = () => {};
-
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
-		// const today = new Date();
-		// format(today, "PPPP");
 
 		return (
 			<div>
@@ -61,35 +30,25 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
-				{/* {this.upcomingOrPastTrip()} */}
 				<UpcomingTrips trips={this.props.upcomingTrips} />
 				<PastTrips trips={this.props.pastTrips} />
 				<Link to="/newtrip">+ New Trip</Link>
-				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
 				<UserFooter user={this.props.user} />
 			</div>
 		);
 	}
 
 	render() {
-		// const { first_name, last_name, joined } = this.props.user;
-		// console.log(this.props);
 		if (this.props.user) {
 			return <>{this.primaryRender()}</>;
 		} else {
 			return <Redirect to="/login" />;
-			// return (
-			// 	<div>
-			// 		<p>Hello!</p>
-			// 	</div>
-			// );
 		}
 	}
 }
 
 const mapStateToProps = (state) => ({
 	user: state.user.user,
-	// trips: state.trips.trips
 	upcomingTrips: state.trips.trips.upcomingTrips,
 	pastTrips: state.trips.trips.pastTrips
 });

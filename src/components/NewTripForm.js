@@ -27,8 +27,6 @@ class NewTripForm extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(this.props);
-		// this.props.createTrip(this.state, this.props.user_id);
 		this.props.createTrip(this.state);
 	};
 
@@ -73,7 +71,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		// createTrip: (trip_info, user_id) => dispatch(createTrip(trip_info, user_id))
 		createTrip: (trip_info) => dispatch(createTrip(trip_info))
 	};
 };

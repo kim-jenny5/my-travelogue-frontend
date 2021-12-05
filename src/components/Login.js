@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-// import { fetchUsers } from "../actions/fetchUsers";
-// import { fetchUsers } from "../api/fetchUser";
-// import { Redirect } from "react-router";
 import { logInUser } from "../actions/userActions";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
 class Login extends Component {
-	// this state is for login form
 	state = {
 		email: "",
 		password: ""
@@ -24,11 +20,8 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(this.state);
 		console.log(this.props);
 		this.props.logInUser(this.state);
-		// if
-		// logInUser(this.state);
 	};
 
 	render() {
@@ -61,8 +54,6 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	// user: state.user,
-	// isLoggedIn: state.isLoggedIn
 	user: state.user.user,
 	isLoggedIn: state.user.isLoggedIn
 });
