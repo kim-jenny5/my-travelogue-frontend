@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 // import DashboardContainer from "./DashboardContainer";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+// import { Link } from "react-router-dom";
 
 // import Signup from "../components/Signup";
 
@@ -26,11 +27,11 @@ class UserContainer extends Component {
 		if (this.props.isLoggedIn) {
 			// debugger;
 			// return <ProfileContainer />;
-			// const name = usersName();
 			// return <Redirect push to="/dashboard" />;
 			// return <Redirect to="/dashboard" />;
 			// return <DashboardContainer />;
 			return <Redirect to="/dashboard" />;
+			// return <Link to="/dashboard" />;
 		} else if (this.props.match.path === "/signup") {
 			return <Signup />;
 		} else {

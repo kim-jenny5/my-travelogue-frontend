@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
+import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "../components/UserFooter";
 import UserHeader from "../components/UserHeader";
-import NewTripForm from "../components/NewTripForm";
+// import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
+	componentDidMount() {
+		// this.props.fetchTrips(this.props.user);
+		this.props.fetchTrips(this.state);
+	}
+
 	produceNewTripForm = () => {
 		// e.preventDefault();
 		// return <Redirect to="/newtrip" />;
@@ -48,10 +54,11 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	// user: state.user
 	user: state.user.user
 });
 
-// const mapDispatchToProps = {};
+const mapDispatchToProps = (dispatch) => {
+	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+};
 
-export default connect(mapStateToProps)(DashboardContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
