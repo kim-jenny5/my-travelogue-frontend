@@ -8,8 +8,7 @@ import UserHeader from "../components/UserHeader";
 
 class DashboardContainer extends Component {
 	componentDidMount() {
-		// this.props.fetchTrips(this.props.user);
-		this.props.fetchTrips(this.state);
+		this.props.fetchTrips(this.props.user);
 	}
 
 	produceNewTripForm = () => {

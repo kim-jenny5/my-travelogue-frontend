@@ -1,4 +1,6 @@
-export const fetchTrips = () => {
+export const fetchTrips = (user_info) => {
+	console.log(user_info);
+	debugger;
 	return (dispatch) => {
 		dispatch({ type: "FETCHING_TRIPS" });
 		fetch("http://localhost:3000/dashboard", {
