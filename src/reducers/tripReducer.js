@@ -18,8 +18,8 @@ const tripReducer = (
 		case "TRIPS_FETCHED":
 			console.log(state);
 			console.log(action);
-			debugger;
-			return;
+			// debugger;
+			return { ...state, trips: [...action.usersTrips] };
 
 		case "CREATING_TRIP":
 			// console.log(state);

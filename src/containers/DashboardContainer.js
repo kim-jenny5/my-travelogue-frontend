@@ -28,6 +28,9 @@ class DashboardContainer extends Component {
 				</span>
 				<div>Joined {joined}</div>
 				<div>Upcoming Trips</div>
+				{this.props.trips.map((trip) => (
+					<div>{trip.trip_name}</div>
+				))}
 				<div>Past Trips</div>
 				<Link to="/newtrip">+ New Trip</Link>
 				{/* <button onClick={this.produceNewTripForm}>+ New Trip</button> */}
@@ -53,7 +56,8 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user
+	user: state.user.user,
+	trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
