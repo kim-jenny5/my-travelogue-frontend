@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from "./components/Home";
-// import Login from "./containers/Login";
-// import Login from "./components/Login";
 // import LoginContainer from "./containers/LoginContainer";
-import DashboardContainer from "./components/DashboardContainer";
-import UserContainer from "./components/UserContainer";
-import NewTripForm from "./components/NewTripForm";
+// import DashboardContainer from "./components/DashboardContainer";
+// import UserContainer from "./components/UserContainer";
+// import NewTripForm from "./components/NewTripForm";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 // import { fetchCurrentUser } from "./actions/userActions";
 // import Login from "./components/Login";
 
@@ -24,10 +24,12 @@ class App extends Component {
 				<div>
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/login" component={UserContainer} />
-						<Route path="/signup" component={UserContainer} />
-						<Route path="/dashboard" component={DashboardContainer} />
-						<Route path="/newtrip" component={NewTripForm} />
+						{/* <Route path="/login" component={UserContainer} />
+						<Route path="/signup" component={UserContainer} /> */}
+						<Route path="/login" component={Login} />
+						<Route path="/signup" component={Signup} />
+						{/* <Route path="/dashboard" component={DashboardContainer} />
+						<Route path="/newtrip" component={NewTripForm} /> */}
 					</Switch>
 				</div>
 			</div>
@@ -36,7 +38,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user
+	user: state.user.user,
+	isloggedIn: state.user.isLoggedIn
 });
 
 // const mapDispatchToProps = (dispatch) => {
