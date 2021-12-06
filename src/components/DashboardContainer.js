@@ -35,14 +35,6 @@ class DashboardContainer extends Component {
 				<PastTrips trips={this.props.trips.pastTrips} />
 				<Link to="/newtrip">+ New Trip</Link>
 				<UserFooter user={this.props.user} />
-				{/* {this.props.trips.map((trip) => (
-					<Route
-						path={`${trip.id}`}
-						render={(routerProps) => (
-							<TripDetails {...routerProps} trip={trip} />
-						)}
-					/>
-				))} */}
 				{/* <Route path={`${match.url}`/> */}
 			</div>
 		);
