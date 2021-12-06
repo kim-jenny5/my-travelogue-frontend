@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
 import { nanoid } from "nanoid";
 import { Redirect } from "react-router";
+import UserHeader from "./UserHeader";
 // import DateRangePicker from "react-daterange-picker";
 
 class NewTripForm extends Component {
@@ -18,26 +19,21 @@ class NewTripForm extends Component {
 		this.setState({ ...this.state, [e.target.name]: e.target.value });
 	};
 
-	connectUser = (e) => {};
-
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.createTrip(
-			{
-				...this.state,
-				id: nanoid(),
-				user_id: this.props.user_id
-			},
-			() => {
-				console.log(this.state);
-			}
-		);
-		<Redirect to="/dashboard" />;
+		this.props.createTrip({
+			...this.state,
+			id: nanoid(),
+			user_id: this.props.user_id
+		});
+		// NOTE: NOT WORKING
+		return <Redirect to="/dashboard" />;
 	};
 
 	render() {
 		return (
 			<div>
+				<UserHeader />
 				<div>When's your new trip?</div>
 				<form onSubmit={this.handleSubmit}>
 					<div>Name of your trip</div>
