@@ -1,14 +1,13 @@
 body {
 	font-family: "Poppins", sans-serif;
 }
-
-.btn-link {
-	text-decoration: none;
-}
-
 .link:visited {
 	text-decoration: none;
 	color: #000;
+}
+
+.btn-link {
+	text-decoration: none;
 }
 
 .login-btn {
@@ -17,4 +16,9 @@ body {
 
 .signup-btn {
 	background-color: #e0e0e0;
+}
+
+.main-title {
+	font-weight: 900;
+	font-size: 36px;
 }
