@@ -1,14 +1,13 @@
 import React from "react";
+import DateFormatting from "./DateFormatting";
 
 export default function TripCard(props) {
-	const { trip_name, start_date, end_date } = props.trip;
+	const { trip } = props;
 
 	return (
 		<div>
-			<div>{trip_name}</div>
-			<div>
-				{start_date} - {end_date}
-			</div>
+			<div>{trip.trip_name}</div>
+			<div>{DateFormatting(trip)}</div>
 		</div>
 	);
 }

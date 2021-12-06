@@ -1,15 +1,12 @@
 import React from "react";
-import DateFormatting from "./DateFormatting";
+import TripCard from "./TripCard";
 
 export default function UpcomingTrips(props) {
 	return (
 		<div>
 			<div>Upcoming Trips</div>
-			{props.trips.map((trip) => (
-				<div>
-					<div>{trip.trip_name}</div>
-					<div>{DateFormatting(trip)}</div>
-				</div>
+			{props.trips.map((trip, idx) => (
+				<TripCard key={idx} trip={trip} />
 			))}
 		</div>
 	);
