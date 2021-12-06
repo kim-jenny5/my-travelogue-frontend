@@ -10,7 +10,8 @@ export const MainNav = () => {
 				<Row>
 					{/* <Col md={4}> */}
 					<span className="main-title">
-						my <i>travelogue</i>
+						<span>my </span>
+						<span className="emphasis">travelogue</span>
 					</span>
 					{/* </Col> */}
 					{/* <span> */}

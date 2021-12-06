@@ -1,6 +1,7 @@
 body {
 	font-family: "Poppins", sans-serif;
 }
+
 .link:visited {
 	text-decoration: none;
 	color: #000;
@@ -29,4 +30,19 @@ body {
 .main-title {
 	font-weight: 900;
 	font-size: 36px;
+}
+
+.main-title > .emphasis {
+	font-style: italic;
+}
+
+.subtitle {
+	font-weight: bold;
+	font-size: 64px;
+	color: #ffffff;
+	background-color: gray;
+}
+
+.subtitle > .emphasis {
+	font-style: italic;
 }
