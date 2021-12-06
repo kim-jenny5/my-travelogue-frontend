@@ -1,8 +1,8 @@
-/* html,
+html,
 body {
 	margin: 0;
 	padding: 0;
-} */
+}
 
 body {
 	/* min-height: 100%; */
@@ -12,7 +12,7 @@ body {
 	width: 100vw; */
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	font-family: "Poppins", sans-serif;
 }
 
@@ -45,8 +45,13 @@ body {
 	border-radius: 5px;
 }
 
-.main-nav {
+#main-nav {
 	position: fixed;
+	width: 100%;
+	/* background-color: transparent; */
+	background-color: white;
+	/* margin: 0;
+	padding: 0; */
 }
 
 .main-title {
@@ -116,9 +121,19 @@ body {
 
 .footer .container {
 	margin-right: 25px;
+	margin-top: 12px;
 }
 
 .footer .icon-css {
-	padding-right: 30px;
+	padding-right: 20px;
 	vertical-align: middle;
+}
+
+.copyright {
+	font-size: 12px;
+}
+
+#main-nav .container {
+	right: 0;
+	/* text-align: end; */
 }

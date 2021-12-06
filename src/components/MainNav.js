@@ -15,13 +15,14 @@ export const MainNav = () => {
 			</span>
 			{/* </Col> */}
 			{/* <span> */}
-
-			<NavLink to="/login" className="link btn-link user-btn login-btn">
-				Log In
-			</NavLink>
-			<NavLink to="/signup" className="link btn-link user-btn signup-btn">
-				Sign Up
-			</NavLink>
+			<span className="container">
+				<NavLink to="/login" className="link btn-link user-btn login-btn">
+					Log In
+				</NavLink>
+				<NavLink to="/signup" className="link btn-link user-btn signup-btn">
+					Sign Up
+				</NavLink>
+			</span>
 			{/* </Row>
 			</Container> */}
 		</div>
