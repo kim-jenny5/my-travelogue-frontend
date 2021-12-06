@@ -28,10 +28,10 @@ class Login extends Component {
 
 	render() {
 		console.log(this.props);
-		// if (this.props.isLoggedIn) {
-		// 	// debugger;
-		// 	return <Redirect to="/dashboard" />;
-		// }
+		if (this.props.isLoggedIn) {
+			// debugger;
+			return <Redirect to="/dashboard" />;
+		}
 		// if (this.props.isLoggedIn)
 		// 	return <Route to="/dashboard" component={DashboardContainer} />;
 
