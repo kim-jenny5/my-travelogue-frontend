@@ -1,6 +1,13 @@
+html {
+	min-height: 100%;
+}
+
 body {
+	min-height: 100%;
 	font-family: "Poppins", sans-serif;
 }
+
+/* NOTE: GENERAL */
 
 .link:visited {
 	text-decoration: none;
@@ -10,6 +17,8 @@ body {
 .btn-link {
 	text-decoration: none;
 }
+
+/* NOTE: NAVBAR/HEADER */
 
 .user-btn {
 	padding-left: 25px;
@@ -27,6 +36,10 @@ body {
 	border-radius: 5px;
 }
 
+.main-nav {
+	position: fixed;
+}
+
 .main-title {
 	font-weight: 900;
 	font-size: 36px;
@@ -35,6 +48,8 @@ body {
 .main-title > .emphasis {
 	font-style: italic;
 }
+
+/* NOTE: HOMEPAGE MAIN CONTENT */
 
 .subtitle {
 	font-weight: bold;

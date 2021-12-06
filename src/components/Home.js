@@ -7,9 +7,11 @@ export default class Home extends Component {
 		return (
 			<div>
 				<MainNav />
-				<div className="subtitle">
-					<div>What's on my bucket list?</div>
-					<div className="emphasis">Everywhere.</div>
+				<div className="main-content">
+					<div className="subtitle">
+						<div>What's on my bucket list?</div>
+						<div className="emphasis">Everywhere.</div>
+					</div>
 				</div>
 				<MainFooter />
 			</div>
