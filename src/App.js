@@ -46,7 +46,7 @@ class App extends Component {
 
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
-						<Route path="tripdetails" component={TripDetails} />
+						<Route path="/tripdetails" component={TripDetails} />
 
 						{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
