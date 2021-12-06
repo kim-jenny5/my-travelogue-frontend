@@ -3,7 +3,11 @@ import { connect } from "react-redux";
 
 class Map extends Component {
 	render() {
-		return <div></div>;
+		return (
+			<div style={{ width: "815px", height: "815px" }}>
+				<GoogleMapReact></GoogleMapReact>
+			</div>
+		);
 	}
 }
 const mapStateToProps = (state) => ({});
