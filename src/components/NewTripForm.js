@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
 import { nanoid } from "nanoid";
+import { Redirect } from "react-router";
 // import DateRangePicker from "react-daterange-picker";
 
 class NewTripForm extends Component {
@@ -21,11 +22,17 @@ class NewTripForm extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.createTrip({
-			...this.state,
-			id: nanoid(),
-			user_id: this.props.user_id
-		});
+		this.props.createTrip(
+			{
+				...this.state,
+				id: nanoid(),
+				user_id: this.props.user_id
+			},
+			() => {
+				console.log(this.state);
+			}
+		);
+		<Redirect to="/dashboard" />;
 	};
 
 	render() {
