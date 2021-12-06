@@ -10,12 +10,20 @@ body {
 	text-decoration: none;
 }
 
+.user-btn {
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .login-btn {
 	background-color: transparent;
 }
 
 .signup-btn {
 	background-color: #e0e0e0;
+	border-radius: 5px;
 }
 
 .main-title {

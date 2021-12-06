@@ -1,18 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 export const MainNav = () => {
 	return (
 		<div id="main-nav">
-			<div className="main-title">
-				my <i>travelogue</i>
-			</div>
-			<NavLink to="/login" className="link btn-link login-btn">
-				Log In
-			</NavLink>
-			<NavLink to="/signup" className="link btn-link signup-btn">
-				Sign Up
-			</NavLink>
+			<Container>
+				<Row>
+					{/* <Col md={4}> */}
+					<span className="main-title">
+						my <i>travelogue</i>
+					</span>
+					{/* </Col> */}
+					{/* <span> */}
+
+					<NavLink to="/login" className="link btn-link user-btn login-btn">
+						Log In
+					</NavLink>
+					<NavLink to="/signup" className="link btn-link user-btn signup-btn">
+						Sign Up
+					</NavLink>
+				</Row>
+			</Container>
 		</div>
 	);
 };
