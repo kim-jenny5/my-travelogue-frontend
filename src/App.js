@@ -42,6 +42,12 @@ class App extends Component {
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/dashboard" component={DashboardContainer} />
+						{/* <Route
+							path="/dashboard"
+							render={(routerProps) => (
+								<DashboardContainer {...routerProps} trips={this.props.trips} />
+							)}
+						/> */}
 						<Route path="/newtrip" component={NewTripForm} />
 
 						{/* NOTE: for now will just make a standing route and nest it later
@@ -61,7 +67,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.user.user,
-	isloggedIn: state.user.isLoggedIn
+	isloggedIn: state.user.isLoggedIn,
+	trips: state.trips.trips
 });
 
 // const mapDispatchToProps = (dispatch) => {

@@ -1,25 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
+import { nanoid } from "nanoid";
 // import DateRangePicker from "react-daterange-picker";
 
 class NewTripForm extends Component {
 	state = {
-		user_id: this.props.user_id,
+		id: "",
+		user_id: "",
 		trip_name: "",
 		start_date: "",
 		end_date: ""
 	};
 
 	handleChange = (e) => {
-		// this.setState(
-		// 	{
-		// 		[e.target.name]: e.target.value
-		// 	},
-		// 	() => {
-		// 		console.log(this.state);
-		// 	}
-		// );
 		this.setState({ ...this.state, [e.target.name]: e.target.value });
 	};
 
@@ -27,7 +21,11 @@ class NewTripForm extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.createTrip(this.state);
+		this.props.createTrip({
+			...this.state,
+			id: nanoid(),
+			user_id: this.props.user_id
+		});
 	};
 
 	render() {
@@ -36,7 +34,6 @@ class NewTripForm extends Component {
 				<div>When's your new trip?</div>
 				<form onSubmit={this.handleSubmit}>
 					<div>Name of your trip</div>
-					{/* <input type="hidden" name="user_id" value={this.props.user_id} /> */}
 					<input
 						type="text"
 						name="trip_name"

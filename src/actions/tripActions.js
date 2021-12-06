@@ -19,6 +19,7 @@ export const fetchTrips = (user_info) => {
 };
 
 export const createTrip = (trip_info) => {
+	debugger;
 	return (dispatch) => {
 		dispatch({ type: "CREATING_TRIP", trip_info });
 		fetch("http://localhost:3000/newtrip", {

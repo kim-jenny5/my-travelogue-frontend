@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect, Link } from "react-router-dom";
+import { Route, Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "./UserFooter";
 import UserHeader from "./UserHeader";
 import UpcomingTrips from "./UpcomingTrips";
 import PastTrips from "./PastTrips";
+import TripDetails from "./TripDetails";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -14,11 +15,11 @@ class DashboardContainer extends Component {
 		this.props.fetchTrips(this.props.user);
 	}
 
-	produceNewTripForm = () => {
-		// return <Redirect to="/newtrip" />;
-		// return <NewTripForm />;
-		return <Link to="/newtrip" />;
-	};
+	// produceNewTripForm = () => {
+	// 	// return <Redirect to="/newtrip" />;
+	// 	// return <NewTripForm />;
+	// 	return <Link to="/newtrip" />;
+	// };
 
 	primaryRender() {
 		const { first_name, last_name, joined } = this.props.user;
@@ -30,16 +31,25 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
-				<UpcomingTrips trips={this.props.upcomingTrips} />
-				<PastTrips trips={this.props.pastTrips} />
+				<UpcomingTrips trips={this.props.trips.upcomingTrips} />
+				<PastTrips trips={this.props.trips.pastTrips} />
 				<Link to="/newtrip">+ New Trip</Link>
 				<UserFooter user={this.props.user} />
+				{/* {this.props.trips.map((trip) => (
+					<Route
+						path={`${trip.id}`}
+						render={(routerProps) => (
+							<TripDetails {...routerProps} trip={trip} />
+						)}
+					/>
+				))} */}
+				{/* <Route path={`${match.url}`/> */}
 			</div>
 		);
 	}
 
 	render() {
-		if (this.props.user) {
+		if (this.props.isLoggedIn) {
 			return <>{this.primaryRender()}</>;
 		} else {
 			return <Redirect to="/login" />;
@@ -49,8 +59,8 @@ class DashboardContainer extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.user.user,
-	upcomingTrips: state.trips.trips.upcomingTrips,
-	pastTrips: state.trips.trips.pastTrips
+	isLoggedIn: state.user.isLoggedIn,
+	trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {

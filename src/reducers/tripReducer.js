@@ -1,7 +1,9 @@
 import { isBefore } from "date-fns";
+import { nanoid } from "nanoid";
 
 const tripReducer = (
 	state = {
+		id: null,
 		user_id: null,
 		trips: { upcomingTrips: [], pastTrips: [] },
 		// trips: [],
@@ -31,6 +33,7 @@ const tripReducer = (
 		case "CREATING_TRIP":
 			return {
 				...state,
+				id: nanoid(),
 				user_id: action.trip_info.user_id,
 				// trips: [...state.trips, action.trip_info],
 				trips: {
