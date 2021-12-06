@@ -11,7 +11,6 @@ export default class Home extends Component {
 					<div>What's on my bucket list?</div>
 					<div className="emphasis">Everywhere.</div>
 				</div>
-
 				<MainFooter />
 			</div>
 		);

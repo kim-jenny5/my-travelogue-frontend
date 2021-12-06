@@ -2428,6 +2428,13 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+akar-icons@^1.9.5:
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/akar-icons/-/akar-icons-1.9.5.tgz#87c4f76ac063c2d9285810cafc83f155eac4308b"
+  integrity sha512-Wfo/LLS1h6O4ftmPjbqEDg3t0zyARWCzZHTUHmcjG2W74fHBzNzGNMKTCtsV7ZauQCg7ANbMvQdY16wLZwspPg==
+  dependencies:
+    prop-types "^15.7.2"
+
 alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
