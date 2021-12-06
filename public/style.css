@@ -2,7 +2,19 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
-/* code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
-} */
+.btn-link {
+	text-decoration: none;
+}
+
+.link:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+.login-btn {
+	background-color: transparent;
+}
+
+.signup-btn {
+	background-color: #e0e0e0;
+}

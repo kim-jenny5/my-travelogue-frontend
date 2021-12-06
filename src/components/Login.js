@@ -60,7 +60,10 @@ class Login extends Component {
 					<button type="submit">Log In</button>
 				</form>
 				<p>
-					Don't have an account? <NavLink to="/signup">Sign Up</NavLink>
+					Don't have an account?{" "}
+					<NavLink to="/signup" className="link">
+						Sign Up
+					</NavLink>
 				</p>
 			</div>
 		);

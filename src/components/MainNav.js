@@ -1,13 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 
 export const MainNav = () => {
 	return (
 		<div id="main-nav">
 			<p>my travelogue</p>
-			<NavLink to="/login">Log In</NavLink>
-			<NavLink to="/signup">Sign Up</NavLink>
+			<NavLink to="/login" className="link btn-link login-btn">
+				Log In
+			</NavLink>
+			<NavLink to="/signup" className="link btn-link signup-btn">
+				Sign Up
+			</NavLink>
 		</div>
 	);
 };

@@ -57,7 +57,10 @@ class Signup extends Component {
 					<button type="submit">Sign Up</button>
 				</form>
 				<p>
-					Already have an account? <NavLink to="/login">Log in</NavLink>
+					Already have an account?{" "}
+					<NavLink to="/login" className="link">
+						Log in
+					</NavLink>
 				</p>
 			</div>
 		);
