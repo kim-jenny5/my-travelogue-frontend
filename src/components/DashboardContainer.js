@@ -45,34 +45,32 @@ class DashboardContainer extends Component {
 		// } else {
 		// 	return <Redirect to="/login" />;
 		// }
-		console.log(this.props);
+		// console.log(this.props);
+		debugger;
 
-		if (this.props.isLoggedIn) {
-			const { first_name, last_name, joined } = this.props.user;
+		const { first_name, last_name, joined } = this.props.user;
 
-			return (
-				<div>
-					<UserHeader />
-					<span>
-						{first_name} {last_name}
-					</span>
-					<div>Joined {joined}</div>
-					<UpcomingTrips trips={this.props.trips.upcomingTrips} />
-					<PastTrips trips={this.props.trips.pastTrips} />
-					<Link to="/newtrip">+ New Trip</Link>
-					<UserFooter user={this.props.user} />
-					{/* <Route path={`${match.url}`/> */}
-				</div>
-			);
-		} else {
-			// return <Redirect to="/login" />;
-		}
+		return (
+			<div>
+				<UserHeader />
+				<span>
+					{first_name} {last_name}
+				</span>
+				<div>Joined {joined}</div>
+				<UpcomingTrips trips={this.props.trips.upcomingTrips} />
+				<PastTrips trips={this.props.trips.pastTrips} />
+				<Link to="/trips/new">+ New Trip</Link>
+				{/* <UserFooter user={this.props.user} /> */}
+				<UserFooter first_name={first_name} />
+				{/* <Route path={`${match.url}`/> */}
+			</div>
+		);
 	}
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user,
-	isLoggedIn: state.user.isLoggedIn,
+	// user: state.user.user,
+	// isLoggedIn: state.user.isLoggedIn,
 	trips: state.trips.trips
 });
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const UserFooter = (props) => {
-	const name = props.user.first_name.toLowerCase();
+	const name = props.first_name.toLowerCase();
 	return (
 		<div className="footer user">
 			<div className="container">

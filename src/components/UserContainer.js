@@ -12,22 +12,24 @@ class UserContainer extends Component {
 			// const { first_name, last_name, joined } = this.props.user;
 			// const { user } = this.props;
 			// return <DashboardContainer user={user} />;
-			return <DashboardContainer />;
+			return <DashboardContainer user={this.props.user} />;
 		} else if (this.props.match.path === "/login") {
 			// return <Redirect to="/login" />;
 			return <Login />;
 		} else if (this.props.match.path === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
-			// }
-		} else {
-			return <Redirect to="/login" />;
 		}
+		// } else {
+		// 	return <Redirect to="/login" />;
+		// 	// return <Login />;
+		// }
 	}
 }
 
 const mapStateToProps = (state) => ({
-	isloggedIn: state.user.isLoggedIn
+	user: state.user.user,
+	isLoggedIn: state.user.isLoggedIn
 });
 
 export default connect(mapStateToProps)(UserContainer);

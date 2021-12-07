@@ -37,7 +37,6 @@ class App extends Component {
 	render() {
 		// console.log(this.props);
 
-		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 		if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 
 		return (
@@ -76,7 +75,7 @@ class App extends Component {
 								<DashboardContainer {...routerProps} trips={this.props.trips} />
 							)}
 						/> */}
-						<Route exact path="/newtrip" component={NewTripForm} />
+						<Route exact path="/trips/new" component={NewTripForm} />
 
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
