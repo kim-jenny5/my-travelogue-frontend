@@ -45,22 +45,28 @@ class DashboardContainer extends Component {
 		// } else {
 		// 	return <Redirect to="/login" />;
 		// }
-		const { first_name, last_name, joined } = this.props.user;
+		console.log(this.props);
 
-		return (
-			<div>
-				<UserHeader />
-				<span>
-					{first_name} {last_name}
-				</span>
-				<div>Joined {joined}</div>
-				<UpcomingTrips trips={this.props.trips.upcomingTrips} />
-				<PastTrips trips={this.props.trips.pastTrips} />
-				<Link to="/newtrip">+ New Trip</Link>
-				<UserFooter user={this.props.user} />
-				{/* <Route path={`${match.url}`/> */}
-			</div>
-		);
+		if (this.props.isLoggedIn) {
+			const { first_name, last_name, joined } = this.props.user;
+
+			return (
+				<div>
+					<UserHeader />
+					<span>
+						{first_name} {last_name}
+					</span>
+					<div>Joined {joined}</div>
+					<UpcomingTrips trips={this.props.trips.upcomingTrips} />
+					<PastTrips trips={this.props.trips.pastTrips} />
+					<Link to="/newtrip">+ New Trip</Link>
+					<UserFooter user={this.props.user} />
+					{/* <Route path={`${match.url}`/> */}
+				</div>
+			);
+		} else {
+			// return <Redirect to="/login" />;
+		}
 	}
 }
 

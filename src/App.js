@@ -15,6 +15,7 @@ import TripDetails from "./components/TripDetails";
 import { fetchCurrentUser } from "./actions/userActions";
 import { fetchTrips } from "./actions/tripActions";
 import { logOutUser } from "./actions/userActions";
+import UserContainer from "./components/UserContainer";
 // import Login from "./components/Login";
 // import { MainFooter } from "./components/MainFooter";
 // import { MainNav } from "./components/MainNav";
@@ -51,9 +52,12 @@ class App extends Component {
 							path="/"
 							render={(props) => <AppContainer props={props} />}
 						/> */}
-						<Route exact path="/login" component={Login} />
-						<Route exact path="/signup" component={Signup} />
-						<Route exact path="/dashboard" component={DashboardContainer} />
+						{/* <Route exact path="/login" component={Login} />
+						<Route exact path="/signup" component={Signup} /> */}
+						<Route exact path="/login" component={UserContainer} />
+						<Route exact path="/signup" component={UserContainer} />
+						<Route exact path="/dashboard" component={UserContainer} />
+						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 						{/* {isLoggedIn ? <Redirect to="/dashboard" /> : null} */}
 						{/* <Route
 							exact

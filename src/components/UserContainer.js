@@ -1,46 +1,29 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 // import { Redirect } from "react-router";
-// import { Route } from "react-router-dom";
-// import { connect } from "react-redux";
-// // import DashboardContainer from "./DashboardContainer";
-// import Home from "./Home";
-// // import Login from "../components/Login";
-// // import Signup from "../components/Signup";
-// import DashboardContainer from "./DashboardContainer";
+import DashboardContainer from "./DashboardContainer";
+import Login from "./Login";
+import Signup from "./Signup";
 
-// class UserContainer extends Component {
-// 	primaryRender() {
-// 		// this.props.isLoggedIn ? (<Redirect to="/myprofile"/>) : <Login />
-// 		// if (this.props.isLoggedIn) {
-// 		// 	// debugger;
-// 		// 	// return <ProfileContainer />;
-// 		// 	// return <Redirect push to="/dashboard" />;
-// 		// 	// return <Redirect to="/dashboard" />;
-// 		// 	// return <DashboardContainer />;
-// 		// 	return <Redirect to="/dashboard" />;
-// 		// 	// return <Link to="/dashboard" />;
-// 		// } else if (this.props.match.path === "/signup") {
-// 		// 	return <Signup />;
-// 		// 	// return <Redirect to="/signup" />;
-// 		// } else {
-// 		// 	return <Login />;
-// 		// 	// return <Redirect to="/login" />;
-// 		// }
-// 		if (!this.props.isLoggedIn) return <Redirect to="/login" />;
-// 		return <Route path="/dashboard" component={DashboardContainer} />;
-// 	}
+class UserContainer extends Component {
+	render() {
+		if (this.props.isLoggedIn) {
+			// const { first_name, last_name, joined } = this.props.user;
+			// const { user } = this.props;
+			// return <DashboardContainer user={user} />;
+			return <DashboardContainer />;
+		} else if (this.props.match.path === "/login") {
+			// return <Redirect to="/login" />;
+			return <Login />;
+		} else if (this.props.match.path === "/signup") {
+			// return <Redirect to="/signup" />;
+			return <Signup />;
+		}
+	}
+}
 
-// 	render() {
-// 		return <>{this.primaryRender()}</>;
-// 	}
-// }
+const mapStateToProps = (state) => ({
+	isloggedIn: state.user.isLoggedIn
+});
 
-// const mapStateToProps = (state) => ({
-// 	user: state.user.user,
-// 	isLoggedIn: state.user.isLoggedIn
-// });
-
-// // const mapDispatchToProps = {};
-
-// export default connect(mapStateToProps)(UserContainer);
-// // export default LoginContainer;
+export default connect(mapStateToProps)(UserContainer);
