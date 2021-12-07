@@ -78,7 +78,7 @@ body {
 }
 
 .nav.second-nav {
-	width: 70%;
+	width: 65%;
 	height: 7%;
 	padding-top: 20px;
 }
@@ -94,30 +94,16 @@ body {
 	width: 100vw;
 } */
 
-.login-page {
+/* NOTE: HOMEPAGE MAIN CONTENT */
+/* .main-content {
 	height: 100vh;
 	width: 100vw;
-	background-image: url(./images/nyc.jpeg);
+	background-image: url(./korea.jpeg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-}
-
-.login {
-	padding-top: 10%;
-}
-
-/* NOTE: HOMEPAGE MAIN CONTENT */
-.main-content {
-	height: 100vh;
-	width: 100vw;
-	/* background-image: url(./korea.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover; */
-}
+} */
 
 .main-content .background-img {
 	height: 100vh;
@@ -170,4 +156,26 @@ body {
 
 .copyright {
 	font-size: 12px;
+}
+
+/* LOGIN PAGE */
+.login-page {
+	height: 100vh;
+	width: 100vw;
+	background-image: url(./images/nyc.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.login {
+	padding-top: 10%;
+	width: 32%;
+	height: 86%;
+	padding-left: 65%;
+	left: 977px !important;
+}
+
+.login.container {
 }
