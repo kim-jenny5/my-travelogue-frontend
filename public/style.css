@@ -54,9 +54,18 @@ body {
 	padding: 0; */
 }
 
+#main-nav .container {
+	float: right;
+	padding-top: 15px;
+	padding-right: 40px;
+	/* vertical-align: middle; */
+	/* text-align: end; */
+}
+
 .main-title {
 	font-weight: 900;
 	font-size: 36px;
+	padding-left: 40px;
 }
 
 .main-title > .emphasis {
@@ -131,9 +140,4 @@ body {
 
 .copyright {
 	font-size: 12px;
-}
-
-#main-nav .container {
-	right: 0;
-	/* text-align: end; */
 }

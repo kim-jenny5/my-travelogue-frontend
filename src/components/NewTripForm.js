@@ -27,6 +27,7 @@ class NewTripForm extends Component {
 			user_id: this.props.user_id
 		});
 		// NOTE: NOT WORKING
+		// history push
 		return <Redirect to="/dashboard" />;
 	};
 

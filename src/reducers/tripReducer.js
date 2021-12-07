@@ -26,7 +26,10 @@ const tripReducer = (
 				isBeforeAns
 					? (upcomingTrips = [...upcomingTrips, trip])
 					: (pastTrips = [...pastTrips, trip]);
+				//you're mutating state
 			}
+
+			// put this kind of logic in the backend
 
 			return { ...state, trips: { upcomingTrips, pastTrips } };
 

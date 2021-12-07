@@ -46,6 +46,7 @@ export const logInUser = (user_info) => {
 			.then((data) => {
 				if (data.error) alert(data.error);
 				dispatch({ type: "LOGIN_SUCCESS", data });
+				// redirect the user here possibly
 				// console.log(props);
 			});
 	};

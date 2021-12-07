@@ -31,6 +31,7 @@ class App extends Component {
 		return (
 			<div>
 				<div>
+					{/* if loading then , else switch statement */}
 					<Switch>
 						<Route exact path="/" component={Home} />
 						{/* <Route exact path="/" component={AppContainer} /> */}
@@ -39,16 +40,28 @@ class App extends Component {
 							path="/"
 							render={(props) => <AppContainer props={props} />}
 						/> */}
-						<Route path="/login" component={Login} />
-						<Route path="/signup" component={Signup} />
-						<Route path="/dashboard" component={DashboardContainer} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/signup" component={Signup} />
+						<Route exact path="/dashboard" component={DashboardContainer} />
+						{/* {isLoggedIn ? <Redirect to="/dashboard" /> : null} */}
+						{/* <Route
+							exact
+							path="/dashboard"
+							render={() => {
+								if (isLoggedIn) {
+									return <DashboardContainer />;
+								} else {
+									return <Redirect to="/login" />;
+								}
+							}}
+						/> */}
 						{/* <Route
 							path="/dashboard"
 							render={(routerProps) => (
 								<DashboardContainer {...routerProps} trips={this.props.trips} />
 							)}
 						/> */}
-						<Route path="/newtrip" component={NewTripForm} />
+						<Route exact path="/newtrip" component={NewTripForm} />
 
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
