@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { logInUser } from "../actions/userActions";
 import DashboardContainer from "./DashboardContainer";
 import NewTripForm from "./NewTripForm";
+import { MainFooter } from "./MainFooter";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
@@ -67,6 +68,7 @@ class Login extends Component {
 						</NavLink>
 					</p>
 				</div>
+				<MainFooter />
 			</div>
 		);
 	}

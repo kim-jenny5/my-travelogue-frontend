@@ -79,7 +79,7 @@ body {
 
 .nav.second-nav {
 	width: 70%;
-	height: 8%;
+	height: 7%;
 	padding-top: 20px;
 }
 
@@ -89,8 +89,9 @@ body {
 	/* padding-top: 5px; */
 }
 
-/* .login {
-} */
+.login {
+	padding-top: 10%;
+}
 
 /* NOTE: HOMEPAGE MAIN CONTENT */
 .main-content {
