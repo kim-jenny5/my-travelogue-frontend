@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 // import { Redirect } from "react-router";
 import DashboardContainer from "./DashboardContainer";
 import Login from "./Login";
@@ -18,6 +19,9 @@ class UserContainer extends Component {
 		} else if (this.props.match.path === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
+			// }
+		} else {
+			return <Redirect to="/login" />;
 		}
 	}
 }
