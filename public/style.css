@@ -186,4 +186,31 @@ body {
 .login .title {
 	font-size: 36px;
 	font-weight: bold;
+	padding-top: 38%;
+	text-align: center;
+}
+
+.login input {
+	border-radius: 5px;
+	border: 1px solid #62676b;
+	/* width: calc(100vw / 0.17); */
+	width: 17vw;
+	height: 5vh;
+	/* width: 17%;
+	height: 5%; */
+	/* width: 250px; */
+	/* height: 48px; */
+	font-family: "Poppins";
+}
+
+.login button {
+	background: #0f43f9;
+	border-radius: 8px;
+	color: white;
+	border: none;
+	width: 16vw;
+	height: 5vh;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Poppins";
 }
