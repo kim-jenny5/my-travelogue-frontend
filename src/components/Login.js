@@ -41,7 +41,7 @@ class Login extends Component {
 				<SecondNav />
 				<div className="login">
 					<div className="container">
-						<div>Log In</div>
+						<div className="title">Log In</div>
 						<form onSubmit={this.handleSubmit}>
 							<input
 								type="text"

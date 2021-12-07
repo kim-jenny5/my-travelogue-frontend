@@ -79,7 +79,7 @@ body {
 
 .nav.second-nav {
 	width: 65%;
-	height: 7%;
+	/* height: 7%; */
 	/* padding-top: 2%; */
 	/* padding-top: 20px; */
 }
@@ -172,7 +172,8 @@ body {
 }
 
 .login {
-	padding-top: 7%;
+	/* padding-top: 7%; */
+	margin-top: 55px;
 	height: 100%;
 	padding-left: 65%;
 }
@@ -180,4 +181,9 @@ body {
 .login .container {
 	height: 100%;
 	background-color: white;
+}
+
+.login .title {
+	font-size: 36px;
+	font-weight: bold;
 }
