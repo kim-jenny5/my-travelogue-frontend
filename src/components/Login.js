@@ -57,12 +57,12 @@ class Login extends Component {
 							/>
 							<button type="submit">Log In</button>
 						</form>
-						<p>
+						<div className="alt">
 							Don't have an account?{" "}
 							<NavLink to="/signup" className="link">
 								Sign Up
 							</NavLink>
-						</p>
+						</div>
 					</div>
 				</div>
 				<MainFooter />

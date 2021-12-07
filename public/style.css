@@ -181,19 +181,20 @@ body {
 .login .container {
 	height: 100%;
 	background-color: white;
+	text-align: center;
+	padding-top: 25vh;
 }
 
 .login .title {
 	font-size: 36px;
 	font-weight: bold;
-	padding-top: 38%;
 	text-align: center;
 }
 
 .login input {
+	/* position: absolute; */
 	border-radius: 5px;
 	border: 1px solid #62676b;
-	/* width: calc(100vw / 0.17); */
 	width: 17vw;
 	height: 5vh;
 	/* width: 17%;
@@ -201,6 +202,24 @@ body {
 	/* width: 250px; */
 	/* height: 48px; */
 	font-family: "Poppins";
+	display: block;
+	margin: auto;
+	/* left: 0; */
+	text-indent: 16px;
+	/* text-align: calc(); */
+}
+
+.login input:nth-child(1) {
+	/* top: 23%; */
+	/* top: 56px; */
+	/* margin-top: 23%; */
+	margin-top: 26px;
+}
+
+.login input:nth-child(2) {
+	/* top: 47.6%; */
+	margin-top: 15px;
+	/* top: 119px; */
 }
 
 .login button {
@@ -208,9 +227,29 @@ body {
 	border-radius: 8px;
 	color: white;
 	border: none;
-	width: 16vw;
-	height: 5vh;
+	width: 17.36vw;
+	height: 5.1vh;
 	font-size: 16px;
 	font-weight: bold;
 	font-family: "Poppins";
+	/* display: flex; */
+	display: block;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	margin-top: 26px !important;
+	/* margin-left: 10px; */
+	/* margin-left: 23%; */
+	/* position: absolute; */
+	/* left: 0; */
+}
+
+.login .alt {
+	font-size: 14px;
+	margin-top: 9px;
+}
+
+.login .alt .link {
+	font-weight: bold;
 }
