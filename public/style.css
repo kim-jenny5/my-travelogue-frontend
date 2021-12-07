@@ -129,6 +129,15 @@ body {
 	font-size: 12px;
 }
 
+.footer.user {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	bottom: 0;
+	background: #ffffff;
+	text-align: end;
+}
+
 /* LOGIN PAGE */
 .login-page {
 	height: 100vh;
