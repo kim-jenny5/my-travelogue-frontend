@@ -26,6 +26,12 @@ body {
 	color: #000;
 }
 
+::selection {
+	/* color: #000; */
+	color: #0f43f9;
+	background-color: #f2f2f2;
+}
+
 /* NOTE: NAVBAR/HEADER */
 
 .user-btn {
@@ -79,14 +85,14 @@ body {
 
 .nav.second-nav {
 	width: 65%;
-	/* height: 7%; */
-	/* padding-top: 2%; */
-	/* padding-top: 20px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .second-nav .main-title {
 	font-size: 24px;
 	padding-bottom: 20px;
+	text-decoration: none !important;
 	/* padding-top: 5px; */
 }
 
@@ -129,9 +135,9 @@ body {
 	/* background-color: gray; */
 }
 
-.subtitle > .emphasis {
+/* .subtitle > .emphasis {
 	font-style: italic;
-}
+} */
 
 /* NOTE: FOOTER */
 .footer.main {

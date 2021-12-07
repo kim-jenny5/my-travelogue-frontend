@@ -11,7 +11,9 @@ export default class Home extends Component {
 					<div className="background-img">
 						<div className="subtitle">
 							<div>What's on my bucket list?</div>
-							<div className="emphasis">Everywhere.</div>
+							<div>
+								<i>Everywhere.</i>
+							</div>
 						</div>
 					</div>
 				</div>
