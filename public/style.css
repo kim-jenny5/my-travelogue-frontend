@@ -5,14 +5,8 @@ body {
 }
 
 body {
-	/* min-height: 100%; */
-	/* min-width: 100%; */
-	/* width: calc(100vw - 17px); */
-	/* height: 100vh;
-	width: 100vw; */
 	width: 100%;
 	height: 100%;
-	/* overflow: hidden; */
 	font-family: "Poppins", sans-serif;
 }
 
@@ -33,7 +27,6 @@ body {
 }
 
 /* NOTE: NAVBAR/HEADER */
-
 .user-btn {
 	padding-left: 25px;
 	padding-right: 25px;
@@ -57,7 +50,6 @@ body {
 }
 
 .main-nav {
-	/* position: fixed; */
 	width: 100%;
 }
 
@@ -65,8 +57,6 @@ body {
 	float: right;
 	padding-top: 15px;
 	padding-right: 40px;
-	/* vertical-align: middle; */
-	/* text-align: end; */
 }
 
 .main-title {
@@ -93,25 +83,9 @@ body {
 	font-size: 24px;
 	padding-bottom: 20px;
 	text-decoration: none !important;
-	/* padding-top: 5px; */
 }
 
-/* .main-content .login-img {
-	height: 100vh;
-	width: 100vw;
-} */
-
 /* NOTE: HOMEPAGE MAIN CONTENT */
-/* .main-content {
-	height: 100vh;
-	width: 100vw;
-	background-image: url(./korea.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-} */
-
 .main-content .background-img {
 	height: 100vh;
 	width: 100vw;
@@ -123,32 +97,21 @@ body {
 }
 
 .subtitle {
-	/* position: absolute; */
 	font-weight: bold;
 	font-size: 64px;
 	padding-top: calc(100vh - (100vh / 1.5));
-	/* padding-left: calc(100vw - (100vw / 1.5)); */
 	color: #ffffff;
 	text-align: center;
-	/* height: 100%; */
-
-	/* background-color: gray; */
 }
-
-/* .subtitle > .emphasis {
-	font-style: italic;
-} */
 
 /* NOTE: FOOTER */
 .footer.main {
 	position: fixed;
 	width: 100%;
 	height: 50px;
-	/* margin: auto; */
 	bottom: 0;
 	background: #ffffff;
 	text-align: end;
-	/* padding-top: 20px; */
 }
 
 .footer .container {
@@ -159,6 +122,7 @@ body {
 .footer .icon-css {
 	padding-right: 20px;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .copyright {
@@ -177,58 +141,47 @@ body {
 	background-size: cover;
 }
 
-.login {
+.login-signup {
 	/* padding-top: 7%; */
 	margin-top: 55px;
 	height: 100%;
 	padding-left: 65%;
 }
 
-.login .container {
+.login-signup-container {
 	height: 100%;
 	background-color: white;
 	text-align: center;
-	padding-top: 25vh;
+	padding-top: 22vh;
 }
 
-.login .title {
+.login-signup-container .title {
 	font-size: 36px;
 	font-weight: bold;
 	text-align: center;
 }
 
-.login input {
-	/* position: absolute; */
+.login-signup-container input {
 	border-radius: 5px;
 	border: 1px solid #62676b;
 	width: 17vw;
 	height: 5vh;
-	/* width: 17%;
-	height: 5%; */
-	/* width: 250px; */
-	/* height: 48px; */
 	font-family: "Poppins";
+	font-weight: 300;
 	display: block;
 	margin: auto;
-	/* left: 0; */
 	text-indent: 16px;
-	/* text-align: calc(); */
 }
 
-.login input:nth-child(1) {
-	/* top: 23%; */
-	/* top: 56px; */
-	/* margin-top: 23%; */
+.login-signup input:nth-child(1) {
 	margin-top: 26px;
 }
 
-.login input:nth-child(2) {
-	/* top: 47.6%; */
+.login-signup input {
 	margin-top: 15px;
-	/* top: 119px; */
 }
 
-.login button {
+.login-signup-container button {
 	background: #0f43f9;
 	border-radius: 8px;
 	color: white;
@@ -238,24 +191,32 @@ body {
 	font-size: 16px;
 	font-weight: bold;
 	font-family: "Poppins";
-	/* display: flex; */
 	display: block;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	margin: auto;
 	margin-top: 26px !important;
-	/* margin-left: 10px; */
-	/* margin-left: 23%; */
-	/* position: absolute; */
-	/* left: 0; */
+	cursor: pointer;
 }
 
-.login .alt {
+.login-signup-container .alt {
 	font-size: 14px;
 	margin-top: 9px;
 }
 
-.login .alt .link {
+.login-signup-container .alt .link {
 	font-weight: bold;
+}
+
+/* NOTE: SIGNUP PAGE */
+.signup-page {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background-image: url(./images/tokyo.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }

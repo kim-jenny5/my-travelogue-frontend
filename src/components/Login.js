@@ -39,8 +39,8 @@ class Login extends Component {
 		return (
 			<div className="login-page">
 				<SecondNav />
-				<div className="login">
-					<div className="container">
+				<div className="login-signup">
+					<div className="login-signup-container">
 						<div className="title">Log In</div>
 						<form onSubmit={this.handleSubmit}>
 							<input
