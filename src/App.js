@@ -19,9 +19,9 @@ import TripDetails from "./components/TripDetails";
 
 // export default class App extends Component {
 class App extends Component {
-	// componentDidMount() {
-	// 	this.props.fetchCurrentUser();
-	// }
+	componentDidMount() {
+		// this.props.fetchCurrentUser();
+	}
 
 	render() {
 		// console.log(this.props);
