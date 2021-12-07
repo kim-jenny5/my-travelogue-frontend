@@ -14,6 +14,7 @@ import TripDetails from "./components/TripDetails";
 // import UserContainer from "./components/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 import { fetchTrips } from "./actions/tripActions";
+import { logOutUser } from "./actions/userActions";
 // import Login from "./components/Login";
 // import { MainFooter } from "./components/MainFooter";
 // import { MainNav } from "./components/MainNav";
@@ -27,6 +28,10 @@ class App extends Component {
 			this.props.fetchTrips(this.props.user);
 		}
 	}
+
+	logout = () => {
+		this.props.logOutUser();
+	};
 
 	render() {
 		// console.log(this.props);
@@ -97,7 +102,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
 	return {
 		fetchCurrentUser: () => dispatch(fetchCurrentUser()),
-		fetchTrips: (user_info) => dispatch(fetchTrips(user_info))
+		fetchTrips: (user_info) => dispatch(fetchTrips(user_info)),
+		logOutUser: () => dispatch(logOutUser())
 	};
 };
 

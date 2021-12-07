@@ -3,6 +3,7 @@ export const fetchCurrentUser = () => {
 		let token = localStorage.token;
 		if (token) {
 			return fetch("http://localhost:3000/authorized", {
+				method: "GET",
 				headers: {
 					"Content-Type": "application/json",
 					Accept: "application/json",
@@ -24,11 +25,8 @@ export const fetchCurrentUser = () => {
 };
 
 export const logInUser = (user_info) => {
-	// debugger;
 	return (dispatch) => {
-		// console.log(user_info);
-		// debugger;
-		dispatch({ type: "LOGIN_ATTEMPTING", user_info });
+		// dispatch({ type: "LOGIN_ATTEMPTING", user_info });
 		fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {
@@ -75,7 +73,7 @@ export const createUser = (user_info) => {
 export const logOutUser = (user_info) => {
 	// console.log(user_info);
 	return (dispatch) => {
-		dispatch({ type: "LOGGING_OUT", user_info });
+		// dispatch({ type: "LOGGING_OUT", user_info });
 		dispatch({ type: "LOGGED_OUT", user_info });
 	};
 };
