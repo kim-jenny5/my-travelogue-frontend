@@ -5,21 +5,21 @@ import Row from "react-bootstrap/Row";
 
 export const MainNav = () => {
 	return (
-		<div id="main-nav">
+		<div className="nav main-nav">
 			{/* <Container>
 				<Row> */}
 			{/* <Col md={4}> */}
-			<span className="main-title">
+			<span className="main-title homepage">
 				<span>my </span>
 				<span className="emphasis">travelogue</span>
 			</span>
 			{/* </Col> */}
 			{/* <span> */}
 			<span className="container">
-				<NavLink to="/login" className="link btn-link user-btn login-btn">
+				<NavLink to="/login" className="link user-btn login-btn">
 					Log In
 				</NavLink>
-				<NavLink to="/signup" className="link btn-link user-btn signup-btn">
+				<NavLink to="/signup" className="link user-btn signup-btn">
 					Sign Up
 				</NavLink>
 			</span>

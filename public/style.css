@@ -17,14 +17,13 @@ body {
 }
 
 /* NOTE: GENERAL */
+.link {
+	text-decoration: none;
+}
 
 .link:visited {
 	text-decoration: none;
 	color: #000;
-}
-
-.btn-link {
-	text-decoration: none;
 }
 
 /* NOTE: NAVBAR/HEADER */
@@ -45,16 +44,18 @@ body {
 	border-radius: 5px;
 }
 
-#main-nav {
+.nav {
 	position: fixed;
-	width: 100%;
-	/* background-color: transparent; */
-	background-color: white;
-	/* margin: 0;
-	padding: 0; */
+	/* background-color: white; */
+	background-color: lightgray;
 }
 
-#main-nav .container {
+.main-nav {
+	/* position: fixed; */
+	width: 100%;
+}
+
+.main-nav .container {
 	float: right;
 	padding-top: 15px;
 	padding-right: 40px;
@@ -64,23 +65,35 @@ body {
 
 .main-title {
 	font-weight: 900;
-	font-size: 36px;
 	padding-left: 40px;
+	letter-spacing: 0.05em;
 }
 
-.main-title > .emphasis {
+.main-title.homepage {
+	font-size: 36px;
+}
+
+.main-title .emphasis {
 	font-style: italic;
 }
 
+.nav.second-nav {
+	width: 70%;
+	height: 8%;
+	padding-top: 20px;
+}
+
+.second-nav .main-title {
+	font-size: 24px;
+	padding-bottom: 20px;
+	/* padding-top: 5px; */
+}
+
+/* .login {
+} */
+
 /* NOTE: HOMEPAGE MAIN CONTENT */
 .main-content {
-	/* height: calc(100vw - 475px); */
-	/* height: 100%;
-	width: 100%; */
-
-	/* position: relative; */
-	/* bottom: 0; */
-
 	height: 100vh;
 	width: 100vw;
 	background-image: url(./korea.jpeg);
@@ -91,12 +104,11 @@ body {
 }
 
 /* .background-img {
-	height: 100vh;
-	width: 100vw;
 	background-image: url(./korea.jpeg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
+	background-size: cover;
 } */
 
 .subtitle {

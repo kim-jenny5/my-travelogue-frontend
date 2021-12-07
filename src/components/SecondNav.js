@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 
 export const SecondNav = () => {
 	return (
-		<div id="second-nav">
-			<NavLink to="/" className="link">
-				my travelogue
+		<div className="nav second-nav">
+			<NavLink to="/" className="main-title link">
+				{/* <div> */}
+				my <span className="emphasis">travelogue</span>
+				{/* </div> */}
 			</NavLink>
 		</div>
 	);
