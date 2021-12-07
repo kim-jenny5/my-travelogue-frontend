@@ -12,7 +12,8 @@ import Signup from "./components/Signup";
 import DashboardContainer from "./components/DashboardContainer";
 import TripDetails from "./components/TripDetails";
 // import UserContainer from "./components/UserContainer";
-// import { fetchCurrentUser } from "./actions/userActions";
+import { fetchCurrentUser } from "./actions/userActions";
+import { fetchTrips } from "./actions/tripActions";
 // import Login from "./components/Login";
 // import { MainFooter } from "./components/MainFooter";
 // import { MainNav } from "./components/MainNav";
@@ -20,13 +21,18 @@ import TripDetails from "./components/TripDetails";
 // export default class App extends Component {
 class App extends Component {
 	componentDidMount() {
-		// this.props.fetchCurrentUser();
+		this.props.fetchCurrentUser();
+		// if (this.props.user) {
+		if (this.props.isLoggedIn) {
+			this.props.fetchTrips(this.props.user);
+		}
 	}
 
 	render() {
 		// console.log(this.props);
 
 		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+		if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 
 		return (
 			<div>
@@ -84,16 +90,17 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.user.user,
-	isloggedIn: state.user.isLoggedIn,
-	trips: state.trips.trips
+	isloggedIn: state.user.isLoggedIn
+	// trips: state.trips.trips
 });
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		fetchCurrentUser: () => dispatch(fetchCurrentUser())
-// 	};
-// };
+const mapDispatchToProps = (dispatch) => {
+	return {
+		fetchCurrentUser: () => dispatch(fetchCurrentUser()),
+		fetchTrips: (user_info) => dispatch(fetchTrips(user_info))
+	};
+};
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 // export default connect(mapStateToProps, mapDispatchToProps)(App);
 // export default connect(null, mapDispatchToProps)(App);

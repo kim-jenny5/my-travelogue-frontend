@@ -11,9 +11,8 @@ import TripDetails from "./TripDetails";
 // import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
-	componentDidMount() {
-		this.props.fetchTrips(this.props.user);
-	}
+	// componentDidMount() {
+	// }
 
 	// produceNewTripForm = () => {
 	// 	// return <Redirect to="/newtrip" />;
@@ -21,7 +20,31 @@ class DashboardContainer extends Component {
 	// 	return <Link to="/newtrip" />;
 	// };
 
-	primaryRender() {
+	// primaryRender() {
+	// 	const { first_name, last_name, joined } = this.props.user;
+
+	// 	return (
+	// 		<div>
+	// 			<UserHeader />
+	// 			<span>
+	// 				{first_name} {last_name}
+	// 			</span>
+	// 			<div>Joined {joined}</div>
+	// 			<UpcomingTrips trips={this.props.trips.upcomingTrips} />
+	// 			<PastTrips trips={this.props.trips.pastTrips} />
+	// 			<Link to="/newtrip">+ New Trip</Link>
+	// 			<UserFooter user={this.props.user} />
+	// 			{/* <Route path={`${match.url}`/> */}
+	// 		</div>
+	// 	);
+	// }
+
+	render() {
+		// if (this.props.isLoggedIn) {
+		// 	return <>{this.primaryRender()}</>;
+		// } else {
+		// 	return <Redirect to="/login" />;
+		// }
 		const { first_name, last_name, joined } = this.props.user;
 
 		return (
@@ -39,14 +62,6 @@ class DashboardContainer extends Component {
 			</div>
 		);
 	}
-
-	render() {
-		if (this.props.isLoggedIn) {
-			return <>{this.primaryRender()}</>;
-		} else {
-			return <Redirect to="/login" />;
-		}
-	}
 }
 
 const mapStateToProps = (state) => ({
@@ -55,8 +70,9 @@ const mapStateToProps = (state) => ({
 	trips: state.trips.trips
 });
 
-const mapDispatchToProps = (dispatch) => {
-	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
-};
+// const mapDispatchToProps = (dispatch) => {
+// 	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
+// export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
+export default connect(mapStateToProps)(DashboardContainer);
