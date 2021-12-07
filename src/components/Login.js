@@ -37,36 +37,33 @@ class Login extends Component {
 		// 	return <Route to="/dashboard" component={DashboardContainer} />;
 
 		return (
-			<div>
-				{/* <Switch>
-					<Route to="/dashboard" component={DashboardContainer} />
-					<Route to="/newtrip" component={NewTripForm} />
-				</Switch> */}
-
+			<div className="login-page">
 				<SecondNav />
-				<div className="login container">
-					<div>Log In</div>
-					<form onSubmit={this.handleSubmit}>
-						<input
-							type="text"
-							placeholder="Email Address"
-							name="email"
-							onChange={this.handleChange}
-						/>
-						<input
-							type="password"
-							placeholder="Password"
-							name="password"
-							onChange={this.handleChange}
-						/>
-						<button type="submit">Log In</button>
-					</form>
-					<p>
-						Don't have an account?{" "}
-						<NavLink to="/signup" className="link">
-							Sign Up
-						</NavLink>
-					</p>
+				<div className="main-content">
+					<div className="login container">
+						<div>Log In</div>
+						<form onSubmit={this.handleSubmit}>
+							<input
+								type="text"
+								placeholder="Email Address"
+								name="email"
+								onChange={this.handleChange}
+							/>
+							<input
+								type="password"
+								placeholder="Password"
+								name="password"
+								onChange={this.handleChange}
+							/>
+							<button type="submit">Log In</button>
+						</form>
+						<p>
+							Don't have an account?{" "}
+							<NavLink to="/signup" className="link">
+								Sign Up
+							</NavLink>
+						</p>
+					</div>
 				</div>
 				<MainFooter />
 			</div>
