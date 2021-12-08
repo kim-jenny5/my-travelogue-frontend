@@ -3,7 +3,7 @@ export const fetchTrips = (user_info) => {
 		dispatch({ type: "FETCHING_TRIPS", user_info });
 		fetch("http://localhost:3000/dashboard")
 			.then((resp) => {
-				console.log(resp);
+				// console.log(resp);
 				// debugger;
 				return resp.json();
 			})

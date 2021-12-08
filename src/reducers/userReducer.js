@@ -33,16 +33,16 @@ const userReducer = (
 				isLoggedIn: true
 			};
 
-		case "LOGGING_OUT":
-			console.log(localStorage);
-			localStorage.removeItem("token");
-			localStorage.removeItem("user");
-			return {
-				...state,
-				user: null,
-				isLoggingIn: false
-				// isLoggedIn: true
-			};
+		// case "LOGGING_OUT":
+		// 	console.log(localStorage);
+		// 	localStorage.removeItem("token");
+		// 	localStorage.removeItem("user");
+		// 	return {
+		// 		...state,
+		// 		user: null,
+		// 		isLoggingIn: false
+		// 		// isLoggedIn: true
+		// 	};
 
 		case "LOGGED_OUT":
 			return { ...state, isLoggedIn: false };

@@ -1,26 +1,25 @@
 export const fetchCurrentUser = () => {
 	return (dispatch) => {
-		const token = localStorage.token;
-		if (token) {
-			return fetch("http://localhost:3000/authorized", {
-				method: "GET",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-					Authorization: localStorage.token
+		// if (token) {
+		return fetch("http://localhost:3000/authorized", {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				Authorization: localStorage.token
+			}
+		})
+			.then((resp) => resp.json())
+			.then((data) => {
+				console.log(data);
+				if (data.error) {
+					alert(data.error);
+					localStorage.removeItem("token");
+				} else {
+					dispatch({ type: "LOGIN_SUCCESS", data });
 				}
-			})
-				.then((resp) => resp.json())
-				.then((data) => {
-					console.log(data);
-					if (data.error) {
-						alert(data.error);
-						localStorage.removeItem("token");
-					} else {
-						dispatch({ type: "LOGIN_SUCCESS", data });
-					}
-				});
-		}
+			});
+		// }
 	};
 };
 
@@ -42,7 +41,7 @@ export const logInUser = (user_info) => {
 				return resp.json();
 			})
 			.then((data) => {
-				debugger;
+				// debugger;
 				if (data.error) alert(data.error);
 				// localStorage.setItem("user", JSON.stringify(data.user));
 				// localStorage.setItem("token", data.jwt);
