@@ -26,7 +26,8 @@ export const fetchTrips = (user_info) => {
 				// upcomingOrPastTrip(usersTrips);
 				dispatch({
 					type: "TRIPS_FETCHED",
-					user: user,
+					// user: user,
+					user,
 					trips: {
 						upcomingTrips: user.upcoming_trips,
 						pastTrips: user.past_trips

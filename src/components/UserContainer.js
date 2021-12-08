@@ -16,8 +16,8 @@ class UserContainer extends Component {
 		// debugger;
 		if (this.props.isLoggedIn) {
 			// debugger;
-			return <DashboardContainer user={this.props.user} />;
-			// return <DashboardContainer />;
+			// return <DashboardContainer user={this.props.user} />;
+			return <DashboardContainer />;
 		} else if (this.props.location.pathname === "/login") {
 			return <Login />;
 		} else if (this.props.location.pathname === "/signup") {

@@ -13,7 +13,9 @@ import NewTripForm from "./NewTripForm";
 
 class DashboardContainer extends Component {
 	componentDidMount() {
-		this.props.fetchTrips(this.props.user);
+		const user = this.props.user.user || this.props.user;
+		// this.props.fetchTrips(this.props.user);
+		this.props.fetchTrips(user);
 	}
 
 	// produceNewTripForm = () => {
@@ -57,9 +59,17 @@ class DashboardContainer extends Component {
 		// console.log(this.state);
 		// debugger;
 
-		// if
+		// let { first_name, last_name, joined }
 
-		const { first_name, last_name, joined } = this.props.user;
+		// if (Object.keys(this.props.user).length !== 2) {
+		// 	{ first_name, last_name, joined } = this.props.user;
+		// } else {
+
+		// }
+
+		const { first_name, last_name, joined } =
+			this.props.user.user || this.props.user;
+		// const { first_name, last_name, joined } = this.props.user.user;
 
 		return (
 			<div>

@@ -94,6 +94,8 @@ export const logOutUser = (user_info) => {
 	// console.log(user_info);
 	return (dispatch) => {
 		// dispatch({ type: "LOGGING_OUT", user_info });
+		localStorage.removeItem("token");
+		localStorage.removeItem("user");
 		dispatch({ type: "LOGGED_OUT", user_info });
 		window.history.pushState(user_info, "", "/login");
 	};
