@@ -1,8 +1,8 @@
 export const fetchTrips = (user_info) => {
-	const user = JSON.parse(user_info);
+	// const user = JSON.parse(user_info);
 	return (dispatch) => {
-		// dispatch({ type: "FETCHING_TRIPS", user_info });
-		dispatch({ type: "FETCHING_TRIPS", user });
+		dispatch({ type: "FETCHING_TRIPS", user_info });
+		// dispatch({ type: "FETCHING_TRIPS", user });
 		fetch("http://localhost:3000/dashboard")
 			.then((resp) => {
 				// console.log(resp);
@@ -12,8 +12,8 @@ export const fetchTrips = (user_info) => {
 			.then((data) => {
 				// debugger;
 				// console.log(data);
-				// const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
-				const usersTrips = data.filter((trip) => trip.user_id === user.id);
+				const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
+				// const usersTrips = data.filter((trip) => trip.user_id === user.id);
 				// upcomingOrPastTrip(usersTrips);
 				dispatch({ type: "TRIPS_FETCHED", usersTrips });
 			});

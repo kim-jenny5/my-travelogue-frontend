@@ -19,6 +19,7 @@ const tripReducer = (
 			return { ...state, user_id: action.user.id, fetchingTrip: true };
 
 		case "TRIPS_FETCHED":
+			debugger;
 			let { upcomingTrips, pastTrips } = state.trips;
 
 			for (const trip of action.usersTrips) {

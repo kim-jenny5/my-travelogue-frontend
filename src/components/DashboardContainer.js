@@ -46,7 +46,7 @@ class DashboardContainer extends Component {
 		// 	return <Redirect to="/login" />;
 		// }
 		console.log(this.props);
-		debugger;
+		// debugger;
 
 		const { first_name, last_name, joined } = this.props.user;
 
@@ -74,9 +74,9 @@ const mapStateToProps = (state) => ({
 	trips: state.trips.trips
 });
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
-// };
+const mapDispatchToProps = (dispatch) => {
+	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
-export default connect(mapStateToProps)(DashboardContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
+// export default connect(mapStateToProps)(DashboardContainer);

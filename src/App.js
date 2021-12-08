@@ -112,8 +112,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		fetchCurrentUser: () => dispatch(fetchCurrentUser()),
-		fetchTrips: (user_info) => dispatch(fetchTrips(user_info)),
+		// fetchCurrentUser: () => dispatch(fetchCurrentUser()),
+		// fetchTrips: (user_info) => dispatch(fetchTrips(user_info)),
 		logOutUser: () => dispatch(logOutUser())
 	};
 };
