@@ -64,9 +64,9 @@ class DashboardContainer extends Component {
 				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
-				<button>
+				{/* <button>
 					<Link to="/dashboard/trips/new">+ New Trip</Link>
-				</button>
+				</button> */}
 				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter first_name={first_name} />

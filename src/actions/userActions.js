@@ -50,7 +50,7 @@ export const logInUser = (user_info) => {
 				} else {
 					// debugger;
 					dispatch({ type: "LOGIN_SUCCESS", data });
-					// window.history.pushState(data.user, "", "dashboard");
+					window.history.pushState(data.user, "", "/dashboard");
 				}
 				// localStorage.setItem("user", JSON.stringify(data.user));
 				// localStorage.setItem("token", data.jwt);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
+import { Switch, Route } from "react-router-dom";
 // import { Redirect } from "react-router";
 import DashboardContainer from "./DashboardContainer";
 import Login from "./Login";
@@ -11,6 +12,7 @@ import NewTripForm from "./NewTripForm";
 class UserContainer extends Component {
 	render() {
 		if (this.props.isLoggedIn) {
+			// debugger;
 			// return <DashboardContainer user={this.props.user} />;
 			return <DashboardContainer />;
 		} else if (this.props.match.path === "/login") {
@@ -18,10 +20,18 @@ class UserContainer extends Component {
 		} else if (this.props.match.path === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
-		} else {
-			// return <Login />;
-			return <Redirect to="/login" />;
 		}
+
+		// <div>
+		// 	<Switch>
+		// 		<Route exact path="/dashboard" component={DashboardContainer} />
+		// 	</Switch>
+		// </div>;
+
+		// } else {
+		// 	// return <Login />;
+		// 	return <Redirect to="/login" />;
+		// }
 		// } else if (this.props.match.path === "/dashboard/trips/new") {
 		// 	return <NewTripForm />;
 		// } else {

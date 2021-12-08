@@ -45,7 +45,7 @@ class App extends Component {
 	render() {
 		// console.log(this.props);
 
-		if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
+		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 		// if (!this.props.isLoggedIn) return <Redirect to="/login" />;
 
 		return (
@@ -57,13 +57,14 @@ class App extends Component {
 						<Route exact path="/login" component={UserContainer} />
 						<Route exact path="/signup" component={UserContainer} />
 						<Route exact path="/dashboard" component={UserContainer} />
+
 						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
-						<Route
+						{/* <Route
 							exact
 							path="/dashboard/trips/new"
 							component={UserContainer}
-						/>
+						/> */}
 
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
