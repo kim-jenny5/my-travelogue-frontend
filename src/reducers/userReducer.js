@@ -14,17 +14,22 @@ const userReducer = (
 				// isLoggedIn: false
 			};
 
-		case "LOGIN_ATTEMPTING":
-			return {
-				...state,
-				// user: null,
-				isLoggingIn: true
-				// isLoggedIn: false
-			};
+		// case "LOGIN_ATTEMPTING":
+		// 	debugger;
+		// 	localStorage.setItem("user", JSON.stringify(action.data.user));
+		// 	localStorage.setItem("token", action.data.jwt);
+
+		// 	return {
+		// 		...state,
+		// 		// user: null,
+		// 		isLoggingIn: true
+		// 		// isLoggedIn: false
+		// 	};
 
 		case "LOGIN_SUCCESS":
-			localStorage.setItem("user", JSON.stringify(action.data.user));
-			localStorage.setItem("token", action.data.jwt);
+			// localStorage.setItem("user", JSON.stringify(action.data.user));
+			// localStorage.setItem("token", action.data.jwt);
+			// debugger;
 
 			return {
 				...state,

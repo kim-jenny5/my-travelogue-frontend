@@ -1,6 +1,9 @@
-export const fetchCurrentUser = () => {
+export const fetchCurrentUser = (user_info) => {
+	// debugger;
 	return (dispatch) => {
 		// if (token) {
+		// dispatch({ type: "LOGIN_ATTEMPTING", user_info });
+
 		return fetch("http://localhost:3000/authorized", {
 			// method: "GET",
 			headers: {
@@ -10,15 +13,18 @@ export const fetchCurrentUser = () => {
 			}
 		})
 			.then((resp) => {
-				debugger;
+				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
 				console.log(data);
 				if (data.error) {
-					alert(data.error);
+					// alert(data.error);
 					localStorage.removeItem("token");
 				} else {
+					// debugger;
+					// localStorage.setItem("user", JSON.stringify(action.data.user));
+					// localStorage.setItem("token", action.data.jwt);
 					dispatch({ type: "LOGIN_SUCCESS", data });
 				}
 			});
@@ -28,7 +34,7 @@ export const fetchCurrentUser = () => {
 
 export const logInUser = (user_info) => {
 	return (dispatch) => {
-		// dispatch({ type: "LOGIN_ATTEMPTING", user_info });
+		dispatch({ type: "LOGIN_ATTEMPTING", user_info });
 		fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {
@@ -49,6 +55,8 @@ export const logInUser = (user_info) => {
 					alert(data.error);
 				} else {
 					// debugger;
+					localStorage.setItem("user", JSON.stringify(data.user));
+					localStorage.setItem("token", data.jwt);
 					dispatch({ type: "LOGIN_SUCCESS", data });
 					window.history.pushState(data.user, "", "/dashboard");
 				}

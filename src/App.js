@@ -25,9 +25,9 @@ class App extends Component {
 	componentDidMount() {
 		let token = localStorage.getItem("token");
 		let user = localStorage.getItem("user");
-		if (token && user) {
+		if (token) {
 			// NOTE: 12/7 JSON.PARSE is not working
-			// this.props.fetchCurrentUser(JSON.parse(user));
+			this.props.fetchCurrentUser(JSON.parse(user));
 			///////////
 			// this.props.fetchTrips(this.props.user);
 			// this.props.fetchTrips(user);
@@ -100,7 +100,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		// fetchCurrentUser: () => dispatch(fetchCurrentUser()),
+		fetchCurrentUser: () => dispatch(fetchCurrentUser()),
 		// fetchTrips: (user_info) => dispatch(fetchTrips(user_info)),
 		logOutUser: () => dispatch(logOutUser())
 	};

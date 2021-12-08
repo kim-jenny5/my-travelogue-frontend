@@ -16,8 +16,8 @@ class UserContainer extends Component {
 		// debugger;
 		if (this.props.isLoggedIn) {
 			// debugger;
-			// return <DashboardContainer user={this.props.user} />;
-			return <DashboardContainer />;
+			return <DashboardContainer user={this.props.user} />;
+			// return <DashboardContainer />;
 		} else if (this.props.location.pathname === "/login") {
 			return <Login />;
 		} else if (this.props.location.pathname === "/signup") {
@@ -54,7 +54,7 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	// user: state.user.user,
+	user: state.user.user,
 	isLoggedIn: state.user.isLoggedIn
 });
 

@@ -55,7 +55,9 @@ class DashboardContainer extends Component {
 		// }
 		// console.log(this.props);
 		// console.log(this.state);
-		// debugger;
+		debugger;
+
+		// if
 
 		const { first_name, last_name, joined } = this.props.user;
 
@@ -90,7 +92,7 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user,
+	// user: state.user.user,
 	upcomingTrips: state.trips.upcomingTrips,
 	pastTrips: state.trips.pastTrips
 	// isLoggedIn: state.user.isLoggedIn,
