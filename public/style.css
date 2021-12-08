@@ -132,10 +132,22 @@ body {
 .footer.user {
 	position: fixed;
 	width: 100%;
-	height: 80px;
+	/* height: 80px; */
+	height: 8.7%;
 	bottom: 0;
 	background: #ffffff;
 	text-align: end;
+	border-top: 5px solid #f2f2f2;
+}
+
+.footer.user .container {
+	/* vertical-align: middle; */
+	padding-top: 5px;
+}
+
+.footer.user .name {
+	font-weight: 900;
+	font-size: 24px;
 }
 
 /* LOGIN PAGE */
