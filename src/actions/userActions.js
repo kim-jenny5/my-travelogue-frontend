@@ -26,6 +26,7 @@ export const fetchCurrentUser = () => {
 					// localStorage.setItem("user", JSON.stringify(action.data.user));
 					// localStorage.setItem("token", action.data.jwt);
 					dispatch({ type: "LOGIN_SUCCESS", data });
+					window.history.pushState(data.user, "", "/dashboard");
 				}
 			});
 		// }

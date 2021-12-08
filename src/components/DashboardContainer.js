@@ -41,11 +41,11 @@ class DashboardContainer extends Component {
 	// 	);
 	// }
 
-	handleClick = () => {
-		// debugger;
-		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
-		return <NewTripForm />;
-	};
+	// handleClick = () => {
+	// 	// debugger;
+	// 	// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
+	// 	return <NewTripForm />;
+	// };
 
 	render() {
 		// if (this.props.isLoggedIn) {
@@ -55,7 +55,7 @@ class DashboardContainer extends Component {
 		// }
 		// console.log(this.props);
 		// console.log(this.state);
-		debugger;
+		// debugger;
 
 		// if
 
@@ -92,7 +92,7 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	// user: state.user.user,
+	user: state.user.user,
 	upcomingTrips: state.trips.upcomingTrips,
 	pastTrips: state.trips.pastTrips
 	// isLoggedIn: state.user.isLoggedIn,

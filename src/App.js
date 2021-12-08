@@ -26,7 +26,6 @@ class App extends Component {
 		let token = localStorage.getItem("token");
 		// let user = localStorage.getItem("user");
 		if (token) {
-			// NOTE: 12/7 JSON.PARSE is not working
 			this.props.fetchCurrentUser();
 			///////////
 			// this.props.fetchTrips(this.props.user);
@@ -59,6 +58,7 @@ class App extends Component {
 						<Route exact path="/login" component={UserContainer} />
 						<Route exact path="/signup" component={UserContainer} />
 						<Route exact path="/dashboard" component={UserContainer} />
+						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 
 						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 						{/* <Route
