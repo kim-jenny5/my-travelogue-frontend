@@ -7,6 +7,7 @@ import UserHeader from "./UserHeader";
 import UpcomingTrips from "./UpcomingTrips";
 import PastTrips from "./PastTrips";
 import TripDetails from "./TripDetails";
+import NewTripForm from "./NewTripForm";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -63,7 +64,10 @@ class DashboardContainer extends Component {
 				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
-				<Link to="/dashboard/trips/new">+ New Trip</Link>
+				<button>
+					<Link to="/dashboard/trips/new">+ New Trip</Link>
+				</button>
+				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter first_name={first_name} />
 				{/* <Route path={`${match.url}`/> */}

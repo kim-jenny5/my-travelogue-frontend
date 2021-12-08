@@ -18,6 +18,9 @@ class UserContainer extends Component {
 		} else if (this.props.match.path === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
+		} else {
+			// return <Login />;
+			return <Redirect to="/login" />;
 		}
 		// } else if (this.props.match.path === "/dashboard/trips/new") {
 		// 	return <NewTripForm />;
