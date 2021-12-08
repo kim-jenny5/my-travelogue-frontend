@@ -21,17 +21,18 @@ class UserContainer extends Component {
 		} else if (this.props.location.pathname === "/login") {
 			return <Login />;
 		} else if (this.props.location.pathname === "/signup") {
-			// return <Redirect to="/signup" />;
 			return <Signup />;
+			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
+			// 	return <NewTripForm />;
 		} else if (!this.props.isLoggedIn) {
 			return <Redirect to="/login" />;
 		}
 
-		// <div>
-		// 	<Switch>
-		// 		<Route exact path="/dashboard" component={DashboardContainer} />
-		// 	</Switch>
-		// </div>;
+		<div>
+			<Switch>
+				<Route exact path="/dashboard/trips/new" component={NewTripForm} />
+			</Switch>
+		</div>;
 
 		// } else {
 		// 	// return <Login />;

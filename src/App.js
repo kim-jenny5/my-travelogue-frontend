@@ -61,12 +61,17 @@ class App extends Component {
 						<Route exact path="/dashboard" component={UserContainer} />
 
 						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
 						{/* <Route
 							exact
 							path="/dashboard/trips/new"
 							component={UserContainer}
 						/> */}
+						{/* <Route
+							exact
+							path="/dashboard/trips/new"
+							component={DashboardContainer}
+						/> */}
+						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
 
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}

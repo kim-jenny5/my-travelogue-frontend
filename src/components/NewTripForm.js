@@ -28,7 +28,7 @@ class NewTripForm extends Component {
 		});
 		// NOTE: NOT WORKING
 		// history push
-		return <Redirect to="/dashboard" />;
+		// return <Redirect to="/dashboard" />;
 	};
 
 	render() {

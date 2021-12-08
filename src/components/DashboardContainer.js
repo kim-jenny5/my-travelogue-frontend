@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Route, Redirect, Link } from "react-router-dom";
+import { Switch, Route, Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "./UserFooter";
 import UserHeader from "./UserHeader";
@@ -41,6 +41,12 @@ class DashboardContainer extends Component {
 	// 	);
 	// }
 
+	handleClick = () => {
+		// debugger;
+		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
+		return <NewTripForm />;
+	};
+
 	render() {
 		// if (this.props.isLoggedIn) {
 		// 	return <>{this.primaryRender()}</>;
@@ -64,13 +70,20 @@ class DashboardContainer extends Component {
 				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
-				{/* <button>
-					<Link to="/dashboard/trips/new">+ New Trip</Link>
-				</button> */}
+				{/* <button onClick={this.handleClick}> */}
+				<Link to="/dashboard/trips/new">+ New Trip</Link>
+				{/* </button> */}
 				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter first_name={first_name} />
 				{/* <Route path={`${match.url}`/> */}
+				{/* <Switch>
+					<Route
+						exact
+						path="/dashboard/trips/new"
+						component={NewTripForm}
+					></Route>
+				</Switch> */}
 			</div>
 		);
 	}
