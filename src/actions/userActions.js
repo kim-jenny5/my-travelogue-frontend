@@ -1,4 +1,4 @@
-export const fetchCurrentUser = (user_info) => {
+export const fetchCurrentUser = () => {
 	// debugger;
 	return (dispatch) => {
 		// if (token) {

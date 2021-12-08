@@ -33,7 +33,7 @@ const userReducer = (
 
 			return {
 				...state,
-				user: action.data.user,
+				user: action.data,
 				isLoggingIn: true,
 				isLoggedIn: true
 			};
