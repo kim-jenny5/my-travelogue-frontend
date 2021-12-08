@@ -15,7 +15,8 @@ const tripReducer = (
 ) => {
 	switch (action.type) {
 		case "FETCHING_TRIPS":
-			return { ...state, user_id: action.user_info.id, fetchingTrip: true };
+			// return { ...state, user_id: action.user_info.id, fetchingTrip: true };
+			return { ...state, user_id: action.user.id, fetchingTrip: true };
 
 		case "TRIPS_FETCHED":
 			let { upcomingTrips, pastTrips } = state.trips;
@@ -36,7 +37,7 @@ const tripReducer = (
 		case "CREATING_TRIP":
 			return {
 				...state,
-				id: nanoid(),
+				// id: nanoid(),
 				user_id: action.trip_info.user_id,
 				// trips: [...state.trips, action.trip_info],
 				trips: {

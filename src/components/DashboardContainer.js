@@ -45,8 +45,8 @@ class DashboardContainer extends Component {
 		// } else {
 		// 	return <Redirect to="/login" />;
 		// }
-		// console.log(this.props);
-		// debugger;
+		console.log(this.props);
+		debugger;
 
 		const { first_name, last_name, joined } = this.props.user;
 

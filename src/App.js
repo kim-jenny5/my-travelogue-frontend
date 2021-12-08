@@ -23,13 +23,14 @@ import UserContainer from "./components/UserContainer";
 // export default class App extends Component {
 class App extends Component {
 	componentDidMount() {
+		// debugger
 		let token = localStorage.getItem("token");
 		let user = localStorage.getItem("user");
-		if (token && user) {
+		if (token) {
 			// debugger;
 			this.props.fetchCurrentUser();
 			// this.props.fetchTrips(this.props.user);
-			this.props.fetchTrips(JSON.parse(user));
+			this.props.fetchTrips(user);
 		}
 		// if (this.props.user) {
 		// if (this.props.isLoggedIn) {
