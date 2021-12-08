@@ -5,9 +5,11 @@ export default function PastTrips(props) {
 	return (
 		<div>
 			<div>Past Trips</div>
-			{props.trips.map((trip, idx) => (
+			<TripCard trips={props.trips} />
+
+			{/* {props.trips.map((trip, idx) => (
 				<TripCard key={idx} trip={trip} />
-			))}
+			))} */}
 		</div>
 	);
 }

@@ -3,40 +3,50 @@ import { nanoid } from "nanoid";
 
 const tripReducer = (
 	state = {
-		id: null,
+		// id: null,
 		user_id: null,
-		trips: { upcomingTrips: [], pastTrips: [] },
+		// trips: { upcomingTrips: [], pastTrips: [] },
+		upcomingTrips: [],
+		pastTrips: []
 		// trips: [],
-		fetchingTrip: null,
-		creatingTrip: null,
-		createdTrip: null
+		// fetchingTrip: null,
+		// creatingTrip: null,
+		// createdTrip: null
 	},
 	action
 ) => {
 	switch (action.type) {
-		case "FETCHING_TRIPS":
-			debugger;
-			// return { ...state, user_id: action.user_info.id, fetchingTrip: true };
-			return { ...state, user_id: action.user.id, fetchingTrip: true };
+		// case "FETCHING_TRIPS":
+		// 	debugger;
+		// 	return { ...state, user_id: action.user_info.id, fetchingTrip: true };
+		// return { ...state, user_id: action.user.id, fetchingTrip: true };
 
 		case "TRIPS_FETCHED":
-			debugger;
-			let { upcomingTrips, pastTrips } = state.trips;
+			// debugger;
+			let { upcomingTrips, pastTrips } = action.trips;
+			// debugger;
 
-			// NOTE: MOVE THIS LOGIC TO USER MODEL
+			return { ...state, user_id: action.user.id, upcomingTrips, pastTrips };
 
-			// for (const trip of action.usersTrips) {
-			// 	const dateFormatted = new Date(trip.start_date);
-			// 	const isBeforeAns = isBefore(new Date(), dateFormatted);
-			// 	isBeforeAns
-			// 		? (upcomingTrips = [...upcomingTrips, trip])
-			// 		: (pastTrips = [...pastTrips, trip]);
-			// 	//you're mutating state
-			// }
+		// return;
+		// return {...state, id: };
 
-			// // put this kind of logic in the backend
+		// let { upcomingTrips, pastTrips } = state.trips;
 
-			return { ...state, trips: { upcomingTrips, pastTrips } };
+		// NOTE: MOVE THIS LOGIC TO USER MODEL
+
+		// for (const trip of action.usersTrips) {
+		// 	const dateFormatted = new Date(trip.start_date);
+		// 	const isBeforeAns = isBefore(new Date(), dateFormatted);
+		// 	isBeforeAns
+		// 		? (upcomingTrips = [...upcomingTrips, trip])
+		// 		: (pastTrips = [...pastTrips, trip]);
+		// 	//you're mutating state
+		// }
+
+		// // put this kind of logic in the backend
+
+		// return { ...state, trips: { upcomingTrips, pastTrips } };
 
 		case "CREATING_TRIP":
 			return {

@@ -13,7 +13,8 @@ class UserContainer extends Component {
 			// 	// const { first_name, last_name, joined } = this.props.user;
 			// 	// const { user } = this.props;
 			// return <DashboardContainer user={user} />;
-			return <DashboardContainer user={this.props.user} />;
+			// return <DashboardContainer user={this.props.user} />;
+			return <DashboardContainer />;
 		} else if (this.props.match.path === "/login") {
 			// if (this.props.match.path === "/login") {
 			// return <Redirect to="/login" />;
@@ -30,7 +31,7 @@ class UserContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user,
+	// user: state.user.user,
 	isLoggedIn: state.user.isLoggedIn
 });
 

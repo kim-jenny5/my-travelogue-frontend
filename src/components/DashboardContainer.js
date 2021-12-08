@@ -11,8 +11,9 @@ import TripDetails from "./TripDetails";
 // import NewTripForm from "../components/NewTripForm";
 
 class DashboardContainer extends Component {
-	// componentDidMount() {
-	// }
+	componentDidMount() {
+		this.props.fetchTrips(this.props.user);
+	}
 
 	// produceNewTripForm = () => {
 	// 	// return <Redirect to="/newtrip" />;
@@ -46,6 +47,7 @@ class DashboardContainer extends Component {
 		// 	return <Redirect to="/login" />;
 		// }
 		console.log(this.props);
+		console.log(this.state);
 		// debugger;
 
 		const { first_name, last_name, joined } = this.props.user;
@@ -57,6 +59,8 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
+				<UpcomingTrips trips={this.props.upcomingTrips} />
+				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
 				<Link to="/trips/new">+ New Trip</Link>
@@ -69,13 +73,15 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	// user: state.user.user,
+	user: state.user.user,
+	upcomingTrips: state.trips.upcomingTrips,
+	pastTrips: state.trips.pastTrips
 	// isLoggedIn: state.user.isLoggedIn,
 	// trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
-	// return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
