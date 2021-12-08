@@ -57,8 +57,8 @@ class DashboardContainer extends Component {
 					{first_name} {last_name}
 				</span>
 				<div>Joined {joined}</div>
-				<UpcomingTrips trips={this.props.trips.upcomingTrips} />
-				<PastTrips trips={this.props.trips.pastTrips} />
+				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
+				<PastTrips trips={this.props.trips.pastTrips} /> */}
 				<Link to="/trips/new">+ New Trip</Link>
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter first_name={first_name} />
@@ -71,11 +71,11 @@ class DashboardContainer extends Component {
 const mapStateToProps = (state) => ({
 	// user: state.user.user,
 	// isLoggedIn: state.user.isLoggedIn,
-	trips: state.trips.trips
+	// trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
-	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+	// return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);

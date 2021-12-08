@@ -7,7 +7,7 @@ export const fetchTrips = (user_info) => {
 		fetch("http://localhost:3000/users")
 			.then((resp) => {
 				// console.log(resp);
-				// debugger;
+				debugger;
 				return resp.json();
 			})
 			.then((data) => {

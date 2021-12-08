@@ -45,13 +45,19 @@ export const logInUser = (user_info) => {
 			})
 			.then((data) => {
 				// debugger;
-				if (data.error) alert(data.error);
+				if (data.error) {
+					alert(data.error);
+				} else {
+					// debugger;
+					dispatch({ type: "LOGIN_SUCCESS", data });
+					// window.history.pushState(data.user, "", "dashboard");
+				}
 				// localStorage.setItem("user", JSON.stringify(data.user));
 				// localStorage.setItem("token", data.jwt);
-				dispatch({ type: "LOGIN_SUCCESS", data });
 				// redirect the user here possibly
 				// console.log(props);
 			});
+		// .then(window.history.pushState(user_info, "", "dashboard"));
 	};
 };
 

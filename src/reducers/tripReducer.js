@@ -15,6 +15,7 @@ const tripReducer = (
 ) => {
 	switch (action.type) {
 		case "FETCHING_TRIPS":
+			debugger;
 			// return { ...state, user_id: action.user_info.id, fetchingTrip: true };
 			return { ...state, user_id: action.user.id, fetchingTrip: true };
 

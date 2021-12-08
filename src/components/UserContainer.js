@@ -5,15 +5,17 @@ import { Redirect } from "react-router";
 import DashboardContainer from "./DashboardContainer";
 import Login from "./Login";
 import Signup from "./Signup";
+import { fetchTrips } from "../actions/tripActions";
 
 class UserContainer extends Component {
 	render() {
 		if (this.props.isLoggedIn) {
-			// const { first_name, last_name, joined } = this.props.user;
-			// const { user } = this.props;
+			// 	// const { first_name, last_name, joined } = this.props.user;
+			// 	// const { user } = this.props;
 			// return <DashboardContainer user={user} />;
 			return <DashboardContainer user={this.props.user} />;
 		} else if (this.props.match.path === "/login") {
+			// if (this.props.match.path === "/login") {
 			// return <Redirect to="/login" />;
 			return <Login />;
 		} else if (this.props.match.path === "/signup") {
@@ -32,4 +34,9 @@ const mapStateToProps = (state) => ({
 	isLoggedIn: state.user.isLoggedIn
 });
 
+// const mapDispatchToProps = (dispatch) => {
+// 	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(UserContainer);
 export default connect(mapStateToProps)(UserContainer);
