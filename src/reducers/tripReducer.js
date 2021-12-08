@@ -22,16 +22,18 @@ const tripReducer = (
 			debugger;
 			let { upcomingTrips, pastTrips } = state.trips;
 
-			for (const trip of action.usersTrips) {
-				const dateFormatted = new Date(trip.start_date);
-				const isBeforeAns = isBefore(new Date(), dateFormatted);
-				isBeforeAns
-					? (upcomingTrips = [...upcomingTrips, trip])
-					: (pastTrips = [...pastTrips, trip]);
-				//you're mutating state
-			}
+			// NOTE: MOVE THIS LOGIC TO USER MODEL
 
-			// put this kind of logic in the backend
+			// for (const trip of action.usersTrips) {
+			// 	const dateFormatted = new Date(trip.start_date);
+			// 	const isBeforeAns = isBefore(new Date(), dateFormatted);
+			// 	isBeforeAns
+			// 		? (upcomingTrips = [...upcomingTrips, trip])
+			// 		: (pastTrips = [...pastTrips, trip]);
+			// 	//you're mutating state
+			// }
+
+			// // put this kind of logic in the backend
 
 			return { ...state, trips: { upcomingTrips, pastTrips } };
 

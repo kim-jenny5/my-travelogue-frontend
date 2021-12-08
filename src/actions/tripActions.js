@@ -3,14 +3,15 @@ export const fetchTrips = (user_info) => {
 	return (dispatch) => {
 		dispatch({ type: "FETCHING_TRIPS", user_info });
 		// dispatch({ type: "FETCHING_TRIPS", user });
-		fetch("http://localhost:3000/dashboard")
+		// fetch("http://localhost:3000/dashboard")
+		fetch("http://localhost:3000/users")
 			.then((resp) => {
 				// console.log(resp);
 				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
-				// debugger;
+				debugger;
 				// console.log(data);
 				const usersTrips = data.filter((trip) => trip.user_id === user_info.id);
 				// const usersTrips = data.filter((trip) => trip.user_id === user.id);
