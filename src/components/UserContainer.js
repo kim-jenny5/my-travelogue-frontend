@@ -10,16 +10,21 @@ import { fetchTrips } from "../actions/tripActions";
 import NewTripForm from "./NewTripForm";
 
 class UserContainer extends Component {
+	// this.props.location.pathname
+
 	render() {
+		// debugger;
 		if (this.props.isLoggedIn) {
 			// debugger;
 			// return <DashboardContainer user={this.props.user} />;
 			return <DashboardContainer />;
-		} else if (this.props.match.path === "/login") {
+		} else if (this.props.location.pathname === "/login") {
 			return <Login />;
-		} else if (this.props.match.path === "/signup") {
+		} else if (this.props.location.pathname === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
+		} else if (!this.props.isLoggedIn) {
+			return <Redirect to="/login" />;
 		}
 
 		// <div>

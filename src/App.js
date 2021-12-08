@@ -47,6 +47,8 @@ class App extends Component {
 
 		// if (this.props.isLoggedIn) return <Redirect to="/dashboard" />;
 		// if (!this.props.isLoggedIn) return <Redirect to="/login" />;
+		// debugger;
+		// if ()
 
 		return (
 			<div>

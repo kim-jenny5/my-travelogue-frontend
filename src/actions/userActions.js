@@ -86,5 +86,6 @@ export const logOutUser = (user_info) => {
 	return (dispatch) => {
 		// dispatch({ type: "LOGGING_OUT", user_info });
 		dispatch({ type: "LOGGED_OUT", user_info });
+		window.history.pushState(user_info, "", "/login");
 	};
 };
