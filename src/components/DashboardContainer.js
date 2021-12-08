@@ -46,8 +46,8 @@ class DashboardContainer extends Component {
 		// } else {
 		// 	return <Redirect to="/login" />;
 		// }
-		console.log(this.props);
-		console.log(this.state);
+		// console.log(this.props);
+		// console.log(this.state);
 		// debugger;
 
 		const { first_name, last_name, joined } = this.props.user;
@@ -63,7 +63,7 @@ class DashboardContainer extends Component {
 				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
-				<Link to="/trips/new">+ New Trip</Link>
+				<Link to="/dashboard/trips/new">+ New Trip</Link>
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter first_name={first_name} />
 				{/* <Route path={`${match.url}`/> */}

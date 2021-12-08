@@ -6,26 +6,30 @@ import DashboardContainer from "./DashboardContainer";
 import Login from "./Login";
 import Signup from "./Signup";
 import { fetchTrips } from "../actions/tripActions";
+import NewTripForm from "./NewTripForm";
 
 class UserContainer extends Component {
 	render() {
 		if (this.props.isLoggedIn) {
-			// 	// const { first_name, last_name, joined } = this.props.user;
-			// 	// const { user } = this.props;
-			// return <DashboardContainer user={user} />;
 			// return <DashboardContainer user={this.props.user} />;
 			return <DashboardContainer />;
 		} else if (this.props.match.path === "/login") {
-			// if (this.props.match.path === "/login") {
-			// return <Redirect to="/login" />;
 			return <Login />;
 		} else if (this.props.match.path === "/signup") {
 			// return <Redirect to="/signup" />;
 			return <Signup />;
 		}
+		// } else if (this.props.match.path === "/dashboard/trips/new") {
+		// 	return <NewTripForm />;
 		// } else {
-		// 	return <Redirect to="/login" />;
-		// 	// return <Login />;
+		// 	if (this.props.match.path === "/login") {
+		// 		// return <Login />;
+		// 		// return <Redirect to="/login" />;
+		// 	} else if (this.props.match.path === "/signup") {
+		// 		return <Signup />;
+		// 	} else if (this.props.match.path === "/dashboard/trips/new") {
+		// 		return <NewTripForm />;
+		// 	}
 		// }
 	}
 }
