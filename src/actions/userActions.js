@@ -36,7 +36,7 @@ export const fetchCurrentUser = () => {
 
 export const logInUser = (user_info) => {
 	return (dispatch) => {
-		dispatch({ type: "LOGIN_ATTEMPTING", user_info });
+		// dispatch({ type: "LOGIN_ATTEMPTING", user_info });
 		fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {

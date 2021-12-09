@@ -1,10 +1,18 @@
-const modalReducer = (state = { type: null, open: false }, action) => {
+const initialState = {
+	modalProps: { open: false },
+	modalType: null
+};
+
+const modalReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "SHOW_MODAL":
-			return;
+			return {
+				modalProps: action.modalProps,
+				modalType: action.modalType
+			};
 
 		case "HIDE_MODAL":
-			return;
+			return initialState;
 
 		default:
 			return state;
