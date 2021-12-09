@@ -75,7 +75,7 @@ class DashboardContainer extends Component {
 		// debugger;
 
 		return (
-			<div>
+			<div className="dashboard">
 				<UserHeader />
 				<div className="info container">
 					<span>
@@ -90,8 +90,10 @@ class DashboardContainer extends Component {
 					</div>
 					{/* <div>{first_upcoming_trip}</div> */}
 				</div>
-				<UpcomingTrips trips={this.props.upcomingTrips} />
-				<PastTrips trips={this.props.pastTrips} />
+				<div className="trip container">
+					<UpcomingTrips trips={this.props.upcomingTrips} />
+					<PastTrips trips={this.props.pastTrips} />
+				</div>
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
 				{/* <button onClick={this.handleClick}> */}

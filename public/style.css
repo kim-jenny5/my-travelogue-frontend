@@ -243,5 +243,18 @@ body {
 }
 
 /* DASHBOARD */
-.info.container {
+.dashboard .info.container {
+	position: absolute;
+	margin-left: 6.7vw;
+	margin-top: 8.68vh;
+	width: 36.8vw;
+	height: 40vh;
+}
+
+.dashboard .trip.container {
+	position: absolute;
+	width: 66vw;
+	height: 68vh;
+	margin-left: 28vw;
+	margin-top: 11.5vh;
 }
