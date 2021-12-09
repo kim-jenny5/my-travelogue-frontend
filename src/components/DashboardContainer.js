@@ -10,6 +10,7 @@ import NextTrip from "./NextTrip";
 import TripDetails from "./TripDetails";
 import NewTripForm from "./NewTripForm";
 import { showModal } from "../actions/modalActions";
+import ModalContainer from "./ModalContainer";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -115,17 +116,7 @@ class DashboardContainer extends Component {
 				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter firstName={first_name} />
-				{/* <Route path={`${match.url}`/> */}
-				{/* <Switch>
-					<Route
-						exact
-						path="/dashboard/trips/new"
-						component={NewTripForm}
-					></Route>
-				</Switch> */}
-				{/* <Switch>
-					<Route exact path="/dashboard/trips/new" component={NewTripForm} />
-				</Switch> */}
+				<ModalContainer />
 			</div>
 		);
 	}

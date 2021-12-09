@@ -23,7 +23,7 @@ class NewTripForm extends Component {
 		e.preventDefault();
 		this.props.createTrip({
 			...this.state,
-			id: nanoid(),
+			// id: nanoid(),
 			user_id: this.props.user_id
 		});
 		// NOTE: NOT WORKING

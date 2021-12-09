@@ -1,7 +1,7 @@
 const initialState = {
 	// modalProps: { open: false },
 	// modalType: { type: null }
-	open: false,
+	isOpen: false,
 	title: null
 };
 
@@ -11,9 +11,9 @@ const modalReducer = (state = initialState, action) => {
 			// debugger;
 			return {
 				// modalProps: action.modalProps,
-				// modalProps: { open: true },
+				// modalProps: { isOpen: true },
 				// modalType: { type: action.modalType.type }
-				open: true,
+				isOpen: true,
 				title: action.modalInfo.title
 			};
 
