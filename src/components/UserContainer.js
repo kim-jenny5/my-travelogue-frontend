@@ -17,6 +17,12 @@ class UserContainer extends Component {
 		if (this.props.isLoggedIn) {
 			// debugger;
 			// return <DashboardContainer user={this.props.user} />;
+			// if (this.props.location.pathname === "/dashboard") {
+			// 	// debugger;
+			// 	return <DashboardContainer />;
+			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
+			// 	return <NewTripForm />;
+			// }
 			return <DashboardContainer />;
 		} else if (this.props.location.pathname === "/login") {
 			return <Login />;
