@@ -347,15 +347,50 @@ input {
 	cursor: pointer;
 }
 
-.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root {
+/* .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root { */
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
 	background-color: #0f43f9;
 	color: white;
 }
 
-.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1mtjxtk-MuiButtonBase-root-MuiPickersDay-root
+	.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
 	color: #62676b;
 }
 
 .css-k008qs * {
 	display: none;
+}
+
+.MuiCalendarPicker-root.css-169iwlq-MuiCalendarPicker-root {
+	background: #f2f2f2;
+}
+
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-dekaj2-MuiButtonBase-root-MuiPickersDay-root {
+	background-color: inherit;
+}
+
+.MuiTypography-root.MuiTypography-caption.css-1d8508y-MuiTypography-root {
+	color: #0f43f9;
+	/* font-weight: bold; */
+}
+
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-dekaj2-MuiButtonBase-root-MuiPickersDay-root {
+	color: #62676b;
+}
+
+.css-1dozdou {
+	padding-top: 30px;
+}
+
+.css-ktxc6a {
+	margin-left: 5em;
+}
+
+.css-ktxc6a * {
+	font-weight: bold;
+}
+
+.PrivatePickersFadeTransitionGroup-root.MuiCalendarPicker-viewTransitionContainer.css-1wvgxus-MuiCalendarPicker-viewTransitionContainer {
+	overflow: hidden;
 }

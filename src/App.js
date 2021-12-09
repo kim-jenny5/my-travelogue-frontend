@@ -16,6 +16,8 @@ import { fetchCurrentUser } from "./actions/userActions";
 import { fetchTrips } from "./actions/tripActions";
 // import { logOutUser } from "./actions/userActions";
 import UserContainer from "./components/UserContainer";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 // import Login from "./components/Login";
 // import { MainFooter } from "./components/MainFooter";
 // import { MainNav } from "./components/MainNav";
@@ -50,46 +52,52 @@ class App extends Component {
 		// debugger;
 		// if ()
 		// if (!this.props.isLoggedIn) return <Redirect to="/login" />;
+		const theme = createTheme({
+			typography: { fontFamily: "Poppins" },
+			palette: { primary: { main: "#0F43F9" } }
+		});
 
 		return (
 			<div>
-				<div>
-					{/* if loading then , else switch statement */}
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/login" component={UserContainer} />
-						<Route exact path="/signup" component={UserContainer} />
-						{/* <Route exact path="/login" component={Login} />
+				<ThemeProvider theme={theme}>
+					<div>
+						{/* if loading then , else switch statement */}
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route exact path="/login" component={UserContainer} />
+							<Route exact path="/signup" component={UserContainer} />
+							{/* <Route exact path="/login" component={Login} />
 						<Route exact path="/signup" component={Signup} /> */}
-						<Route exact path="/dashboard" component={UserContainer} />
-						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
-						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-						{/* <Route
+							<Route exact path="/dashboard" component={UserContainer} />
+							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
+							{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
+							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
+							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
+							{/* <Route
 							exact
 							path="/dashboard/trips/new"
 							component={UserContainer}
 						/> */}
-						{/* <Route
+							{/* <Route
 							exact
 							path="/dashboard/trips/new"
 							component={DashboardContainer}
 						/> */}
-						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
-						{/* NOTE: for now will just make a standing route and nest it later
+							{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
+							{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
-						{/* <Route path="/tripdetails" component={TripDetails} /> */}
-						{/* <Route
+							{/* <Route path="/tripdetails" component={TripDetails} /> */}
+							{/* <Route
 							path="trips/:id"
 							render={(routerProps) => <TripDetails {...routerProps} />}
 						/> */}
-						{/* <Route path="/login" component={UserContainer} />
+							{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
-						{/* <Route path="/dashboard" component={DashboardContainer} />
+							{/* <Route path="/dashboard" component={DashboardContainer} />
 						<Route path="/newtrip" component={NewTripForm} /> */}
-					</Switch>
-				</div>
+						</Switch>
+					</div>
+				</ThemeProvider>
 			</div>
 		);
 	}

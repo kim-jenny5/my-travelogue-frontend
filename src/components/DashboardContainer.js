@@ -15,6 +15,7 @@ import ModalContainer from "./ModalContainer";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
+// import { ThemeProvider, createTheme } from "@mui/material/styles";
 // import PickersDay from "@mui/lab/PickersDay";
 
 // import TripCard from "../components/TripCard";
@@ -108,6 +109,7 @@ class DashboardContainer extends Component {
 							openTo="day"
 							readOnly="true"
 							disabled="true"
+							sx={{ fontFamily: "Poppins" }}
 						/>
 					</LocalizationProvider>
 					{/* <div className="next-trip-container">
