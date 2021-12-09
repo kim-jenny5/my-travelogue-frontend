@@ -256,20 +256,13 @@ input {
 }
 
 .dashboard .info.container {
-	position: absolute;
+	/* position: absolute; */
 	margin-left: 6vw;
 	margin-top: 10vh;
 	width: 31vw;
 	height: 64.3vh;
 	text-align: center;
-}
-
-.dashboard .trip.container {
-	position: absolute;
-	width: 66vw;
-	height: 68.8vh;
-	margin-left: 28.8vw;
-	margin-top: 11.55vh;
+	/* position: relative; */
 }
 
 .dashboard .info.container .user {
@@ -293,40 +286,63 @@ input {
 
 .dashboard .info.container .upcoming-trip.title {
 	position: absolute;
-	margin-top: 29em;
+	margin-top: 28em;
 }
 
 .next-trip-container {
 	position: absolute;
 	/* width: 19.4vw;
 	height: 11.7vh; */
-	width: max-content;
+	/* width: max-content; */
 	/* height: min-content; */
 	/* margin-left: 1.7vw; */
-	margin-left: 7vw;
-	margin-top: 48vh;
+	/* margin-left: 7vw;
+	margin-top: 48vh; */
+	/* width: min-content; */
+	width: 14em;
+	height: 3.25em;
+	background: #0f43f9;
+	color: white;
+	border-radius: 20px;
+	/* margin-top: 36em; */
+	/* margin-top: 5em; */
+	/* margin-left: 2em; */
+	bottom: 0;
+	padding: 0.875em;
 }
 
-/* .next-trip-container .title {
+.next-trip-container .circle {
+	position: absolute;
+	/* height: 50px; */
+	height: 3em;
+	/* width: 50px; */
+	width: 3em;
+	background-color: white;
+	border-radius: 50%;
+	/* display: block; */
+	color: #0f43f9;
+	font-weight: bold;
 	text-align: center;
-} */
+	margin-left: 0.5em;
+	/* bottom: 0.5px; */
+	/* top: 1px; */
+}
+
+.next-trip-container .circle .text {
+	padding: 12px 0;
+}
+
+.next-trip-container .text {
+	text-align: end;
+	font-size: 0.875em;
+}
 
 .dashboard .info.container .user .text:nth-child(2) {
-	/* position: absolute; */
 	margin-top: 5vh;
-	/* font-size: 1.09375vw; */
-	/* margin-left: 4.65vw; */
-	/* padding-top: 6.8vh; */
-	/* padding-top: 21px; */
-	/* display: flex;
-	align-items: center; */
 }
 
-.dashboard .info.container .user .text:nth-child(3) {
-	/* position: absolute; */
-	/* margin-left: 5.2vw;
-	padding-top: 10.2vh; */
-}
+/* .dashboard .info.container .user .text:nth-child(3) {
+} */
 
 .new-trip-btn {
 	position: absolute;
@@ -352,7 +368,7 @@ input {
 
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
-	margin-top: 12vh;
+	margin-top: 6em;
 	z-index: -1;
 }
 

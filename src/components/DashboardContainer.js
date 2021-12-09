@@ -57,21 +57,21 @@ class DashboardContainer extends Component {
 							Taken <b>{this.props.pastTrips.length}</b> trips
 						</div>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
+						<LocalizationProvider dateAdapter={AdapterDateFns}>
+							<StaticDatePicker
+								displayStaticWrapperAs="desktop"
+								orientation="portrait"
+								openTo="day"
+								readOnly="true"
+								disabled="true"
+								sx={{ fontFamily: "Poppins" }}
+							/>
+						</LocalizationProvider>
+						<div className="next-trip-container">
+							<NextTrip trip={this.props.nextTrip} />
+						</div>
 					</div>
-					<LocalizationProvider dateAdapter={AdapterDateFns}>
-						<StaticDatePicker
-							displayStaticWrapperAs="desktop"
-							orientation="portrait"
-							openTo="day"
-							readOnly="true"
-							disabled="true"
-							sx={{ fontFamily: "Poppins" }}
-						/>
-					</LocalizationProvider>
 				</div>
-				{/* <div className="next-trip-container">
-					<NextTrip trip={this.props.nextTrip} />
-				</div> */}
 				<button onClick={this.handleClick} className="new-trip-btn">
 					+ New Trip
 				</button>
