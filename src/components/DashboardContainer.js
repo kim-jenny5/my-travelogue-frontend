@@ -56,6 +56,7 @@ class DashboardContainer extends Component {
 						<div className="text">
 							Taken <b>{this.props.pastTrips.length}</b> trips
 						</div>
+						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
 					</div>
 					<LocalizationProvider dateAdapter={AdapterDateFns}>
 						<StaticDatePicker
@@ -68,10 +69,9 @@ class DashboardContainer extends Component {
 						/>
 					</LocalizationProvider>
 				</div>
-				<div className="next-trip-container">
-					<div className="title">Upcoming Trip 🚗</div>
+				{/* <div className="next-trip-container">
 					<NextTrip trip={this.props.nextTrip} />
-				</div>
+				</div> */}
 				<button onClick={this.handleClick} className="new-trip-btn">
 					+ New Trip
 				</button>

@@ -291,10 +291,13 @@ input {
 	margin-top: 5em;
 }
 
+.dashboard .info.container .upcoming-trip.title {
+	position: absolute;
+	margin-top: 29em;
+}
+
 .next-trip-container {
-	/* display: flex;
-	justify-content: center; */
-	/* position: absolute; */
+	position: absolute;
 	/* width: 19.4vw;
 	height: 11.7vh; */
 	width: max-content;
@@ -304,9 +307,9 @@ input {
 	margin-top: 48vh;
 }
 
-.next-trip-container .title {
+/* .next-trip-container .title {
 	text-align: center;
-}
+} */
 
 .dashboard .info.container .user .text:nth-child(2) {
 	/* position: absolute; */
@@ -349,7 +352,6 @@ input {
 
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
-	position: absolute;
 	margin-top: 12vh;
 	z-index: -1;
 }
