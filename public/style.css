@@ -346,3 +346,16 @@ input {
 	font-weight: bold;
 	cursor: pointer;
 }
+
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root {
+	background-color: #0f43f9;
+	color: white;
+}
+
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+	color: #62676b;
+}
+
+.css-k008qs * {
+	display: none;
+}

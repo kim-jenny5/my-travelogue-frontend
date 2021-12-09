@@ -11,6 +11,12 @@ import TripDetails from "./TripDetails";
 import NewTripForm from "./NewTripForm";
 import { showModal } from "../actions/modalActions";
 import ModalContainer from "./ModalContainer";
+
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import StaticDatePicker from "@mui/lab/StaticDatePicker";
+// import PickersDay from "@mui/lab/PickersDay";
+
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -87,17 +93,26 @@ class DashboardContainer extends Component {
 				<UserHeader />
 				<div className="info container">
 					<div className="user">
-						<div className="name">
+						{/* <div className="name">
 							{first_name} {last_name}
 						</div>
 						<div className="text">Joined {joined}</div>
 						<div className="text">
 							Taken <b>{this.props.pastTrips.length}</b> trips
-						</div>
+						</div> */}
 					</div>
-					<div className="next-trip-container">
+					<LocalizationProvider dateAdapter={AdapterDateFns}>
+						<StaticDatePicker
+							displayStaticWrapperAs="desktop"
+							orientation="portrait"
+							openTo="day"
+							readOnly="true"
+							disabled="true"
+						/>
+					</LocalizationProvider>
+					{/* <div className="next-trip-container">
 						<NextTrip trip={this.props.nextTrip} />
-					</div>
+					</div> */}
 					{/* <div>{first_upcoming_trip}</div> */}
 				</div>
 				<div className="trip container">
