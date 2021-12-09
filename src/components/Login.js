@@ -25,8 +25,6 @@ class Login extends Component {
 		e.preventDefault();
 		// console.log(this.props);
 		this.props.logInUser(this.state);
-		// debugger;
-		// window.history.pushState(this.state, "", "dashboard");
 	};
 
 	render() {
