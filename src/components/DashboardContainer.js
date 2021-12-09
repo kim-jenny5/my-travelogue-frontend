@@ -111,7 +111,7 @@ class DashboardContainer extends Component {
 				</button> */}
 
 				<button onClick={this.handleClick} className="new-trip-btn">
-					<span className="text">+ New Trip</span>
+					+ New Trip
 				</button>
 
 				{/* <button onClick={this.handleClick}>+ New Trip</button> */}
