@@ -9,6 +9,7 @@ import PastTrips from "./PastTrips";
 import NextTrip from "./NextTrip";
 import TripDetails from "./TripDetails";
 import NewTripForm from "./NewTripForm";
+import { showModal } from "../actions/modalActions";
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
 
@@ -45,9 +46,14 @@ class DashboardContainer extends Component {
 	// }
 
 	handleClick = () => {
-		// 	// debugger;
+		// debugger;
 		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
-		return <NewTripForm />;
+		// return <NewTripForm />;
+		// const modalInfo = { open: true, title: "New Trip Modal" };
+		// const modalInfo = { title: "New Trip Modal" };
+		// this.props.showModal(modalInfo);
+
+		this.props.showModal({ title: "New Trip Modal" });
 	};
 
 	render() {
@@ -102,9 +108,7 @@ class DashboardContainer extends Component {
 					<Link to="/dashboard/trips/new">+ New Trip</Link>
 				</button> */}
 
-				<button>
-					<Link to="/dashboard/trips/new">+ New Trip</Link>
-				</button>
+				<button onClick={this.handleClick}>+ New Trip</button>
 
 				{/* <button onClick={this.handleClick}>+ New Trip</button> */}
 
@@ -137,7 +141,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-	return { fetchTrips: (user_info) => dispatch(fetchTrips(user_info)) };
+	return {
+		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
+		// showModal: () => dispatch({ type: "SHOW_MODAL" })
+		showModal: (modalInfo) => dispatch(showModal(modalInfo))
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
