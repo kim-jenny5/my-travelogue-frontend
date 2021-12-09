@@ -78,14 +78,16 @@ class DashboardContainer extends Component {
 			<div className="dashboard">
 				<UserHeader />
 				<div className="info container">
-					<span>
-						{first_name} {last_name}
-					</span>
-					<div>Joined {joined}</div>
-					<div>
-						Taken <b>{this.props.pastTrips.length}</b> trips
+					<div className="user">
+						<div className="name">
+							{first_name} {last_name}
+						</div>
+						<div className="text">Joined {joined}</div>
+						<div className="text">
+							Taken <b>{this.props.pastTrips.length}</b> trips
+						</div>
 					</div>
-					<div>
+					<div className="next-trip-container">
 						<NextTrip trip={this.props.nextTrip} />
 					</div>
 					{/* <div>{first_upcoming_trip}</div> */}

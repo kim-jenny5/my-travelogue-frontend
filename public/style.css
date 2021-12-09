@@ -243,18 +243,76 @@ body {
 }
 
 /* DASHBOARD */
+.dashboard {
+	position: relative;
+}
+
 .dashboard .info.container {
 	position: absolute;
-	margin-left: 6.7vw;
-	margin-top: 8.68vh;
-	width: 36.8vw;
-	height: 40vh;
+	margin-left: 4.236vw;
+	margin-top: 13.88vh;
+	width: 23vw;
+	height: 64.3vh;
 }
 
 .dashboard .trip.container {
 	position: absolute;
 	width: 66vw;
-	height: 68vh;
-	margin-left: 28vw;
-	margin-top: 11.5vh;
+	height: 68.8vh;
+	margin-left: 28.8vw;
+	margin-top: 11.55vh;
+}
+
+.dashboard .info.container .user {
+	position: absolute;
+	width: 16.5vw;
+	height: 13.55vh;
+	margin-left: 3.19vw;
+	margin-top: 3.66vh;
+	/* display: block;
+	align-items: center; */
+
+	/* text-align: center; */
+}
+
+.dashboard .info.container .user .name {
+	position: absolute;
+	font-weight: bold;
+	/* display: block;
+	align-items: center; */
+	/* font-size: 1.667vw; */
+	/* font-size: 2.542372881355932vh; */
+	/* font-size: 1.875vw; */
+	font-size: 24px;
+}
+
+.next-trip-container {
+	position: absolute;
+	width: 19.4vw;
+	height: 11.7vh;
+	margin-left: 1.7vw;
+	margin-top: 48vh;
+}
+
+.dashboard .info.container .user .text {
+	position: absolute;
+	font-size: 14px;
+	/* font-size: 1.09375vw; */
+}
+
+.dashboard .info.container .user .text:nth-child(1) {
+	/* position: absolute;
+	font-size: 1.09375vw; */
+	/* margin-left: 4.65vw; */
+	/* padding-top: 6.8vh; */
+	/* padding-top: 21px; */
+	/* display: flex;
+	align-items: center; */
+}
+
+.dashboard .info.container .user .text:nth-child(2) {
+	/* position: absolute; */
+	margin-left: 5.2vw;
+	padding-top: 10.2vh;
+	/* display: flex; */
 }
