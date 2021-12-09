@@ -1,5 +1,6 @@
 const userReducer = (
-	state = { user: null, isLoggingIn: false, isLoggedIn: false },
+	// state = { user: null, isLoggingIn: false, isLoggedIn: false },
+	state = { user: null, isLoggedIn: false },
 	action
 ) => {
 	switch (action.type) {
@@ -8,9 +9,9 @@ const userReducer = (
 			// localStorage.setItem("token", action.user_info.jwt);
 
 			return {
-				...state,
+				...state
 				// user: null,
-				isLoggingIn: true
+				// isLoggingIn: true
 				// isLoggedIn: false
 			};
 
@@ -32,9 +33,9 @@ const userReducer = (
 			// debugger;
 
 			return {
-				...state,
+				// ...state,
 				user: action.data,
-				isLoggingIn: true,
+				// isLoggingIn: true,
 				isLoggedIn: true
 			};
 
@@ -50,7 +51,8 @@ const userReducer = (
 		// 	};
 
 		case "LOGGED_OUT":
-			return { ...state, isLoggedIn: false };
+			// debugger;
+			return { ...state, user: null, isLoggedIn: false };
 
 		// case "LOGIN_FAIL":
 		// 	return {

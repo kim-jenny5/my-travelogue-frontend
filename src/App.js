@@ -14,7 +14,7 @@ import TripDetails from "./components/TripDetails";
 // import UserContainer from "./components/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 import { fetchTrips } from "./actions/tripActions";
-import { logOutUser } from "./actions/userActions";
+// import { logOutUser } from "./actions/userActions";
 import UserContainer from "./components/UserContainer";
 // import Login from "./components/Login";
 // import { MainFooter } from "./components/MainFooter";
@@ -37,9 +37,10 @@ class App extends Component {
 		// }
 	}
 
-	logout = () => {
-		this.props.logOutUser();
-	};
+	// logout = () => {
+	// 	this.props.logOutUser();
+	// 	window.history.pushState(user_info, "", "/login");
+	// };
 
 	render() {
 		// console.log(this.props);
@@ -102,9 +103,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		fetchCurrentUser: () => dispatch(fetchCurrentUser()),
+		fetchCurrentUser: () => dispatch(fetchCurrentUser())
 		// fetchTrips: (user_info) => dispatch(fetchTrips(user_info)),
-		logOutUser: () => dispatch(logOutUser())
+		// logOutUser: () => dispatch(logOutUser())
+		// logOutUser: () => dispatch({ type: "LOGGED_OUT" })
 	};
 };
 
