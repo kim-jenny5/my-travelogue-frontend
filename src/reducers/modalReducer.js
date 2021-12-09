@@ -2,7 +2,8 @@ const initialState = {
 	// modalProps: { open: false },
 	// modalType: { type: null }
 	isOpen: false,
-	title: null
+	type: null
+	// title: null
 };
 
 const modalReducer = (state = initialState, action) => {
@@ -14,7 +15,8 @@ const modalReducer = (state = initialState, action) => {
 				// modalProps: { isOpen: true },
 				// modalType: { type: action.modalType.type }
 				isOpen: true,
-				title: action.modalInfo.title
+				type: action.modalInfo.type
+				// title: action.modalInfo.title
 			};
 
 		case "HIDE_MODAL":

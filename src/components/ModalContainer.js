@@ -23,7 +23,8 @@ class ModalContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	isOpen: state.modal.isOpen
+	isOpen: state.modal.isOpen,
+	type: state.modal.type
 });
 
 const mapDispatchToProps = (dispatch) => {

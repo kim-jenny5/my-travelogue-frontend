@@ -12,7 +12,6 @@ export default function NextTrip(props) {
 				<div>{days_left_till}</div>
 				<div>{trip_name}</div>
 				<div>{DateFormatting(start_date, end_date)}</div>
-				{/* HELLO WOOHOO! */}
 			</div>
 		);
 	} else {

@@ -54,7 +54,8 @@ class DashboardContainer extends Component {
 		// const modalInfo = { title: "New Trip Modal" };
 		// this.props.showModal(modalInfo);
 
-		this.props.showModal({ title: "New Trip Modal" });
+		// this.props.showModal({ type: "New Trip Modal" });
+		this.props.showModal({ type: "new trip" });
 	};
 
 	render() {
