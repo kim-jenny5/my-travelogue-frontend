@@ -364,6 +364,11 @@ input {
 
 .MuiCalendarPicker-root.css-169iwlq-MuiCalendarPicker-root {
 	background: #f2f2f2;
+	transform: scale(0.85);
+	/* height: 40vh;
+	width: 30vw; */
+	border-radius: 15px;
+	/* padding: 0px 10px 0px 10px; */
 }
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-dekaj2-MuiButtonBase-root-MuiPickersDay-root {
@@ -380,7 +385,8 @@ input {
 }
 
 .css-1dozdou {
-	padding-top: 30px;
+	/* padding-top: 30px; */
+	padding-top: 2em;
 }
 
 .css-ktxc6a {
