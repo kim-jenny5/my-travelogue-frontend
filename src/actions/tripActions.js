@@ -1,4 +1,4 @@
-export const fetchTrips = (user_info) => {
+export const fetchTrips = (userInfo) => {
 	// const user = JSON.parse(user_info);
 	return (dispatch) => {
 		// dispatch({ type: "FETCHING_TRIPS", user_info });
@@ -11,7 +11,7 @@ export const fetchTrips = (user_info) => {
 				return resp.json();
 			})
 			.then((data) => {
-				const fetchedUser = data.filter((user) => user.id === user_info.id);
+				const fetchedUser = data.filter((user) => user.id === userInfo.id);
 				// const user = data.filter((user) => user.id === user_info.id);
 				const [user] = fetchedUser;
 				// console.log(user);
@@ -27,11 +27,11 @@ export const fetchTrips = (user_info) => {
 				dispatch({
 					type: "TRIPS_FETCHED",
 					// user: user,
-					user,
-					trips: {
-						upcomingTrips: user.upcoming_trips,
-						pastTrips: user.past_trips
-					}
+					user
+					// trips: {
+					// 	upcomingTrips: user.upcoming_trips,
+					// 	pastTrips: user.past_trips
+					// }
 					// trips: [user.upcoming_trips, user.past_trips]
 				});
 			});
@@ -39,10 +39,10 @@ export const fetchTrips = (user_info) => {
 	};
 };
 
-export const createTrip = (trip_info) => {
+export const createTrip = (tripInfo) => {
 	// debugger;
 	return (dispatch) => {
-		dispatch({ type: "CREATING_TRIP", trip_info });
+		dispatch({ type: "CREATING_TRIP", tripInfo });
 		fetch("http://localhost:3000/newtrip", {
 			method: "POST",
 			headers: {
@@ -50,7 +50,7 @@ export const createTrip = (trip_info) => {
 				Accept: "application/json",
 				Authorization: localStorage.token
 			},
-			body: JSON.stringify(trip_info)
+			body: JSON.stringify(tripInfo)
 		})
 			.then((resp) => {
 				return resp.json();

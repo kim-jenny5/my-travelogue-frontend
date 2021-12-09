@@ -4,10 +4,11 @@ import { nanoid } from "nanoid";
 const tripReducer = (
 	state = {
 		// id: null,
-		user_id: null,
+		userId: null,
 		// trips: { upcomingTrips: [], pastTrips: [] },
 		upcomingTrips: [],
-		pastTrips: []
+		pastTrips: [],
+		nextTrip: null
 		// trips: [],
 		// fetchingTrip: null,
 		// creatingTrip: null,
@@ -23,10 +24,16 @@ const tripReducer = (
 
 		case "TRIPS_FETCHED":
 			// debugger;
-			let { upcomingTrips, pastTrips } = action.trips;
+			// let { user } = action.user;
 			// debugger;
 
-			return { ...state, user_id: action.user.id, upcomingTrips, pastTrips };
+			return {
+				...state,
+				userId: action.user.id,
+				upcomingTrips: action.user.upcoming_trips,
+				pastTrips: action.user.past_trips,
+				nextTrip: action.user.next_trip
+			};
 
 		// return;
 		// return {...state, id: };

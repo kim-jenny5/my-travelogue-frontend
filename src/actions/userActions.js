@@ -25,6 +25,7 @@ export const fetchCurrentUser = () => {
 					// debugger;
 					// localStorage.setItem("user", JSON.stringify(action.data.user));
 					// localStorage.setItem("token", action.data.jwt);
+					// debugger;
 					dispatch({ type: "LOGIN_SUCCESS", data });
 					window.history.pushState(data.user, "", "/dashboard");
 				}

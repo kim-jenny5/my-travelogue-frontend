@@ -6,6 +6,7 @@ import { UserFooter } from "./UserFooter";
 import UserHeader from "./UserHeader";
 import UpcomingTrips from "./UpcomingTrips";
 import PastTrips from "./PastTrips";
+import NextTrip from "./NextTrip";
 import TripDetails from "./TripDetails";
 import NewTripForm from "./NewTripForm";
 // import TripCard from "../components/TripCard";
@@ -71,13 +72,24 @@ class DashboardContainer extends Component {
 			this.props.user.user || this.props.user;
 		// const { first_name, last_name, joined } = this.props.user.user;
 
+		// debugger;
+
 		return (
 			<div>
 				<UserHeader />
-				<span>
-					{first_name} {last_name}
-				</span>
-				<div>Joined {joined}</div>
+				<div className="info container">
+					<span>
+						{first_name} {last_name}
+					</span>
+					<div>Joined {joined}</div>
+					<div>
+						Taken <b>{this.props.pastTrips.length}</b> trips
+					</div>
+					<div>
+						<NextTrip trip={this.props.nextTrip} />
+					</div>
+					{/* <div>{first_upcoming_trip}</div> */}
+				</div>
 				<UpcomingTrips trips={this.props.upcomingTrips} />
 				<PastTrips trips={this.props.pastTrips} />
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
@@ -87,7 +99,7 @@ class DashboardContainer extends Component {
 				{/* </button> */}
 				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
-				<UserFooter first_name={first_name} />
+				<UserFooter firstName={first_name} />
 				{/* <Route path={`${match.url}`/> */}
 				{/* <Switch>
 					<Route
@@ -104,7 +116,8 @@ class DashboardContainer extends Component {
 const mapStateToProps = (state) => ({
 	user: state.user.user,
 	upcomingTrips: state.trips.upcomingTrips,
-	pastTrips: state.trips.pastTrips
+	pastTrips: state.trips.pastTrips,
+	nextTrip: state.trips.nextTrip
 	// isLoggedIn: state.user.isLoggedIn,
 	// trips: state.trips.trips
 });
