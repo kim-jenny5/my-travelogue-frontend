@@ -24,6 +24,9 @@ class UserContainer extends Component {
 			return <Signup />;
 			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
 			// 	return <NewTripForm />;
+			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
+			// return <NewTripForm />;
+			// debugger;
 		} else if (!this.props.isLoggedIn) {
 			return <Redirect to="/login" />;
 		}

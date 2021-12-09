@@ -48,6 +48,7 @@ class App extends Component {
 		// if (!this.props.isLoggedIn) return <Redirect to="/login" />;
 		// debugger;
 		// if ()
+		// if (!this.props.isLoggedIn) return <Redirect to="/login" />;
 
 		return (
 			<div>
@@ -56,10 +57,13 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={UserContainer} />
-						<Route exact path="/signup" component={UserContainer} />
+						// <Route exact path="/signup" component={UserContainer} />
+						{/* <Route exact path="/login" component={Login} />
+						<Route exact path="/signup" component={Signup} /> */}
 						<Route exact path="/dashboard" component={UserContainer} />
 						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-
+						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
+						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 						{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 						{/* <Route
 							exact
@@ -72,7 +76,6 @@ class App extends Component {
 							component={DashboardContainer}
 						/> */}
 						{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
-
 						{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
 						{/* <Route path="/tripdetails" component={TripDetails} /> */}
@@ -80,7 +83,6 @@ class App extends Component {
 							path="trips/:id"
 							render={(routerProps) => <TripDetails {...routerProps} />}
 						/> */}
-
 						{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
 						{/* <Route path="/dashboard" component={DashboardContainer} />

@@ -44,11 +44,11 @@ class DashboardContainer extends Component {
 	// 	);
 	// }
 
-	// handleClick = () => {
-	// 	// debugger;
-	// 	// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
-	// 	return <NewTripForm />;
-	// };
+	handleClick = () => {
+		// 	// debugger;
+		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
+		return <NewTripForm />;
+	};
 
 	render() {
 		// if (this.props.isLoggedIn) {
@@ -98,9 +98,16 @@ class DashboardContainer extends Component {
 				</div>
 				{/* <UpcomingTrips trips={this.props.trips.upcomingTrips} />
 				<PastTrips trips={this.props.trips.pastTrips} /> */}
-				{/* <button onClick={this.handleClick}> */}
-				<Link to="/dashboard/trips/new">+ New Trip</Link>
-				{/* </button> */}
+				{/* <button onClick={this.handleClick}>
+					<Link to="/dashboard/trips/new">+ New Trip</Link>
+				</button> */}
+
+				<button>
+					<Link to="/dashboard/trips/new">+ New Trip</Link>
+				</button>
+
+				{/* <button onClick={this.handleClick}>+ New Trip</button> */}
+
 				{/* <Link to="/dashboard/trips/new">+ New Trip</Link> */}
 				{/* <UserFooter user={this.props.user} /> */}
 				<UserFooter firstName={first_name} />
@@ -111,6 +118,9 @@ class DashboardContainer extends Component {
 						path="/dashboard/trips/new"
 						component={NewTripForm}
 					></Route>
+				</Switch> */}
+				{/* <Switch>
+					<Route exact path="/dashboard/trips/new" component={NewTripForm} />
 				</Switch> */}
 			</div>
 		);
