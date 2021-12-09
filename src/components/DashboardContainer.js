@@ -94,13 +94,13 @@ class DashboardContainer extends Component {
 				<UserHeader />
 				<div className="info container">
 					<div className="user">
-						{/* <div className="name">
+						<div className="name">
 							{first_name} {last_name}
 						</div>
 						<div className="text">Joined {joined}</div>
 						<div className="text">
 							Taken <b>{this.props.pastTrips.length}</b> trips
-						</div> */}
+						</div>
 					</div>
 					<LocalizationProvider dateAdapter={AdapterDateFns}>
 						<StaticDatePicker

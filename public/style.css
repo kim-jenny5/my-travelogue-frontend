@@ -347,7 +347,10 @@ input {
 	cursor: pointer;
 }
 
-/* .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-195y93z-MuiButtonBase-root-MuiPickersDay-root { */
+.MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
+	position: absolute;
+}
+
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
 	background-color: #0f43f9;
 	color: white;
@@ -395,6 +398,7 @@ input {
 
 .css-ktxc6a * {
 	font-weight: bold;
+	cursor: default;
 }
 
 .PrivatePickersFadeTransitionGroup-root.MuiCalendarPicker-viewTransitionContainer.css-1wvgxus-MuiCalendarPicker-viewTransitionContainer {
