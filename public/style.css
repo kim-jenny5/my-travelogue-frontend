@@ -26,6 +26,14 @@ body {
 	background-color: #f2f2f2;
 }
 
+button {
+	font-family: inherit;
+}
+
+input {
+	font-family: inherit;
+}
+
 /* NOTE: NAVBAR/HEADER */
 .user-btn {
 	padding-left: 25px;
@@ -187,7 +195,7 @@ body {
 	border: 1px solid #62676b;
 	width: 17vw;
 	height: 5vh;
-	font-family: "Poppins";
+	/* font-family: "Poppins"; */
 	font-weight: 300;
 	display: block;
 	margin: auto;
@@ -315,4 +323,33 @@ body {
 	margin-left: 5.2vw;
 	padding-top: 10.2vh;
 	/* display: flex; */
+}
+
+.new-trip-btn {
+	position: absolute;
+	/* width: max-content; */
+	/* height: min-content; */
+	/* width: min-content; */
+	/* width: 9.79vw; */
+	/* width: 7em; */
+	width: 7vw;
+	/* height: 4.44vh; */
+	height: 2.5em;
+	/* height: min-content; */
+	left: 85vw;
+	top: 6.5vh;
+	background: #0f43f9;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.new-trip-btn .text {
+	/* padding-left: 1.25em; */
+	/* padding: 0.375em, 1.25em, 0.375em, 1.25em; */
+	/* padding-right: 1.25em; */
+	/* padding-top: 0.5em;
+	padding-bottom: 0.5em; */
 }
