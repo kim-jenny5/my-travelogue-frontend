@@ -273,7 +273,6 @@ input {
 }
 
 .dashboard .info.container .user {
-	/* position: absolute; */
 	display: flex;
 	justify-content: center;
 }
@@ -283,8 +282,6 @@ input {
 	font-weight: bold;
 	font-size: 1.5em;
 	width: max-content;
-
-	/* margin-left: 5em; */
 }
 
 .dashboard .info.container .user .text {
@@ -292,10 +289,11 @@ input {
 	font-size: 0.875em;
 	width: max-content;
 	margin-top: 5em;
-	/* font-size: 1.09375vw; */
 }
 
 .next-trip-container {
+	/* display: flex;
+	justify-content: center; */
 	/* position: absolute; */
 	/* width: 19.4vw;
 	height: 11.7vh; */
