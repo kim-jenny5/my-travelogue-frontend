@@ -257,14 +257,8 @@ input {
 
 .dashboard .info.container {
 	position: absolute;
-	/* margin-left: 4.236vw; */
 	margin-left: 6vw;
-	/* margin-left: vw; */
-	/* margin-top: 13.88vh; */
 	margin-top: 10vh;
-	/* width: max-content;
-	height: max-content; */
-	/* width: 28vw; */
 	width: 31vw;
 	height: 64.3vh;
 	text-align: center;
@@ -279,28 +273,9 @@ input {
 }
 
 .dashboard .info.container .user {
-	position: absolute;
-	/* width: 238px;
-	height: 122px; */
-	/* left: 5vw; */
-	/* display: flex;
-	align-items: center; */
-	/* text-align: center; */
-	/* left: 46px;
-	top: 33px; */
-	/* display: flex;
-	align-items: center; */
-	/* margin: auto; */
-	/* width: 16.5vw;
-	height: 13.55vh; */
-	/* margin-left: 8vw; */
-	/* text-align: center; */
-	/* margin-top: 10vh; */
-	/* margin-top: 3vh; */
-	/* display: block;
-	align-items: center; */
-
-	/* text-align: center; */
+	/* position: absolute; */
+	display: flex;
+	justify-content: center;
 }
 
 .dashboard .info.container .user .name {
@@ -308,10 +283,20 @@ input {
 	font-weight: bold;
 	font-size: 1.5em;
 	width: max-content;
+
+	/* margin-left: 5em; */
+}
+
+.dashboard .info.container .user .text {
+	position: absolute;
+	font-size: 0.875em;
+	width: max-content;
+	margin-top: 5em;
+	/* font-size: 1.09375vw; */
 }
 
 .next-trip-container {
-	position: absolute;
+	/* position: absolute; */
 	/* width: 19.4vw;
 	height: 11.7vh; */
 	width: max-content;
@@ -323,13 +308,6 @@ input {
 
 .next-trip-container .title {
 	text-align: center;
-}
-
-.dashboard .info.container .user .text {
-	/* position: absolute; */
-	font-size: 0.875em;
-	width: max-content;
-	/* font-size: 1.09375vw; */
 }
 
 .dashboard .info.container .user .text:nth-child(2) {
@@ -374,7 +352,7 @@ input {
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
 	position: absolute;
-	margin-top: 15vh;
+	margin-top: 12vh;
 	z-index: -1;
 }
 
