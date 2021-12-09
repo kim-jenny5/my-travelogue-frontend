@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactModal from "react-modal";
 import { connect } from "react-redux";
 import NewTripForm from "./NewTripForm";
+import Modals from "./Modals";
 
 class ModalContainer extends Component {
 	closeModal = () => {
@@ -15,7 +16,8 @@ class ModalContainer extends Component {
 			<div>
 				<ReactModal isOpen={this.props.isOpen}>
 					<button onClick={this.closeModal}>CLOSE</button>
-					<div>Example Text</div>
+					{/* <div>Example Text</div> */}
+					<Modals type={this.props.type} />
 				</ReactModal>
 			</div>
 		);

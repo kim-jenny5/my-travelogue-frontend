@@ -37,7 +37,6 @@ class NewTripForm extends Component {
 		// } else {
 		return (
 			<div>
-				<UserHeader />
 				<div>When's your new trip?</div>
 				<form onSubmit={this.handleSubmit}>
 					<div>Name of your trip</div>
