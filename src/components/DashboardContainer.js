@@ -112,10 +112,11 @@ class DashboardContainer extends Component {
 							sx={{ fontFamily: "Poppins" }}
 						/>
 					</LocalizationProvider>
-					{/* <div className="next-trip-container">
-						<NextTrip trip={this.props.nextTrip} />
-					</div> */}
 					{/* <div>{first_upcoming_trip}</div> */}
+				</div>
+				<div className="next-trip-container">
+					<div className="title">Upcoming Trip 🚗</div>
+					<NextTrip trip={this.props.nextTrip} />
 				</div>
 				{/* <div className="trip container">
 					<UpcomingTrips trips={this.props.upcomingTrips} />

@@ -257,10 +257,17 @@ input {
 
 .dashboard .info.container {
 	position: absolute;
-	margin-left: 4.236vw;
-	margin-top: 13.88vh;
-	width: 23vw;
+	/* margin-left: 4.236vw; */
+	margin-left: 6vw;
+	/* margin-left: vw; */
+	/* margin-top: 13.88vh; */
+	margin-top: 10vh;
+	/* width: max-content;
+	height: max-content; */
+	/* width: 28vw; */
+	width: 31vw;
 	height: 64.3vh;
+	text-align: center;
 }
 
 .dashboard .trip.container {
@@ -273,10 +280,23 @@ input {
 
 .dashboard .info.container .user {
 	position: absolute;
-	width: 16.5vw;
-	height: 13.55vh;
-	margin-left: 3.19vw;
-	margin-top: 3.66vh;
+	/* width: 238px;
+	height: 122px; */
+	/* left: 5vw; */
+	/* display: flex;
+	align-items: center; */
+	/* text-align: center; */
+	/* left: 46px;
+	top: 33px; */
+	/* display: flex;
+	align-items: center; */
+	/* margin: auto; */
+	/* width: 16.5vw;
+	height: 13.55vh; */
+	/* margin-left: 8vw; */
+	/* text-align: center; */
+	/* margin-top: 10vh; */
+	/* margin-top: 3vh; */
 	/* display: block;
 	align-items: center; */
 
@@ -286,31 +306,36 @@ input {
 .dashboard .info.container .user .name {
 	position: absolute;
 	font-weight: bold;
-	/* display: block;
-	align-items: center; */
-	/* font-size: 1.667vw; */
-	/* font-size: 2.542372881355932vh; */
-	/* font-size: 1.875vw; */
-	font-size: 24px;
+	font-size: 1.5em;
+	width: max-content;
 }
 
 .next-trip-container {
 	position: absolute;
-	width: 19.4vw;
-	height: 11.7vh;
-	margin-left: 1.7vw;
+	/* width: 19.4vw;
+	height: 11.7vh; */
+	width: max-content;
+	/* height: min-content; */
+	/* margin-left: 1.7vw; */
+	margin-left: 7vw;
 	margin-top: 48vh;
 }
 
+.next-trip-container .title {
+	text-align: center;
+}
+
 .dashboard .info.container .user .text {
-	position: absolute;
-	font-size: 14px;
+	/* position: absolute; */
+	font-size: 0.875em;
+	width: max-content;
 	/* font-size: 1.09375vw; */
 }
 
-.dashboard .info.container .user .text:nth-child(1) {
-	/* position: absolute;
-	font-size: 1.09375vw; */
+.dashboard .info.container .user .text:nth-child(2) {
+	/* position: absolute; */
+	margin-top: 5vh;
+	/* font-size: 1.09375vw; */
 	/* margin-left: 4.65vw; */
 	/* padding-top: 6.8vh; */
 	/* padding-top: 21px; */
@@ -318,11 +343,10 @@ input {
 	align-items: center; */
 }
 
-.dashboard .info.container .user .text:nth-child(2) {
+.dashboard .info.container .user .text:nth-child(3) {
 	/* position: absolute; */
-	margin-left: 5.2vw;
-	padding-top: 10.2vh;
-	/* display: flex; */
+	/* margin-left: 5.2vw;
+	padding-top: 10.2vh; */
 }
 
 .new-trip-btn {
@@ -347,8 +371,11 @@ input {
 	cursor: pointer;
 }
 
+/* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
 	position: absolute;
+	margin-top: 15vh;
+	z-index: -1;
 }
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
@@ -393,7 +420,7 @@ input {
 }
 
 .css-ktxc6a {
-	margin-left: 5em;
+	margin-left: 4.5em;
 }
 
 .css-ktxc6a * {

@@ -7,8 +7,7 @@ export default function NextTrip(props) {
 	if (props.trip) {
 		const { days_left_till, trip_name, start_date, end_date } = props.trip;
 		return (
-			<div>
-				<div>Upcoming Trip 🚗</div>
+			<div className="upcoming-trip container">
 				<div>{days_left_till}</div>
 				<div>{trip_name}</div>
 				<div>{DateFormatting(start_date, end_date)}</div>
