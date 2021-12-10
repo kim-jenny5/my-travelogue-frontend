@@ -478,18 +478,17 @@ input {
 	background-color: gray;
 } */
 
+.hide-modal.btn {
+	float: right !important;
+}
+
 /* NEW TRIP FORM */
 .ReactModal__Content.ReactModal__Content--after-open {
 	overflow: hidden !important;
-	background-image: url(./images/switzerland.jpeg) !important;
-	background-repeat: no-repeat !important;
-	/* background-attachment: fixed !important; */
-	background-position: center !important;
-	background-size: cover !important;
-	/* background-color: rgba(0, 0, 0, 0.1); */
+	background-color: #f2f2f2 !important;
 	border-radius: 10px !important;
-	height: 75% !important;
-	width: 50% !important;
+	/* height: 75% !important;
+	width: 50% !important; */
 
 	/* position: relative; */
 
@@ -499,12 +498,12 @@ input {
 .new-trip-form {
 	/* height: 100%; */
 	/* position: absolute; */
-	margin-top: 1em;
+	margin-top: 3em;
 	/* margin: auto; */
 	/* top: 50%;
 	left: 50%; */
 	height: 90%;
-	width: 100%;
+	/* width: 100%; */
 	/* width: 95%; */
 	/* display: flex;
 	align-items: center; */
@@ -514,7 +513,7 @@ input {
 	background-position: center;
 	background-size: cover; */
 	/* background-color: white; */
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	border-radius: 5px;
 }
 
