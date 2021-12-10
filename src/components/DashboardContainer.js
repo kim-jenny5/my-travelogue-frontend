@@ -15,6 +15,7 @@ import ModalContainer from "./ModalContainer";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
+import TripCard from "./TripCard";
 
 // import TripCard from "../components/TripCard";
 // import NewTripForm from "../components/NewTripForm";
@@ -80,9 +81,20 @@ class DashboardContainer extends Component {
 						</LocalizationProvider>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
 						<div className="next-trip-container">
-							{/* <div className="container"> */}
 							<NextTrip trip={this.props.nextTrip} />
 						</div>
+					</div>
+				</div>
+				<div className="all-trips container">
+					<div>
+						<div classname="titles">Upcoming Trips</div>
+						{/* <UpcomingTrips trips={this.props.upcomingTrips} /> */}
+						<TripCard trips={this.props.upcomingTrips} />
+					</div>
+					<div>
+						<div classname="titles">Past Trips</div>
+						{/* <PastTrips trips={this.props.pastTrips} /> */}
+						<TripCard trips={this.props.pastTrips} />
 					</div>
 				</div>
 				<button onClick={this.handleClick} className="new-trip-btn">
