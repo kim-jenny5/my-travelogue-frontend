@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
 import { nanoid } from "nanoid";
@@ -9,31 +10,43 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TextField from "@mui/material/TextField";
 import DatePicker from "@mui/lab/DatePicker";
+import Box from "@mui/material/Box";
+// import DateRangePicker from "@mui/lab/DateRangePicker";
+// import DatePicker from "./DatePicker";
+// import { MuiPickersUtilsProvider, DatePicker } from "material-ui-pickers";
 
 class NewTripFormCont extends Component {
 	state = {
 		// id: "",
-		user_id: "",
-		trip_name: "",
-		start_date: "",
-		end_date: ""
+		userId: "",
+		tripName: "",
+		// startDate: "",
+		// endDate: "",
+		// startDate: new Date(),
+		// endDate: new Date(),
+		dates: new Date()
 	};
 
-	handleChange = (e) => {
+	handleChange = (keyName, e) => {
 		// debugger;
-		this.setState({ ...this.state, [e.target.name]: e.target.value });
+		if (e instanceof Date) {
+			this.setState({ [keyName]: e });
+		} else {
+			this.setState({ [keyName]: e.target.value });
+		}
+		// this.setState({ ...this.state, [e.target.name]: e.target.value });
+		// this.setState({ tripName: e.target.value });
+		// this.setState({ tripName: e.target.value });
 	};
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+		debugger;
 		this.props.createTrip({
 			...this.state,
 			// id: nanoid(),
-			user_id: this.props.user_id
+			userId: this.props.userId
 		});
-		// NOTE: NOT WORKING
-		// history push
-		// return <Redirect to="/dashboard" />;
 	};
 
 	render() {
@@ -48,27 +61,61 @@ class NewTripFormCont extends Component {
 					<TextField
 						id="outlined-basic"
 						label="Name of your trip"
+						// name="tripName"
 						variant="outlined"
 						placeholder="Roadtrip with the girls 👯"
+						onChange={(e) => this.handleChange("tripName", e)}
 					>
-						<input
+						{/* <input
 							type="text"
-							name="trip_name"
+							name="tripName"
 							placeholder="Example: Roadtrip with the girls 👯"
 							onChange={this.handleChange}
-						/>
+						/> */}
 					</TextField>
-					<DatePicker />
+					<LocalizationProvider dateAdapter={AdapterDateFns}>
+						<DatePicker
+							label="Start Date"
+							value={this.state.startDate}
+							// name="startDate"
+							onChange={(e) => this.handleChange("startDate", e)}
+							renderInput={(params) => <TextField {...params} />}
+						/>
+						<DatePicker
+							label="End Date"
+							value={this.state.endDate}
+							// name="endDate"
+							// onChange={this.handleChange}
+							onChange={(e) => this.handleChange("endDate", e)}
+							renderInput={(params) => <TextField {...params} />}
+						/>
+					</LocalizationProvider>
+					{/* <LocalizationProvider dateAdapter={AdapterDateFns}>
+						<DateRangePicker
+							startText="Start Date"
+							endText="End Date"
+							value={this.state.dates}
+							onChange={(e) => this.handleChange("dates", e)}
+							renderInput={(startProps, endProps) => (
+								<>
+									<TextField {...startProps} />
+									<Box sx={{ mx: 2 }}> to </Box>
+									<TextField {...endProps} />
+								</>
+							)}
+						/>
+					</LocalizationProvider> */}
+
 					{/* <input
 						type="date"
-						id="start_date"
-						name="start_date"
+						id="startDate"
+						name="startDate"
 						onChange={this.handleChange}
 					/>
 					<input
 						type="date"
-						id="end_date"
-						name="end_date"
+						id="endDate"
+						name="endDate"
 						onChange={this.handleChange}
 					/> */}
 					<button type="submit" onClick={this.connectUser}>
@@ -82,7 +129,7 @@ class NewTripFormCont extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user_id: state.user.user.id,
+	userId: state.user.user.id,
 	isLoggedIn: state.user.isLoggedIn
 });
 
