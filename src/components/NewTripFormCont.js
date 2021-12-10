@@ -41,6 +41,7 @@ class NewTripFormCont extends Component {
 			...this.state,
 			user_id: this.props.userId
 		});
+		this.props.hideModal();
 	};
 
 	render() {
@@ -101,7 +102,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		createTrip: (tripInfo) => dispatch(createTrip(tripInfo))
+		createTrip: (tripInfo) => dispatch(createTrip(tripInfo)),
+		hideModal: () => dispatch({ type: "HIDE_MODAL" })
 	};
 };
 
