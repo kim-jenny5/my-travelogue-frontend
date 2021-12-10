@@ -371,13 +371,17 @@ input {
 	cursor: pointer;
 }
 
-.all-trips.container {
+.all-trips-container {
 	position: absolute;
 	/* width: 60vw; */
 	left: 35vw;
 	top: 12vh;
 
-	background-color: gray;
+	background-color: lightgray;
+}
+
+.all-trips-container .titles {
+	font-weight: bold;
 }
 
 /* NOTE: CALENDAR */
