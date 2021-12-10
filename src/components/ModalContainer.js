@@ -3,6 +3,8 @@ import ReactModal from "react-modal";
 import { connect } from "react-redux";
 import NewTripForm from "./NewTripForm";
 import Modals from "./Modals";
+import Button from "@mui/material/Button";
+import { Cross } from "akar-icons";
 
 class ModalContainer extends Component {
 	closeModal = () => {
@@ -15,8 +17,13 @@ class ModalContainer extends Component {
 		return (
 			<div>
 				<ReactModal isOpen={this.props.isOpen}>
-					<button onClick={this.closeModal}>CLOSE</button>
-					{/* <div>Example Text</div> */}
+					<Button
+						onClick={this.closeModal}
+						variant="contained"
+						className="hide-modal btn"
+					>
+						Close
+					</Button>
 					<Modals type={this.props.type} />
 				</ReactModal>
 			</div>

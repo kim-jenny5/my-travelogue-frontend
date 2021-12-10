@@ -8,7 +8,7 @@ import { Redirect } from "react-router";
 
 class NewTripForm extends Component {
 	state = {
-		id: "",
+		// id: "",
 		user_id: "",
 		trip_name: "",
 		start_date: "",
