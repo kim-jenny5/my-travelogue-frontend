@@ -36,7 +36,7 @@ class NewTripForm extends Component {
 		// 	return <Redirect to="/login" />;
 		// } else {
 		return (
-			<div>
+			<div className="new-trip-form">
 				<div>When's your new trip?</div>
 				<form onSubmit={this.handleSubmit}>
 					<div>Name of your trip</div>
