@@ -90,22 +90,6 @@ class NewTripFormCont extends Component {
 							renderInput={(params) => <TextField {...params} />}
 						/>
 					</LocalizationProvider>
-					{/* <LocalizationProvider dateAdapter={AdapterDateFns}>
-						<DateRangePicker
-							startText="Start Date"
-							endText="End Date"
-							value={this.state.dates}
-							onChange={(e) => this.handleChange("dates", e)}
-							renderInput={(startProps, endProps) => (
-								<>
-									<TextField {...startProps} />
-									<Box sx={{ mx: 2 }}> to </Box>
-									<TextField {...endProps} />
-								</>
-							)}
-						/>
-					</LocalizationProvider> */}
-
 					{/* <input
 						type="date"
 						id="startDate"
