@@ -473,47 +473,29 @@ input {
 }
 
 /* MODALS */
-/* .modal-container {
-	overflow: hidden;
-	background-color: gray;
-} */
-
 .hide-modal.btn {
 	float: right !important;
 }
 
 /* NEW TRIP FORM */
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+	position: relative;
+}
+
 .ReactModal__Content.ReactModal__Content--after-open {
+	position: absolute;
 	overflow: hidden !important;
 	background-color: #f2f2f2 !important;
 	border-radius: 10px !important;
-	/* height: 75% !important;
-	width: 50% !important; */
-
-	/* position: relative; */
-
-	/* opacity: 50%; */
+	height: 40em;
+	width: 50em;
+	margin: auto;
 }
 
 .new-trip-form {
-	/* height: 100%; */
-	/* position: absolute; */
 	margin-top: 3em;
-	/* margin: auto; */
-	/* top: 50%;
-	left: 50%; */
 	height: 90%;
-	/* width: 100%; */
-	/* width: 95%; */
-	/* display: flex;
-	align-items: center; */
-	/* background-image: url(./images/switzerland.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover; */
-	/* background-color: white; */
-	background-color: rgba(255, 255, 255, 0.5);
+	/* background-color: rgba(255, 255, 255, 0.5); */
 	border-radius: 5px;
 }
 
