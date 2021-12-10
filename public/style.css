@@ -253,12 +253,17 @@ input {
 /* DASHBOARD */
 .dashboard {
 	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
 
 .dashboard .info.container {
-	/* position: absolute; */
-	margin-left: 3em;
-	margin-top: 5em;
+	position: absolute;
+	/* margin-left: 3em; */
+	left: 3em;
+	top: 5em;
+	/* margin-top: 5em; */
 	width: 31vw;
 	height: 64.3vh;
 	/* height: 20em; */
@@ -353,10 +358,10 @@ input {
 
 .new-trip-btn {
 	position: absolute;
-	width: 7vw;
-	height: 2.5em;
-	left: 85vw;
-	top: 6.5vh;
+	padding: 0.5em 0.75em 0.5em 0.75em;
+	/* right: 10em; */
+	right: 10vw;
+	top: 4em;
 	background: #0f43f9;
 	color: white;
 	border: none;
