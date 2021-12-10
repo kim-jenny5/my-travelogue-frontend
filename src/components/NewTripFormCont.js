@@ -58,7 +58,8 @@ class NewTripFormCont extends Component {
 							onChange={this.handleChange}
 						/>
 					</TextField>
-					<input
+					<DatePicker />
+					{/* <input
 						type="date"
 						id="start_date"
 						name="start_date"
@@ -69,7 +70,7 @@ class NewTripFormCont extends Component {
 						id="end_date"
 						name="end_date"
 						onChange={this.handleChange}
-					/>
+					/> */}
 					<button type="submit" onClick={this.connectUser}>
 						Let's Go!
 					</button>
