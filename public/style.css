@@ -497,12 +497,13 @@ input {
 	margin-top: 3em;
 	height: 90%;
 	border-radius: 5px;
+	text-align: center;
 }
 
 .new-trip-form .title {
 	font-weight: bold;
 	font-size: 1.5em;
-	text-align: center;
+	/* text-align: center; */
 }
 
 .materialui-daterange-picker-MuiGrid-root-35 {
@@ -510,20 +511,39 @@ input {
 }
 
 .form-container {
-	position: absolute;
-	left: 5em;
-	top: 10em;
+	/* position: absolute; */
+	/* margin-top: 2em; */
+	/* left: 10em; */
+	/* top: 10em; */
+	/* text-align: center; */
+}
+
+.trip-name-container {
+	/* margin-top: 2em; */
+	/* text-align: center; */
 }
 
 .trip-name {
 	background-color: white;
+	width: 20em;
+}
+
+.trip-dates {
+	/* position: absolute; */
+
+	display: flex;
+	margin-left: 9.2em;
+	/* align-items: center; */
 }
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+	margin-top: 2em;
 	background-color: white;
 }
 
 .submit-btn {
+	/* position: absolute; */
 	margin-top: 2em;
-	text-align: center;
+	/* margin: auto; */
+	/* text-align: center; */
 }
