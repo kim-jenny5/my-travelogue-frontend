@@ -291,6 +291,7 @@ input {
 
 .next-trip-container {
 	position: absolute;
+	/* position: relative; */
 	/* width: 19.4vw;
 	height: 11.7vh; */
 	/* width: max-content; */
@@ -299,17 +300,26 @@ input {
 	/* margin-left: 7vw;
 	margin-top: 48vh; */
 	/* width: min-content; */
-	width: 14em;
-	height: 3.25em;
+	/* width: 14em; */
+	width: 12em;
+	/* height: 3.25em; */
+	/* padding-top: 2.25em; */
+	/* padding-bottom: 2.25em; */
+	padding: 2.25em;
 	background: #0f43f9;
 	color: white;
 	border-radius: 20px;
 	/* margin-top: 36em; */
-	/* margin-top: 5em; */
+	margin-top: 30em;
+	/* padding-top: 30em; */
 	/* margin-left: 2em; */
-	bottom: 0;
-	padding: 0.875em;
+	/* bottom: 0; */
+	/* padding: 0.875em; */
+	z-index: -1;
 }
+
+/* .next-trip-container.container {
+} */
 
 .next-trip-container .circle {
 	position: absolute;
@@ -323,18 +333,30 @@ input {
 	color: #0f43f9;
 	font-weight: bold;
 	text-align: center;
-	margin-left: 0.5em;
+	/* margin-left: 0.5em; */
 	/* bottom: 0.5px; */
 	/* top: 1px; */
 }
 
 .next-trip-container .circle .text {
-	padding: 12px 0;
+	/* position: absolute; */
+	bottom: 1.05em;
+	left: 1.3em;
+	/* padding: 12px 0; */
+}
+
+/* .next-trip-container-cont .text.container { */
+.next-trip-container .text.container {
+	position: absolute;
+	z-index: 1;
+	color: orange;
+	font-size: 0.875em;
+	top: 0;
 }
 
 .next-trip-container .text {
 	text-align: end;
-	font-size: 0.875em;
+	/* font-size: 0.875em; */
 }
 
 .dashboard .info.container .user .text:nth-child(2) {

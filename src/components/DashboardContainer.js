@@ -68,6 +68,7 @@ class DashboardContainer extends Component {
 							/>
 						</LocalizationProvider>
 						<div className="next-trip-container">
+							{/* <div className="container"> */}
 							<NextTrip trip={this.props.nextTrip} />
 						</div>
 					</div>
