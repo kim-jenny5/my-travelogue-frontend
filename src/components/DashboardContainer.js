@@ -50,10 +50,10 @@ class DashboardContainer extends Component {
 						<div className="name">
 							{first_name} {last_name}
 						</div>
-						<div className="text">
+						<div className="joined text">
 							Joined <b>{joined}</b>
 						</div>
-						<div className="text">
+						<div className="total-trips text">
 							Taken <b>{this.props.pastTrips.length}</b> trips
 						</div>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>

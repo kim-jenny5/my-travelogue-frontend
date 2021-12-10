@@ -261,6 +261,7 @@ input {
 	margin-top: 10vh;
 	width: 31vw;
 	height: 64.3vh;
+	/* height: 20em; */
 	text-align: center;
 	/* position: relative; */
 }
@@ -277,91 +278,80 @@ input {
 	width: max-content;
 }
 
-.dashboard .info.container .user .text {
+.dashboard .info.container .user .joined.text {
 	position: absolute;
 	font-size: 0.875em;
 	width: max-content;
+	/* height: max-content; */
+	margin-top: 3em;
+}
+
+.dashboard .info.container .user .total-trips.text {
+	position: absolute;
+	font-size: 0.875em;
+	width: max-content;
+	/* height: max-content; */
 	margin-top: 5em;
 }
 
 .dashboard .info.container .upcoming-trip.title {
 	position: absolute;
-	margin-top: 28em;
+	margin-top: 27em;
 }
 
 .next-trip-container {
 	position: absolute;
-	/* position: relative; */
-	/* width: 19.4vw;
-	height: 11.7vh; */
-	/* width: max-content; */
-	/* height: min-content; */
-	/* margin-left: 1.7vw; */
-	/* margin-left: 7vw;
-	margin-top: 48vh; */
-	/* width: min-content; */
-	/* width: 14em; */
-	width: 12em;
-	/* height: 3.25em; */
-	/* padding-top: 2.25em; */
-	/* padding-bottom: 2.25em; */
-	padding: 2.25em;
+	width: 14em;
+	padding: 1em;
 	background: #0f43f9;
 	color: white;
 	border-radius: 20px;
-	/* margin-top: 36em; */
-	margin-top: 30em;
-	/* padding-top: 30em; */
-	/* margin-left: 2em; */
-	/* bottom: 0; */
-	/* padding: 0.875em; */
+	margin-top: 29em;
 	z-index: -1;
 }
 
-/* .next-trip-container.container {
-} */
-
 .next-trip-container .circle {
 	position: absolute;
-	/* height: 50px; */
 	height: 3em;
-	/* width: 50px; */
 	width: 3em;
 	background-color: white;
 	border-radius: 50%;
-	/* display: block; */
-	color: #0f43f9;
 	font-weight: bold;
 	text-align: center;
-	/* margin-left: 0.5em; */
-	/* bottom: 0.5px; */
-	/* top: 1px; */
+	left: 1.5em;
+	top: 1em;
 }
 
 .next-trip-container .circle .text {
-	/* position: absolute; */
+	position: absolute;
 	bottom: 1.05em;
 	left: 1.3em;
-	/* padding: 12px 0; */
+	color: #0f43f9;
 }
 
 /* .next-trip-container-cont .text.container { */
-.next-trip-container .text.container {
+/* .next-trip-container .text.container {
 	position: absolute;
 	z-index: 1;
 	color: orange;
 	font-size: 0.875em;
-	top: 0;
-}
+	bottom: 0;
+	margin: 0;
+} */
 
 .next-trip-container .text {
-	text-align: end;
-	/* font-size: 0.875em; */
+	font-size: 0.875em;
+	color: orange;
 }
 
-.dashboard .info.container .user .text:nth-child(2) {
-	margin-top: 5vh;
+.upcoming-text {
+	text-align: end;
+	font-size: 0.875em;
 }
+
+/* .dashboard .info.container .user .text:nth-child(2) {
+	margin-top: 5vh;
+} */
 
 /* .dashboard .info.container .user .text:nth-child(3) {
 } */
@@ -390,7 +380,7 @@ input {
 
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
-	margin-top: 6em;
+	margin-top: 5em;
 	z-index: -1;
 }
 
