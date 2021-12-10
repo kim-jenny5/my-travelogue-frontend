@@ -371,6 +371,15 @@ input {
 	cursor: pointer;
 }
 
+.all-trips.container {
+	position: absolute;
+	/* width: 60vw; */
+	left: 35vw;
+	top: 12vh;
+
+	background-color: gray;
+}
+
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
 	margin-top: 8em;
