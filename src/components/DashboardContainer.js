@@ -38,13 +38,20 @@ class DashboardContainer extends Component {
 		this.props.showModal({ type: "new trip" });
 	};
 
+	logOutUser = () => {
+		this.props.logOutUser();
+		localStorage.removeItem("token");
+		localStorage.removeItem("user");
+		window.history.pushState(this.props.user, "", "/login");
+	};
+
 	render() {
 		const { first_name, last_name, joined } =
 			this.props.user.user || this.props.user;
 
 		return (
 			<div className="dashboard">
-				<UserHeader />
+				{/* <UserHeader /> */}
 				<div className="info container">
 					<div className="user">
 						<div className="name">
@@ -56,7 +63,9 @@ class DashboardContainer extends Component {
 						<div className="total-trips text">
 							Taken <b>{this.props.pastTrips.length}</b> trips
 						</div>
-						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
+						<div className="logout-btn container">
+							<button onClick={this.logOutUser}>Log Out</button>
+						</div>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
 							<StaticDatePicker
 								displayStaticWrapperAs="desktop"
@@ -67,6 +76,7 @@ class DashboardContainer extends Component {
 								sx={{ fontFamily: "Poppins" }}
 							/>
 						</LocalizationProvider>
+						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
 						<div className="next-trip-container">
 							{/* <div className="container"> */}
 							<NextTrip trip={this.props.nextTrip} />
@@ -96,7 +106,8 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
 		// showModal: () => dispatch({ type: "SHOW_MODAL" })
-		showModal: (modalInfo) => dispatch(showModal(modalInfo))
+		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
+		logOutUser: () => dispatch({ type: "LOGGED_OUT" })
 	};
 };
 

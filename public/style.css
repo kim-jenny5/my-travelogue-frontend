@@ -257,8 +257,8 @@ input {
 
 .dashboard .info.container {
 	/* position: absolute; */
-	margin-left: 6vw;
-	margin-top: 10vh;
+	margin-left: 3em;
+	margin-top: 3em;
 	width: 31vw;
 	height: 64.3vh;
 	/* height: 20em; */
@@ -282,7 +282,6 @@ input {
 	position: absolute;
 	font-size: 0.875em;
 	width: max-content;
-	/* height: max-content; */
 	margin-top: 3em;
 }
 
@@ -290,13 +289,17 @@ input {
 	position: absolute;
 	font-size: 0.875em;
 	width: max-content;
-	/* height: max-content; */
 	margin-top: 5em;
+}
+
+.logout-btn.container {
+	position: absolute;
+	margin-top: 6em;
 }
 
 .dashboard .info.container .upcoming-trip.title {
 	position: absolute;
-	margin-top: 27em;
+	margin-top: 30em;
 }
 
 .next-trip-container {
@@ -306,7 +309,7 @@ input {
 	background: #0f43f9;
 	color: white;
 	border-radius: 20px;
-	margin-top: 29em;
+	margin-top: 32em;
 	z-index: -1;
 }
 
@@ -329,16 +332,6 @@ input {
 	color: #0f43f9;
 }
 
-/* .next-trip-container-cont .text.container { */
-/* .next-trip-container .text.container {
-	position: absolute;
-	z-index: 1;
-	color: orange;
-	font-size: 0.875em;
-	bottom: 0;
-	margin: 0;
-} */
-
 .next-trip-container .text {
 	font-size: 0.875em;
 	color: orange;
@@ -348,13 +341,6 @@ input {
 	text-align: end;
 	font-size: 0.875em;
 }
-
-/* .dashboard .info.container .user .text:nth-child(2) {
-	margin-top: 5vh;
-} */
-
-/* .dashboard .info.container .user .text:nth-child(3) {
-} */
 
 .new-trip-btn {
 	position: absolute;
@@ -380,7 +366,7 @@ input {
 
 /* NOTE: CALENDAR */
 .MuiPickerStaticWrapper-root.css-1snvurg-MuiPickerStaticWrapper-root {
-	margin-top: 5em;
+	margin-top: 8em;
 	z-index: -1;
 }
 
