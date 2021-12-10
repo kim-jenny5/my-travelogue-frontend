@@ -10,7 +10,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 // import AppContainer from "./components/AppContainer";
 import DashboardContainer from "./components/DashboardContainer";
-import TripDetails from "./components/TripDetails";
+// import TripDetails from "./components/TripDetails";
 // import UserContainer from "./components/UserContainer";
 import { fetchCurrentUser } from "./actions/userActions";
 import { fetchTrips } from "./actions/tripActions";

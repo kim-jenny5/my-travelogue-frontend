@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
 import { nanoid } from "nanoid";
 import { Redirect } from "react-router";
-import UserHeader from "./UserHeader";
+// import UserHeader from "./UserHeader";
 // import DateRangePicker from "react-daterange-picker";
 
 class NewTripForm extends Component {
