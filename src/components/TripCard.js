@@ -23,7 +23,7 @@ export default function TripCard(props) {
 							<CardActions>
 								<Button
 									size="small"
-									style={{ color: "#0F43F9", fontWeight: 300 }}
+									style={{ color: "#0F43F9", fontWeight: 400 }}
 								>
 									{/* <Button size="small" style={{ color: "#62676B" }}> */}
 									{/* View */}
