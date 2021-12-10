@@ -255,7 +255,7 @@ input {
 	position: relative;
 	height: 100vh;
 	width: 100vw;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .dashboard .info.container {
@@ -442,4 +442,28 @@ input {
 
 .PrivatePickersFadeTransitionGroup-root.MuiCalendarPicker-viewTransitionContainer.css-1wvgxus-MuiCalendarPicker-viewTransitionContainer {
 	overflow: hidden;
+}
+
+/* NOTE: TRIP CARDS */
+.trip-card.container {
+	/* left: 0; */
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.trip-card {
+	/* font-size: 0.875em; */
+	font-size: 0.875em;
+	/* margin-top: 1em; */
+	width: 20em;
+	min-width: min-content;
+	margin-right: 1em;
+	height: 10em;
+	/* text-align: end; */
+	text-align: start;
+}
+
+.trip-card .title {
+	font-size: 0.9rem;
+	/* font-weight: 500; */
 }

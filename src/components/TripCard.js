@@ -10,14 +10,14 @@ export default function TripCard(props) {
 		<div>
 			{props.trips.map((trip) => {
 				return (
-					<Card>
-						<CardContent>
-							<div>{trip.trip_name}</div>
-							<div>{DateFormatting(trip.start_date, trip.end_date)}</div>
-						</CardContent>
-						{/* <div> */}
-						{/* </div> */}
-					</Card>
+					<div className="trip-card container">
+						<Card className="trip-card">
+							<CardContent>
+								<div className="title">{trip.trip_name}</div>
+								<div>{DateFormatting(trip.start_date, trip.end_date)}</div>
+							</CardContent>
+						</Card>
+					</div>
 				);
 			})}
 
