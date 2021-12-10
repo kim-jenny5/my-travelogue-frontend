@@ -19,42 +19,31 @@ import Stack from "@mui/material/Stack";
 
 class NewTripFormCont extends Component {
 	state = {
-		// id: "",
 		userId: "",
 		tripName: "",
 		// startDate: "",
 		// endDate: "",
-		// startDate: new Date(),
-		// endDate: new Date(),
-		dates: new Date()
+		startDate: new Date(),
+		endDate: new Date()
 	};
 
 	handleChange = (keyName, e) => {
-		// debugger;
 		if (e instanceof Date) {
 			this.setState({ [keyName]: e });
 		} else {
 			this.setState({ [keyName]: e.target.value });
 		}
-		// this.setState({ ...this.state, [e.target.name]: e.target.value });
-		// this.setState({ tripName: e.target.value });
-		// this.setState({ tripName: e.target.value });
 	};
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		debugger;
 		this.props.createTrip({
 			...this.state,
-			// id: nanoid(),
 			userId: this.props.userId
 		});
 	};
 
 	render() {
-		// if (!this.props.isLoggedIn) {
-		// 	return <Redirect to="/login" />;
-		// } else {
 		return (
 			<div className="new-trip-form">
 				<div className="title">When's your new trip?</div>
@@ -71,13 +60,6 @@ class NewTripFormCont extends Component {
 								className="trip-name"
 							/>
 						</div>
-						{/* <input
-							type="text"
-							name="tripName"
-							placeholder="Example: Roadtrip with the girls 👯"
-							onChange={this.handleChange}
-						/> */}
-						{/* </TextField> */}
 						<div className="trip-dates">
 							<LocalizationProvider dateAdapter={AdapterDateFns}>
 								<Stack direction="row" spacing={5}>
@@ -97,23 +79,8 @@ class NewTripFormCont extends Component {
 										renderInput={(params) => <TextField {...params} />}
 									/>
 								</Stack>
-								{/* <span></span>
-								<span></span> */}
 							</LocalizationProvider>
 						</div>
-						{/* <input
-						type="date"
-						id="startDate"
-						name="startDate"
-						onChange={this.handleChange}
-					/>
-					<input
-						type="date"
-						id="endDate"
-						name="endDate"
-						onChange={this.handleChange}
-					/> */}
-						{/* <button type="submit">Let's Go!</button> */}
 						<div className="submit-btn">
 							<Button variant="contained" type="submit">
 								Let's Go!
@@ -134,7 +101,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		createTrip: (trip_info) => dispatch(createTrip(trip_info))
+		createTrip: (tripInfo) => dispatch(createTrip(tripInfo))
 	};
 };
 
