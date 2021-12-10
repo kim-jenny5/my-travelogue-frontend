@@ -86,13 +86,13 @@ class DashboardContainer extends Component {
 					</div>
 				</div>
 				<div className="all-trips-container">
-					<div className="titles">Upcoming Trips</div>
 					<div className="upcoming-trips-container">
+						<div className="titles">Upcoming Trips</div>
 						{/* <UpcomingTrips trips={this.props.upcomingTrips} /> */}
 						<TripCard trips={this.props.upcomingTrips} />
 					</div>
-					<div className="titles">Past Trips</div>
 					<div className="past-trips-container">
+						<div className="titles">Past Trips</div>
 						{/* <PastTrips trips={this.props.pastTrips} /> */}
 						<TripCard trips={this.props.pastTrips} />
 					</div>

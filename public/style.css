@@ -467,3 +467,7 @@ input {
 	font-size: 0.9rem;
 	/* font-weight: 500; */
 }
+
+.past-trips-container {
+	margin-top: 2em;
+}
