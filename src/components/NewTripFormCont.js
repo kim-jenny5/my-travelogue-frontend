@@ -19,12 +19,12 @@ import Stack from "@mui/material/Stack";
 
 class NewTripFormCont extends Component {
 	state = {
-		userId: "",
-		tripName: "",
-		// startDate: "",
-		// endDate: "",
-		startDate: new Date(),
-		endDate: new Date()
+		user_id: "",
+		trip_name: "",
+		// start_date: "",
+		// end_date: "",
+		start_date: new Date(),
+		end_date: new Date()
 	};
 
 	handleChange = (keyName, e) => {
@@ -39,7 +39,7 @@ class NewTripFormCont extends Component {
 		e.preventDefault();
 		this.props.createTrip({
 			...this.state,
-			userId: this.props.userId
+			user_id: this.props.userId
 		});
 	};
 
@@ -53,10 +53,10 @@ class NewTripFormCont extends Component {
 							<TextField
 								id="outlined-basic"
 								label="Name of your trip"
-								// name="tripName"
+								// name="trip_name"
 								variant="outlined"
 								placeholder="Roadtrip with the girls 👯"
-								onChange={(e) => this.handleChange("tripName", e)}
+								onChange={(e) => this.handleChange("trip_name", e)}
 								className="trip-name"
 							/>
 						</div>
@@ -65,17 +65,17 @@ class NewTripFormCont extends Component {
 								<Stack direction="row" spacing={5}>
 									<DatePicker
 										label="Start Date"
-										value={this.state.startDate}
-										// name="startDate"
-										onChange={(e) => this.handleChange("startDate", e)}
+										value={this.state.start_date}
+										// name="start_date"
+										onChange={(e) => this.handleChange("start_date", e)}
 										renderInput={(params) => <TextField {...params} />}
 									/>
 									<DatePicker
 										label="End Date"
-										value={this.state.endDate}
-										// name="endDate"
+										value={this.state.end_date}
+										// name="end_date"
 										// onChange={this.handleChange}
-										onChange={(e) => this.handleChange("endDate", e)}
+										onChange={(e) => this.handleChange("end_date", e)}
 										renderInput={(params) => <TextField {...params} />}
 									/>
 								</Stack>

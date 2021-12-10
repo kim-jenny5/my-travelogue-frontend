@@ -42,7 +42,7 @@ export const fetchTrips = (userInfo) => {
 export const createTrip = (tripInfo) => {
 	// debugger;
 	return (dispatch) => {
-		dispatch({ type: "CREATING_TRIP", tripInfo });
+		// dispatch({ type: "CREATING_TRIP", tripInfo });
 		fetch("http://localhost:3000/newtrip", {
 			method: "POST",
 			headers: {
@@ -50,15 +50,16 @@ export const createTrip = (tripInfo) => {
 				Accept: "application/json",
 				Authorization: localStorage.token
 			},
-			body: JSON.stringify(tripInfo)
+			body: JSON.stringify({ trip: tripInfo })
 		})
 			.then((resp) => {
 				return resp.json();
 			})
 			.then((data) => {
+				// debugger;
 				// console.log(data);
 				if (data.error) alert(data.error);
-				dispatch({ type: "TRIP_CREATION_SUCCESS", data });
+				dispatch({ type: "TRIP_CREATED", data });
 			});
 	};
 };

@@ -28,7 +28,6 @@ const tripReducer = (
 			// debugger;
 
 			return {
-				...state,
 				userId: action.user.id,
 				upcomingTrips: action.user.upcoming_trips,
 				pastTrips: action.user.past_trips,
@@ -55,28 +54,35 @@ const tripReducer = (
 
 		// return { ...state, trips: { upcomingTrips, pastTrips } };
 
-		case "CREATING_TRIP":
+		// case "CREATING_TRIP":
+		// 	return {
+		// 		...state,
+		// 		// id: nanoid(),
+		// 		user_id: action.trip_info.user_id,
+		// 		// trips: [...state.trips, action.trip_info],
+		// 		trips: {
+		// 			...state.trips,
+		// 			upcomingTrips: [...state.trips.upcomingTrips, action.trip_info]
+		// 		},
+		// 		creatingTrip: true,
+		// 		createdTrip: false
+		// 	};
+
+		case "TRIP_CREATED":
+			// debugger;
 			return {
 				...state,
-				// id: nanoid(),
-				user_id: action.trip_info.user_id,
-				// trips: [...state.trips, action.trip_info],
-				trips: {
-					...state.trips,
-					upcomingTrips: [...state.trips.upcomingTrips, action.trip_info]
-				},
-				creatingTrip: true,
-				createdTrip: false
+				userId: action.data.user_id,
+				upcomingTrips: [...state.upcomingTrips, action.data]
 			};
 
-		case "TRIP_CREATION_SUCCESS":
-			return {
-				...state,
-				// user_id: action.data.user_id,
-				// trips: [...state.trips, action.data],
-				// creatingTrip: true,
-				createdTrip: true
-			};
+		// return {
+		// 	...state,
+		// 	// user_id: action.data.user_id,
+		// 	// trips: [...state.trips, action.data],
+		// 	// creatingTrip: true,
+		// 	// createdTrip: true
+		// };
 
 		// case "TRIP_CREATION_FAIL":
 		// 	return {
