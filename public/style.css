@@ -486,15 +486,15 @@ input {
 .ReactModal__Content.ReactModal__Content--after-open {
 	position: absolute;
 	overflow: hidden !important;
-	background-color: #f2f2f2 !important;
-	border-radius: 10px !important;
+	/* background-color: #f2f2f2 !important; */
+	border-radius: 15px !important;
 	height: 40em;
 	width: 50em;
 	margin: auto;
 }
 
 .new-trip-form {
-	margin-top: 8em;
+	margin-top: 11em;
 	/* margin: auto; */
 	height: 90%;
 	border-radius: 5px;
@@ -512,7 +512,9 @@ input {
 }
 
 .trip-name {
-	background-color: white;
+	/* background-color: white; */
+	background-color: #f2f2f2;
+
 	width: 20em;
 }
 
@@ -526,7 +528,8 @@ input {
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
 	margin-top: 2em;
-	background-color: white;
+	/* background-color: white; */
+	background-color: #f2f2f2;
 }
 
 .submit-btn {
