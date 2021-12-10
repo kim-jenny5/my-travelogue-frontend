@@ -11,6 +11,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TextField from "@mui/material/TextField";
 import DatePicker from "@mui/lab/DatePicker";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 // import DateRangePicker from "@mui/lab/DateRangePicker";
 // import DatePicker from "./DatePicker";
 // import { MuiPickersUtilsProvider, DatePicker } from "material-ui-pickers";
@@ -102,9 +103,10 @@ class NewTripFormCont extends Component {
 						name="endDate"
 						onChange={this.handleChange}
 					/> */}
-					<button type="submit" onClick={this.connectUser}>
+					{/* <button type="submit">Let's Go!</button> */}
+					<Button variant="contained" type="submit">
 						Let's Go!
-					</button>
+					</Button>
 				</form>
 			</div>
 		);

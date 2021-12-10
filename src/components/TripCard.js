@@ -12,9 +12,9 @@ import { LinkOut } from "akar-icons";
 export default function TripCard(props) {
 	return (
 		<div>
-			{props.trips.map((trip) => {
+			{props.trips.map((trip, idx) => {
 				return (
-					<div className="trip-card container">
+					<div className="trip-card container" key={idx}>
 						<Card className="trip-card" variant="outlined">
 							<CardContent style={{ backgroundColor: "#F2F2F2" }}>
 								<div className="title">{trip.trip_name}</div>

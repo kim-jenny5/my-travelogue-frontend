@@ -17,6 +17,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
 import TripCard from "./TripCard";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 // import TripCard from "../components/TripCard";
 // import NewTripFormCont from "../components/NewTripFormCont";
@@ -75,9 +76,12 @@ class DashboardContainer extends Component {
 								displayStaticWrapperAs="desktop"
 								orientation="portrait"
 								openTo="day"
-								readOnly="true"
-								disabled="true"
+								value={new Date()}
+								readOnly={true}
+								disabled={true}
+								onChange={() => {}}
 								sx={{ fontFamily: "Poppins" }}
+								renderInput={(params) => <TextField {...params} />}
 							/>
 						</LocalizationProvider>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
