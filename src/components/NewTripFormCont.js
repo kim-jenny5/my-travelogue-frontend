@@ -66,6 +66,7 @@ class NewTripFormCont extends Component {
 						variant="outlined"
 						placeholder="Roadtrip with the girls 👯"
 						onChange={(e) => this.handleChange("tripName", e)}
+						className="trip-name inputs"
 					>
 						{/* <input
 							type="text"
@@ -81,6 +82,7 @@ class NewTripFormCont extends Component {
 							// name="startDate"
 							onChange={(e) => this.handleChange("startDate", e)}
 							renderInput={(params) => <TextField {...params} />}
+							className="trip-date-inputs"
 						/>
 						<DatePicker
 							label="End Date"
@@ -89,6 +91,7 @@ class NewTripFormCont extends Component {
 							// onChange={this.handleChange}
 							onChange={(e) => this.handleChange("endDate", e)}
 							renderInput={(params) => <TextField {...params} />}
+							className="trip-date-inputs"
 						/>
 					</LocalizationProvider>
 					{/* <input

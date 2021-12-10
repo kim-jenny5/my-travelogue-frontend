@@ -508,3 +508,11 @@ input {
 .materialui-daterange-picker-MuiGrid-root-35 {
 	display: none !important;
 }
+
+.trip-name {
+	background-color: white;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+	background-color: white;
+}
