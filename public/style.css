@@ -377,7 +377,7 @@ input {
 	left: 35vw;
 	top: 12vh;
 
-	background-color: lightgray;
+	/* background-color: lightgray; */
 }
 
 .all-trips-container .titles {
