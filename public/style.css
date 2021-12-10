@@ -258,7 +258,7 @@ input {
 .dashboard .info.container {
 	/* position: absolute; */
 	margin-left: 3em;
-	margin-top: 3em;
+	margin-top: 5em;
 	width: 31vw;
 	height: 64.3vh;
 	/* height: 20em; */
@@ -342,17 +342,19 @@ input {
 	font-size: 0.875em;
 }
 
+.logout-btn {
+	background: #f2f2f2;
+	color: #0f43f9;
+	border: none;
+	padding: 0.25em 0.75em 0.25em 0.75em;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
 .new-trip-btn {
 	position: absolute;
-	/* width: max-content; */
-	/* height: min-content; */
-	/* width: min-content; */
-	/* width: 9.79vw; */
-	/* width: 7em; */
 	width: 7vw;
-	/* height: 4.44vh; */
 	height: 2.5em;
-	/* height: min-content; */
 	left: 85vw;
 	top: 6.5vh;
 	background: #0f43f9;

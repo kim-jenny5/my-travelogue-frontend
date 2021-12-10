@@ -64,7 +64,9 @@ class DashboardContainer extends Component {
 							Taken <b>{this.props.pastTrips.length}</b> trips
 						</div>
 						<div className="logout-btn container">
-							<button onClick={this.logOutUser}>Log Out</button>
+							<button onClick={this.logOutUser} className="logout-btn">
+								Log Out
+							</button>
 						</div>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
 							<StaticDatePicker
