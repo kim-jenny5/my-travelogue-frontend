@@ -8,7 +8,7 @@ import { UserFooter } from "./UserFooter";
 // import PastTrips from "./PastTrips";
 import NextTrip from "./NextTrip";
 // import TripDetails from "./TripDetails";
-import NewTripForm from "./NewTripForm";
+import NewTripFormCont from "./NewTripFormCont";
 import { showModal } from "../actions/modalActions";
 import ModalContainer from "./ModalContainer";
 
@@ -19,7 +19,7 @@ import TripCard from "./TripCard";
 import Button from "@mui/material/Button";
 
 // import TripCard from "../components/TripCard";
-// import NewTripForm from "../components/NewTripForm";
+// import NewTripFormCont from "../components/NewTripFormCont";
 
 class DashboardContainer extends Component {
 	componentDidMount() {
@@ -31,7 +31,7 @@ class DashboardContainer extends Component {
 	handleClick = () => {
 		// debugger;
 		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
-		// return <NewTripForm />;
+		// return <NewTripFormCont />;
 		// const modalInfo = { open: true, title: "New Trip Modal" };
 		// const modalInfo = { title: "New Trip Modal" };
 		// this.props.showModal(modalInfo);

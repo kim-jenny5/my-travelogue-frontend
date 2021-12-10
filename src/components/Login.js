@@ -4,7 +4,7 @@ import { NavLink, Route, Redirect, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { logInUser } from "../actions/userActions";
 import DashboardContainer from "./DashboardContainer";
-import NewTripForm from "./NewTripForm";
+import NewTripFormCont from "./NewTripFormCont";
 import { MainFooter } from "./MainFooter";
 
 // TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER

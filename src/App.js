@@ -5,7 +5,7 @@ import Home from "./components/Home";
 // import LoginContainer from "./containers/LoginContainer";
 // import DashboardContainer from "./components/DashboardContainer";
 // import UserContainer from "./components/UserContainer";
-import NewTripForm from "./components/NewTripForm";
+import NewTripFormCont from "./components/NewTripFormCont";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 // import AppContainer from "./components/AppContainer";
@@ -70,7 +70,7 @@ class App extends Component {
 						<Route exact path="/signup" component={Signup} /> */}
 							<Route exact path="/dashboard" component={UserContainer} />
 							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
-							{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
+							{/* <Route exact path="/dashboard/trips/new" component={NewTripFormCont} /> */}
 							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 							{/* <Route exact path="/dashboard" component={DashboardContainer} /> */}
 							{/* <Route
@@ -83,7 +83,7 @@ class App extends Component {
 							path="/dashboard/trips/new"
 							component={DashboardContainer}
 						/> */}
-							{/* <Route exact path="/dashboard/trips/new" component={NewTripForm} /> */}
+							{/* <Route exact path="/dashboard/trips/new" component={NewTripFormCont} /> */}
 							{/* NOTE: for now will just make a standing route and nest it later
 						into trips */}
 							{/* <Route path="/tripdetails" component={TripDetails} /> */}
@@ -94,7 +94,7 @@ class App extends Component {
 							{/* <Route path="/login" component={UserContainer} />
 						<Route path="/signup" component={UserContainer} /> */}
 							{/* <Route path="/dashboard" component={DashboardContainer} />
-						<Route path="/newtrip" component={NewTripForm} /> */}
+						<Route path="/newtrip" component={NewTripFormCont} /> */}
 						</Switch>
 					</div>
 				</ThemeProvider>

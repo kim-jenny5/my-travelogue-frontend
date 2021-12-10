@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 import { connect } from "react-redux";
-import NewTripForm from "./NewTripForm";
+import NewTripFormCont from "./NewTripFormCont";
 import Modals from "./Modals";
 import Button from "@mui/material/Button";
 // import { Cross } from "akar-icons";

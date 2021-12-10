@@ -7,7 +7,7 @@ import DashboardContainer from "./DashboardContainer";
 import Login from "./Login";
 import Signup from "./Signup";
 import { fetchTrips } from "../actions/tripActions";
-import NewTripForm from "./NewTripForm";
+import NewTripFormCont from "./NewTripFormCont";
 
 class UserContainer extends Component {
 	// this.props.location.pathname
@@ -21,7 +21,7 @@ class UserContainer extends Component {
 			// debugger;
 			return <DashboardContainer />;
 			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
-			// 	return <NewTripForm />;
+			// 	return <NewTripFormCont />;
 			// }
 			// return <DashboardContainer />;
 		} else if (this.props.location.pathname === "/login") {
@@ -29,9 +29,9 @@ class UserContainer extends Component {
 		} else if (this.props.location.pathname === "/signup") {
 			return <Signup />;
 			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
-			// 	return <NewTripForm />;
+			// 	return <NewTripFormCont />;
 			// } else if (this.props.location.pathname === "/dashboard/trips/new") {
-			// return <NewTripForm />;
+			// return <NewTripFormCont />;
 			// debugger;
 		} else if (!this.props.isLoggedIn) {
 			return <Redirect to="/login" />;
@@ -39,7 +39,7 @@ class UserContainer extends Component {
 
 		// <div>
 		// 	<Switch>
-		// 		<Route exact path="/dashboard/trips/new" component={NewTripForm} />
+		// 		<Route exact path="/dashboard/trips/new" component={NewTripFormCont} />
 		// 	</Switch>
 		// </div>;
 
@@ -48,7 +48,7 @@ class UserContainer extends Component {
 		// 	return <Redirect to="/login" />;
 		// }
 		// } else if (this.props.match.path === "/dashboard/trips/new") {
-		// 	return <NewTripForm />;
+		// 	return <NewTripFormCont />;
 		// } else {
 		// 	if (this.props.match.path === "/login") {
 		// 		// return <Login />;
@@ -56,7 +56,7 @@ class UserContainer extends Component {
 		// 	} else if (this.props.match.path === "/signup") {
 		// 		return <Signup />;
 		// 	} else if (this.props.match.path === "/dashboard/trips/new") {
-		// 		return <NewTripForm />;
+		// 		return <NewTripFormCont />;
 		// 	}
 		// }
 	}
