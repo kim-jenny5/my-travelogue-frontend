@@ -27,6 +27,7 @@ class ModalContainer extends Component {
 					<Button
 						onClick={this.closeModal}
 						variant="contained"
+						// variant="outlined"
 						className="hide-modal btn"
 					>
 						Close
