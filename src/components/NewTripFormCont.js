@@ -57,44 +57,44 @@ class NewTripFormCont extends Component {
 		return (
 			<div className="new-trip-form">
 				<div className="title">When's your new trip?</div>
-				<form onSubmit={this.handleSubmit}>
-					{/* <div>Name of your trip</div> */}
-					<TextField
-						id="outlined-basic"
-						label="Name of your trip"
-						// name="tripName"
-						variant="outlined"
-						placeholder="Roadtrip with the girls 👯"
-						onChange={(e) => this.handleChange("tripName", e)}
-						className="trip-name inputs"
-					>
-						{/* <input
+				<div className="form-container">
+					<form onSubmit={this.handleSubmit}>
+						<TextField
+							id="outlined-basic"
+							label="Name of your trip"
+							// name="tripName"
+							variant="outlined"
+							placeholder="Roadtrip with the girls 👯"
+							onChange={(e) => this.handleChange("tripName", e)}
+							className="trip-name"
+						>
+							{/* <input
 							type="text"
 							name="tripName"
 							placeholder="Example: Roadtrip with the girls 👯"
 							onChange={this.handleChange}
 						/> */}
-					</TextField>
-					<LocalizationProvider dateAdapter={AdapterDateFns}>
-						<DatePicker
-							label="Start Date"
-							value={this.state.startDate}
-							// name="startDate"
-							onChange={(e) => this.handleChange("startDate", e)}
-							renderInput={(params) => <TextField {...params} />}
-							className="trip-date-inputs"
-						/>
-						<DatePicker
-							label="End Date"
-							value={this.state.endDate}
-							// name="endDate"
-							// onChange={this.handleChange}
-							onChange={(e) => this.handleChange("endDate", e)}
-							renderInput={(params) => <TextField {...params} />}
-							className="trip-date-inputs"
-						/>
-					</LocalizationProvider>
-					{/* <input
+						</TextField>
+						<LocalizationProvider dateAdapter={AdapterDateFns}>
+							<DatePicker
+								label="Start Date"
+								value={this.state.startDate}
+								// name="startDate"
+								onChange={(e) => this.handleChange("startDate", e)}
+								renderInput={(params) => <TextField {...params} />}
+								className="trip-date-inputs"
+							/>
+							<DatePicker
+								label="End Date"
+								value={this.state.endDate}
+								// name="endDate"
+								// onChange={this.handleChange}
+								onChange={(e) => this.handleChange("endDate", e)}
+								renderInput={(params) => <TextField {...params} />}
+								className="trip-date-inputs"
+							/>
+						</LocalizationProvider>
+						{/* <input
 						type="date"
 						id="startDate"
 						name="startDate"
@@ -106,11 +106,14 @@ class NewTripFormCont extends Component {
 						name="endDate"
 						onChange={this.handleChange}
 					/> */}
-					{/* <button type="submit">Let's Go!</button> */}
-					<Button variant="contained" type="submit">
-						Let's Go!
-					</Button>
-				</form>
+						{/* <button type="submit">Let's Go!</button> */}
+						<div className="submit-btn">
+							<Button variant="contained" type="submit">
+								Let's Go!
+							</Button>
+						</div>
+					</form>
+				</div>
 			</div>
 		);
 		// }

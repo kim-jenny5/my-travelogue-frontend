@@ -509,10 +509,21 @@ input {
 	display: none !important;
 }
 
+.form-container {
+	position: absolute;
+	left: 5em;
+	top: 10em;
+}
+
 .trip-name {
 	background-color: white;
 }
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
 	background-color: white;
+}
+
+.submit-btn {
+	margin-top: 2em;
+	text-align: center;
 }
