@@ -10,18 +10,18 @@ export const showModal = (modalInfo) => {
 
 // };
 
-// export const fetchTripModal = (modalInfo, tripInfo) => {
-// 	return (dispatch) => {
-// 		const { id } = tripInfo;
+export const fetchTripModal = (modalInfo, tripInfo) => {
+	return (dispatch) => {
+		const { id } = tripInfo;
 
-// 		fetch(`http://localhost:3000/trips/${id}`)
-// 			.then((resp) => resp.json())
-// 			.then((data) => {
-// 				debugger;
-// 				dispatch({ type: "FETCH_A_TRIP", data });
-// 			});
+		fetch(`http://localhost:3000/trips/${id}`)
+			.then((resp) => resp.json())
+			.then((data) => {
+				// debugger;
+				dispatch({ type: "FETCH_A_TRIP", data });
+			});
 
-// 		dispatch({ type: "SHOW_MODAL", modalInfo });
-// 		// showModal(modalInfo);
-// 	};
-// };
+		dispatch({ type: "SHOW_MODAL", modalInfo });
+		// showModal(modalInfo);
+	};
+};

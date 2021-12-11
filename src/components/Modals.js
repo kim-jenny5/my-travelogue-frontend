@@ -65,7 +65,7 @@ class Modals extends Component {
 		if (this.props.type === "new trip") {
 			return <NewTripFormCont />;
 		} else if (this.props.type === "show trip") {
-			debugger;
+			// debugger;
 			// return <TripShowDetails trip={this.props.trip} />;
 			// return <TripShowDetails trip=/>;
 			return <div>Not yet babe</div>;

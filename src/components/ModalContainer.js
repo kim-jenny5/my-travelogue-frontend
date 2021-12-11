@@ -15,13 +15,16 @@ class ModalContainer extends Component {
 	render() {
 		if (!this.props.isOpen) return null;
 
-		debugger;
+		// debugger;
 
 		return (
 			<div className="modal-container">
 				{/* <ReactModal isOpen={this.props.isOpen} style={styles.modalContainer}> */}
 				<ReactModal isOpen={this.props.isOpen}>
 					<Button
+						// onClick={() => {
+						// 	this.closeModal();
+						// }}
 						onClick={this.closeModal}
 						variant="contained"
 						// variant="outlined"
@@ -29,10 +32,7 @@ class ModalContainer extends Component {
 					>
 						Close
 					</Button>
-					<Modals
-						type={this.props.type}
-						trip={this.props.trip ? this.props.trip : null}
-					/>
+					<Modals type={this.props.type} />
 				</ReactModal>
 			</div>
 		);
@@ -41,8 +41,8 @@ class ModalContainer extends Component {
 
 const mapStateToProps = (state) => ({
 	isOpen: state.modal.isOpen,
-	type: state.modal.type
-	// fetchedTrip: state.trips.fetchedTrip
+	type: state.modal.type,
+	fetchedTrip: state.trips.fetchedTrip
 });
 
 const mapDispatchToProps = (dispatch) => {
