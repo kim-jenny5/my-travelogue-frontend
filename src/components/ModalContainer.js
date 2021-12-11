@@ -32,7 +32,7 @@ class ModalContainer extends Component {
 					>
 						Close
 					</Button>
-					<Modals type={this.props.type} />
+					<Modals type={this.props.type} isOpen={this.props.isOpen} />
 				</ReactModal>
 			</div>
 		);
