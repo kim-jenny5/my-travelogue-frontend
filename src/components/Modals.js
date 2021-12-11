@@ -1,28 +1,55 @@
-import React from "react";
+// import React from "react";
+// import NewTripFormCont from "./NewTripFormCont";
+// import TripShowDetails from "./TripShowDetails";
+// import { Bug } from "akar-icons";
+
+// export default function Modals(props) {
+// 	// console.log(props);
+// 	// debugger;
+// 	if (props.type === "new trip") {
+// 		return <NewTripFormCont />;
+// 	} else if (props.type === "show trip") {
+// 		return <TripShowDetails trip={props.trip} />;
+// 		// return <TripShowDetails trip=/>;
+// 	} else {
+// 		return ErrorModal();
+// 	}
+// }
+
+// const ErrorModal = () => {
+// 	return (
+// 		<div className="error-container">
+// 			Oops... This is embarassing.{" "}
+// 			<span style={{ fontSize: "1.5em", verticalAlign: "middle" }}>😳</span>
+// 			<div
+// 				style={{ fontSize: "1.25rem", fontWeight: "400", marginBottom: "2em" }}
+// 			>
+// 				We're always bug hunting, but we'll be sure to catch this one too!
+// 			</div>
+// 			<div>
+// 				<Bug strokeWidth={2} size={60} />
+// 			</div>
+// 		</div>
+// 	);
+// };
+
+import React, { Component } from "react";
 import NewTripFormCont from "./NewTripFormCont";
 import TripShowDetails from "./TripShowDetails";
 import { Bug } from "akar-icons";
+import { connect } from "react-redux";
 
-export default function Modals(props) {
-	// console.log(props);
-	// debugger;
-	if (props.type === "new trip") {
-		return <NewTripFormCont />;
-	} else if (props.type === "show trip") {
-		// return <TripShowDetails trip={props.trip} />;
-		return <TripShowDetails />;
-	} else {
-		return ErrorModal();
-	}
-}
-
-const ErrorModal = () => {
-	return (
+class Modals extends Component {
+	errorModal = () => (
 		<div className="error-container">
 			Oops... This is embarassing.{" "}
 			<span style={{ fontSize: "1.5em", verticalAlign: "middle" }}>😳</span>
 			<div
-				style={{ fontSize: "1.25rem", fontWeight: "400", marginBottom: "2em" }}
+				style={{
+					fontSize: "1.25rem",
+					fontWeight: "400",
+					marginBottom: "2em"
+				}}
 			>
 				We're always bug hunting, but we'll be sure to catch this one too!
 			</div>
@@ -31,4 +58,24 @@ const ErrorModal = () => {
 			</div>
 		</div>
 	);
-};
+	q;
+	render() {
+		// return <div></div>;
+		if (props.type === "new trip") {
+			return <NewTripFormCont />;
+		} else if (props.type === "show trip") {
+			return <TripShowDetails trip={props.trip} />;
+			// return <TripShowDetails trip=/>;
+		} else {
+			return ErrorModal();
+		}
+	}
+}
+
+// const mapStateToProps = (state) => ({
+
+// })
+
+const mapDispatchToProps = {};
+
+export default connect(null, mapDispatchToProps)(Modals);

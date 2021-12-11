@@ -17,7 +17,7 @@ export const fetchCurrentUser = () => {
 				return resp.json();
 			})
 			.then((data) => {
-				console.log(data);
+				// console.log(data);
 				if (data.error) {
 					// alert(data.error);
 					localStorage.removeItem("token");

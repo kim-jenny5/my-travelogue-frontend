@@ -58,6 +58,7 @@ class TripCard extends Component {
 	handleClick = (trip) => {
 		this.props.fetchATrip(trip);
 		this.props.showModal({ type: "show trip" });
+		// return <ModalContainer trip={trip} />;
 	};
 
 	render() {
@@ -81,10 +82,10 @@ class TripCard extends Component {
 									</Button>
 								</CardActions>
 							</Card>
-							<ModalContainer />
 						</div>
 					);
 				})}
+				<ModalContainer />;
 			</div>
 		);
 	}

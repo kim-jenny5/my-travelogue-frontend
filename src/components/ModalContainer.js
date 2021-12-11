@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 class ModalContainer extends Component {
 	closeModal = () => {
 		this.props.hideModal();
-		this.props.clearFetchedTrip();
+		// this.props.clearFetchedTrip();
 	};
 
 	render() {
@@ -29,7 +29,7 @@ class ModalContainer extends Component {
 					</Button>
 					<Modals
 						type={this.props.type}
-						// trip={this.props.trip ? this.props.trip : !this.props.trip}
+						trip={this.props.trip ? this.props.trip : null}
 					/>
 				</ReactModal>
 			</div>
@@ -44,10 +44,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		hideModal: () => dispatch({ type: "HIDE_MODAL" }),
-		clearFetchedTrip: () => {
-			dispatch({ type: "CLEAR_FETCHED_TRIP" });
-		}
+		hideModal: () => dispatch({ type: "HIDE_MODAL" })
+		// clearFetchedTrip: () => {
+		// 	dispatch({ type: "CLEAR_FETCHED_TRIP" });
+		// }
 	};
 };
 

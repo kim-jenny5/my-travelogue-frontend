@@ -9,6 +9,7 @@ class TripShowDetails extends Component {
 
 	render() {
 		console.log(this.props);
+		debugger;
 		return <div>Hello</div>;
 	}
 }
