@@ -57,10 +57,11 @@ class TripCard extends Component {
 	// }
 
 	handleClick = (trip) => {
-		debugger;
+		// debugger;
 		// this.props.fetchATrip(trip);
 		// this.props.showModal({ type: "show trip" });
 		// this.props.fetchTripModal({ type: "show trip" }, trip);
+		this.props.showModal({ type: "show trip" });
 		// return <ModalContainer trip={trip} />;
 		// return <ModalContainer />;
 	};
@@ -86,11 +87,11 @@ class TripCard extends Component {
 									</Button>
 								</CardActions>
 							</Card>
+							<ModalContainer trip={trip} />
 						</div>
 					);
 				})}
 				{/* <ModalContainer fetchedTrip={this.props.fetchedTrip} /> */}
-				{/* <ModalContainer /> */}
 			</div>
 		);
 	}
@@ -100,14 +101,14 @@ class TripCard extends Component {
 // 	// fetchedTrip: state.trips.fetchedTrip
 // });
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		// showModal: (modalInfo) => dispatch(showModal(modalInfo)),
-// 		// fetchATrip: (tripInfo) => dispatch(fetchATrip(tripInfo))
-// 		// fetchTripModal: (modalInfo, tripInfo) =>
-// 		// 	dispatch(fetchTripModal(modalInfo, tripInfo))
-// 	};
-// };
+const mapDispatchToProps = (dispatch) => {
+	return {
+		showModal: (modalInfo) => dispatch(showModal(modalInfo))
+		// fetchATrip: (tripInfo) => dispatch(fetchATrip(tripInfo))
+		// fetchTripModal: (modalInfo, tripInfo) =>
+		// 	dispatch(fetchTripModal(modalInfo, tripInfo))
+	};
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(TripCard);
-export default TripCard;
+export default connect(null, mapDispatchToProps)(TripCard);
+// export default TripCard;
