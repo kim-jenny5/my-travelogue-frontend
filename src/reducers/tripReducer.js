@@ -29,6 +29,7 @@ const tripReducer = (
 			// debugger;
 
 			return {
+				...state,
 				userId: action.user.id,
 				upcomingTrips: action.user.upcoming_trips,
 				pastTrips: action.user.past_trips,
@@ -86,8 +87,16 @@ const tripReducer = (
 		// };
 
 		case "FETCH_A_TRIP":
-			debugger;
-			return state;
+			const { trip_name, start_date, end_date } = action.data;
+
+			return {
+				...state,
+				fetchedTrip: {
+					tripName: trip_name,
+					startDate: start_date,
+					endDate: end_date
+				}
+			};
 
 		// case "TRIP_CREATION_FAIL":
 		// 	return {

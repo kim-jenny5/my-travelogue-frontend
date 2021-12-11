@@ -72,7 +72,7 @@ export const fetchATrip = (tripInfo) => {
 		fetch(`http://localhost:3000/trips/${id}`)
 			.then((resp) => resp.json())
 			.then((data) => {
-				debugger;
+				// debugger;
 				dispatch({ type: "FETCH_A_TRIP", data });
 			});
 	};
