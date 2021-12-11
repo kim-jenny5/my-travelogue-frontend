@@ -20,11 +20,11 @@ class TripShowDetails extends Component {
 		} else return null;
 	}
 }
-// const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({ fetchedTrip: state.trips.fetchedTrip });
 
 // const mapDispatchToProps = (dispatch) => {
 // 	return { fetchATrip: (tripInfo) => dispatch(fetchATrip(tripInfo)) };
 // };
 
-// export default connect(mapDispatchToProps)(TripShowDetails);
-export default TripShowDetails;
+export default connect(mapStateToProps)(TripShowDetails);
+// export default TripShowDetails;
