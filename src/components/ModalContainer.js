@@ -26,7 +26,7 @@ class ModalContainer extends Component {
 					>
 						Close
 					</Button>
-					<Modals type={this.props.type} trip={this.props.trip} />
+					<Modals type={this.props.type} />
 				</ReactModal>
 			</div>
 		);

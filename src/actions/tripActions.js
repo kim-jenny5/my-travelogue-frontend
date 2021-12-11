@@ -63,3 +63,7 @@ export const createTrip = (tripInfo) => {
 			});
 	};
 };
+
+export const fetchATrip = (tripInfo) => {
+	return (dispatch) => {};
+};
