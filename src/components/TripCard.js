@@ -48,9 +48,15 @@ import Button from "@mui/material/Button";
 import { connect } from "react-redux";
 import { showModal } from "../actions/modalActions";
 import ModalContainer from "./ModalContainer";
+import { fetchATrip } from "../actions/tripActions";
 
 class TripCard extends Component {
-	handleClick = () => {
+	// componentDidMount() {
+	// 	this.props.fetchATrip();
+	// }
+
+	handleClick = (trip) => {
+		this.props.fetchATrip(trip);
 		this.props.showModal({ type: "show trip" });
 	};
 
@@ -69,13 +75,13 @@ class TripCard extends Component {
 									<Button
 										size="small"
 										style={{ color: "#0F43F9", fontWeight: 400 }}
-										onClick={this.handleClick}
+										onClick={() => this.handleClick(trip)}
 									>
 										Open
 									</Button>
 								</CardActions>
 							</Card>
-							<ModalContainer />;
+							<ModalContainer trip={trip} />
 						</div>
 					);
 				})}
@@ -89,7 +95,10 @@ class TripCard extends Component {
 // })
 
 const mapDispatchToProps = (dispatch) => {
-	return { showModal: (modalInfo) => dispatch(showModal(modalInfo)) };
+	return {
+		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
+		fetchATrip: (tripInfo) => dispatch(fetchATrip(tripInfo))
+	};
 };
 
 export default connect(null, mapDispatchToProps)(TripCard);

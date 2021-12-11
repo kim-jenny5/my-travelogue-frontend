@@ -65,5 +65,15 @@ export const createTrip = (tripInfo) => {
 };
 
 export const fetchATrip = (tripInfo) => {
-	return (dispatch) => {};
+	const { id } = tripInfo;
+	// console.log(id);
+	// debugger;
+	return (dispatch) => {
+		fetch(`http://localhost:3000/trips/${id}`)
+			.then((resp) => resp.json())
+			.then((data) => {
+				debugger;
+				dispatch({ type: "FETCH_A_TRIP", data });
+			});
+	};
 };

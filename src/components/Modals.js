@@ -4,11 +4,11 @@ import TripShowDetails from "./TripShowDetails";
 import { Bug } from "akar-icons";
 
 export default function Modals(props) {
-	console.log(props);
+	// console.log(props);
 	if (props.type === "new trip") {
 		return <NewTripFormCont />;
 	} else if (props.type === "show trip") {
-		return <TripShowDetails />;
+		return <TripShowDetails trip={props.trip} />;
 	} else {
 		return ErrorModal();
 	}

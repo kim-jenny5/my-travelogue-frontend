@@ -8,7 +8,8 @@ const tripReducer = (
 		// trips: { upcomingTrips: [], pastTrips: [] },
 		upcomingTrips: [],
 		pastTrips: [],
-		nextTrip: null
+		nextTrip: null,
+		fetchedTrip: { tripName: null, startDate: null, endDate: null }
 		// trips: [],
 		// fetchingTrip: null,
 		// creatingTrip: null,
@@ -83,6 +84,10 @@ const tripReducer = (
 		// 	// creatingTrip: true,
 		// 	// createdTrip: true
 		// };
+
+		case "FETCH_A_TRIP":
+			debugger;
+			return state;
 
 		// case "TRIP_CREATION_FAIL":
 		// 	return {
