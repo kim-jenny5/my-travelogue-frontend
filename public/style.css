@@ -34,6 +34,12 @@ input {
 	font-family: inherit;
 }
 
+a,
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
 /* NOTE: NAVBAR/HEADER */
 .user-btn {
 	padding-left: 25px;
