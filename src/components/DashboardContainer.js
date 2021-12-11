@@ -94,12 +94,18 @@ class DashboardContainer extends Component {
 					<div className="upcoming-trips-container">
 						<div className="titles">Upcoming Trips</div>
 						{/* <UpcomingTrips trips={this.props.upcomingTrips} /> */}
-						<TripCard trips={this.props.upcomingTrips} />
+						<TripCard
+							trips={this.props.upcomingTrips}
+							// showModal={this.props.showModal({ type: "show trip" })}
+						/>
 					</div>
 					<div className="past-trips-container">
 						<div className="titles">Past Trips</div>
 						{/* <PastTrips trips={this.props.pastTrips} /> */}
-						<TripCard trips={this.props.pastTrips} />
+						<TripCard
+							trips={this.props.pastTrips}
+							// showModal={this.props.showModal({ type: "show trip" })}
+						/>
 					</div>
 				</div>
 				<button onClick={this.handleClick} className="new-trip-btn">
