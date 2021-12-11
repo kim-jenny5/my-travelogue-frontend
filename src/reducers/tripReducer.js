@@ -1,6 +1,8 @@
 import { isBefore } from "date-fns";
 import { nanoid } from "nanoid";
 
+const initialTripState = { tripName: null, startDate: null, endDate: null };
+
 const tripReducer = (
 	state = {
 		// id: null,
@@ -9,7 +11,7 @@ const tripReducer = (
 		upcomingTrips: [],
 		pastTrips: [],
 		nextTrip: null,
-		fetchedTrip: { tripName: null, startDate: null, endDate: null }
+		fetchedTrip: initialTripState
 		// trips: [],
 		// fetchingTrip: null,
 		// creatingTrip: null,
@@ -96,6 +98,12 @@ const tripReducer = (
 					startDate: start_date,
 					endDate: end_date
 				}
+			};
+
+		case "CLEAR_FETCHED_TRIP":
+			return {
+				...state,
+				fetchedTrip: initialTripState
 			};
 
 		// case "TRIP_CREATION_FAIL":

@@ -5,10 +5,12 @@ import { Bug } from "akar-icons";
 
 export default function Modals(props) {
 	// console.log(props);
+	// debugger;
 	if (props.type === "new trip") {
 		return <NewTripFormCont />;
 	} else if (props.type === "show trip") {
-		return <TripShowDetails trip={props.trip} />;
+		// return <TripShowDetails trip={props.trip} />;
+		return <TripShowDetails />;
 	} else {
 		return ErrorModal();
 	}
