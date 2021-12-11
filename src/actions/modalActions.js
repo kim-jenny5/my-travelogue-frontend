@@ -1,5 +1,6 @@
 export const showModal = (modalInfo) => {
 	return (dispatch) => {
+		// debugger;
 		dispatch({ type: "SHOW_MODAL", modalInfo });
 	};
 	// return { type: "SHOW_MODAL", modalInfo };
@@ -11,8 +12,8 @@ export const showModal = (modalInfo) => {
 
 export const fetchTripModal = (modalInfo, tripInfo) => {
 	return (dispatch) => {
-		debugger;
-		dispatch({ type: "SHOW_MODAL" }, modalInfo);
+		// debugger;
+		dispatch({ type: "SHOW_MODAL", modalInfo });
 		// showModal(modalInfo);
 
 		const { id } = tripInfo;
