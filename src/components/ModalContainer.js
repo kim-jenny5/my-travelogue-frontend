@@ -9,11 +9,13 @@ import Button from "@mui/material/Button";
 class ModalContainer extends Component {
 	closeModal = () => {
 		this.props.hideModal();
-		// this.props.clearFetchedTrip();
+		this.props.clearFetchedTrip();
 	};
 
 	render() {
 		if (!this.props.isOpen) return null;
+
+		debugger;
 
 		return (
 			<div className="modal-container">
@@ -39,15 +41,16 @@ class ModalContainer extends Component {
 
 const mapStateToProps = (state) => ({
 	isOpen: state.modal.isOpen,
-	type: state.modal.type
+	type: state.modal.type,
+	fetchedTrip: state.trips.fetchedTrip
 });
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		hideModal: () => dispatch({ type: "HIDE_MODAL" })
-		// clearFetchedTrip: () => {
-		// 	dispatch({ type: "CLEAR_FETCHED_TRIP" });
-		// }
+		hideModal: () => dispatch({ type: "HIDE_MODAL" }),
+		clearFetchedTrip: () => {
+			dispatch({ type: "CLEAR_FETCHED_TRIP" });
+		}
 	};
 };
 

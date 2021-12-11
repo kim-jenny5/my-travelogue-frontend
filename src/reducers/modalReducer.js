@@ -9,7 +9,7 @@ const initialState = {
 const modalReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "SHOW_MODAL":
-			// debugger;
+			debugger;
 			return {
 				// modalProps: action.modalProps,
 				// modalProps: { isOpen: true },

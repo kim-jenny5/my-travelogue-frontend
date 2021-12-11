@@ -39,6 +39,7 @@ class DashboardContainer extends Component {
 
 		// this.props.showModal({ type: "New Trip Modal" });
 		this.props.showModal({ type: "new trip" });
+		// this.props.newTripFormModal();
 	};
 
 	logOutUser = () => {
@@ -132,6 +133,7 @@ const mapDispatchToProps = (dispatch) => {
 		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
 		// showModal: () => dispatch({ type: "SHOW_MODAL" })
 		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
+		// newTripFormModal: () => dispatch(showModal()),
 		logOutUser: () => dispatch({ type: "LOGGED_OUT" })
 	};
 };

@@ -89,6 +89,7 @@ const tripReducer = (
 		// };
 
 		case "FETCH_A_TRIP":
+			// debugger;
 			const { trip_name, start_date, end_date } = action.data;
 
 			return {
