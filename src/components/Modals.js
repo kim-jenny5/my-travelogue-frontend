@@ -66,19 +66,19 @@ class Modals extends Component {
 			return <NewTripFormCont />;
 		} else if (this.props.type === "show trip") {
 			// debugger;
-			// return <TripShowDetails trip={this.props.trip} />;
+			return <TripShowDetails fetchedTrip={this.props.fetchedTrip} />;
 			// return <TripShowDetails trip=/>;
-			return <div>Not yet babe</div>;
+			// return <div>Not yet babe</div>;
 		} else {
 			return this.errorModal();
 		}
 	}
 }
 
-// const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
+	fetchedTrip: state.trips.fetchedTrip
+});
 
-// })
+// const mapDispatchToProps = {};
 
-const mapDispatchToProps = {};
-
-export default connect(null, mapDispatchToProps)(Modals);
+export default connect(mapStateToProps)(Modals);

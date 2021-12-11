@@ -8,9 +8,16 @@ class TripShowDetails extends Component {
 	// }
 
 	render() {
-		console.log(this.props);
-		debugger;
-		return <div>Hello</div>;
+		// console.log(this.props);
+		// debugger;
+		const notNull = Object.values(this.props.fetchedTrip).every(
+			(value) => value !== null
+		);
+
+		if (notNull) {
+			debugger;
+			return <div>Hello</div>;
+		} else return null;
 	}
 }
 // const mapStateToProps = (state) => ({});
