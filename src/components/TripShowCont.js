@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchATrip } from "../actions/tripActions";
+import TripShow from "./TripShow";
 
-class TripShowDetails extends Component {
+class TripShowCont extends Component {
 	// componentDidMount() {
 	// 	this.props.fetchATrip();
 	// }
@@ -15,8 +16,9 @@ class TripShowDetails extends Component {
 		);
 
 		if (notNull) {
-			debugger;
-			return <div>Hello</div>;
+			// const { tripName, startDate, endDate } = this.props.fetchedTrip;
+			return <TripShow trip={this.props.fetchedTrip} />;
+			// return <div>Hello</div>;
 		} else return null;
 	}
 }
@@ -26,5 +28,5 @@ const mapStateToProps = (state) => ({ fetchedTrip: state.trips.fetchedTrip });
 // 	return { fetchATrip: (tripInfo) => dispatch(fetchATrip(tripInfo)) };
 // };
 
-export default connect(mapStateToProps)(TripShowDetails);
-// export default TripShowDetails;
+export default connect(mapStateToProps)(TripShowCont);
+// export default TripShowCont;
