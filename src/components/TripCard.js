@@ -75,10 +75,10 @@ class TripCard extends Component {
 									</Button>
 								</CardActions>
 							</Card>
+							<ModalContainer trip={trip} />;
 						</div>
 					);
 				})}
-				<ModalContainer />
 			</div>
 		);
 	}

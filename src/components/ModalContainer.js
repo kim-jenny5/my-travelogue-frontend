@@ -12,12 +12,6 @@ class ModalContainer extends Component {
 	};
 
 	render() {
-		// const styles = {
-		// 	modalContainer: {
-		// 		backgroundColor: "black"
-		// 	}
-		// };
-
 		if (!this.props.isOpen) return null;
 
 		return (
@@ -32,7 +26,7 @@ class ModalContainer extends Component {
 					>
 						Close
 					</Button>
-					<Modals type={this.props.type} isOpen={this.props.isOpen} />
+					<Modals type={this.props.type} trip={this.props.trip} />
 				</ReactModal>
 			</div>
 		);

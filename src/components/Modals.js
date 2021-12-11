@@ -1,12 +1,14 @@
 import React from "react";
 import NewTripFormCont from "./NewTripFormCont";
-import { ChatError, Bug } from "akar-icons";
+import TripShowDetails from "./TripShowDetails";
+import { Bug } from "akar-icons";
 
 export default function Modals(props) {
+	console.log(props);
 	if (props.type === "new trip") {
 		return <NewTripFormCont />;
 	} else if (props.type === "show trip") {
-		return <div>SHOW TRIP!</div>;
+		return <TripShowDetails trip={props.trip} />;
 	} else {
 		return ErrorModal();
 	}
