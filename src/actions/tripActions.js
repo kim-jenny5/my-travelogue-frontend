@@ -72,10 +72,15 @@ export const addPlace = (placeInfo) => {
 			})
 			.then((data) => {
 				// console.log(data);
-				// debugger;
-				if (data.error) alert(data.error);
+				if (data.error) {
+					const key = Object.keys(data.error);
+					const errorMsg = data.error[key][0];
+					alert(errorMsg);
+				} else {
+					dispatch({ type: "ADD_PLACE_TO_TRIP", data });
+				}
+
 				// dispatch({ type: "ADD_PLACE", data });
-				dispatch({ type: "ADD_PLACE_TO_TRIP", data });
 			});
 	};
 };
