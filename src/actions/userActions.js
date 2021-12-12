@@ -13,6 +13,7 @@ export const fetchCurrentUser = () => {
 			.then((data) => {
 				if (data.error) {
 					localStorage.removeItem("token");
+					localStorage.removeItem("user");
 				} else {
 					dispatch({ type: "LOGIN_SUCCESS", data });
 					window.history.pushState(data.user, "", "/dashboard");

@@ -9,7 +9,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 class App extends Component {
 	componentDidMount() {
 		let token = localStorage.getItem("token");
-		if (token) {
+		let user = localStorage.getItem("user");
+		if (token && user) {
 			this.props.fetchCurrentUser();
 		}
 	}
