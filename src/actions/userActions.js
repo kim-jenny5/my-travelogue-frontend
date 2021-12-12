@@ -85,12 +85,14 @@ export const createUser = (userInfo) => {
 			body: JSON.stringify({ user: userInfo })
 		})
 			.then((resp) => {
-				debugger;
+				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
-				debugger;
-				console.log(data);
+				localStorage.setItem("user", JSON.stringify(data.user));
+				localStorage.setItem("token", data.jwt);
+				dispatch({ type: "LOGIN_SUCCESS", data });
+				window.history.pushState(data.user, "", "/dashboard");
 			});
 	};
 };
