@@ -6,7 +6,8 @@ const tripReducer = (
 		upcomingTrips: [],
 		pastTrips: [],
 		nextTrip: null,
-		fetchedTrip: initialTripState
+		fetchedTrip: initialTripState,
+		places: []
 	},
 	action
 ) => {
@@ -45,6 +46,10 @@ const tripReducer = (
 				...state,
 				fetchedTrip: initialTripState
 			};
+
+		case "ADD_PLACE_TO_TRIP":
+			debugger;
+			return { ...state };
 
 		default:
 			return state;

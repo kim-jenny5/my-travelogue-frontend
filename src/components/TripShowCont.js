@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 // import { fetchATrip } from "../actions/tripActions";
-// import { addPlace } from "../actions/tripActions";
-import { addPlace } from "../actions/placeAction";
+import { addPlace } from "../actions/tripActions";
+// import { addPlace } from "../actions/placeAction";
 import TripShow from "./TripShow";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
