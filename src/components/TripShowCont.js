@@ -62,12 +62,13 @@ class TripShowCont extends Component {
 				this.props.showFetchedTrip;
 
 			return (
-				<div>
+				<div className="show-page">
 					{/* <TripShow trip={this.props.showFetchedTrip} /> */}
-					<div className="show-page title">{trip_name}</div>
+					<div className="title">{trip_name}</div>
 					<div>{DateFormatting(start_date, end_date)}</div>
 					{days_left_till !== "N/A" ? <div>D-{days_left_till}</div> : null}
-					Add to your itinerary here.
+					<div className="subtitle-1">Where to?</div>
+					<div className="subtitle-2">Add to your itinerary here.</div>
 					<form onSubmit={this.handleSubmit}>
 						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
 						<TextField
@@ -82,6 +83,7 @@ class TripShowCont extends Component {
 							<CirclePlus strokeWidth={2} size={24} />
 						</IconButton>
 					</form>
+					<div className="subtitle-1">Current Itinerary</div>
 					{places.map((place, idx) => {
 						return (
 							<ul>

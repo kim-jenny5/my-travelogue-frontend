@@ -110,7 +110,7 @@ a:visited {
 	background-size: cover;
 }
 
-.subtitle {
+.main-content .subtitle {
 	font-weight: bold;
 	font-size: 64px;
 	padding-top: calc(100vh - (100vh / 1.5));
@@ -509,8 +509,6 @@ a:visited {
 
 .ReactModal__Content.ReactModal__Content--after-open {
 	position: absolute;
-	overflow: hidden !important;
-	/* background-color: #f2f2f2 !important; */
 	border-radius: 15px !important;
 	height: 40em;
 	width: 50em;
@@ -518,17 +516,15 @@ a:visited {
 }
 
 .new-trip-form {
-	margin-top: 11em;
-	/* margin: auto; */
 	height: 90%;
 	border-radius: 5px;
 	text-align: center;
 }
 
 .new-trip-form .title {
+	padding-top: 7em;
 	font-weight: bold;
 	font-size: 1.5em;
-	/* text-align: center; */
 }
 
 .materialui-daterange-picker-MuiGrid-root-35 {
@@ -564,7 +560,16 @@ a:visited {
 }
 
 /* NOTE: TRIP SHOW MODAL */
-.show-page.title {
+.show-page .title {
 	font-weight: bold;
 	font-size: 1.5em;
+}
+
+.show-page .subtitle-1 {
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+.show-page .subtitle-2 {
+	font-size: 0.875em;
 }
