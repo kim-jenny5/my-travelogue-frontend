@@ -15,10 +15,10 @@ const tripReducer = (
 		case "TRIPS_FETCHED":
 			return {
 				...state,
-				userId: action.user.id,
-				upcomingTrips: action.user.upcoming_trips,
-				pastTrips: action.user.past_trips,
-				nextTrip: action.user.next_trip
+				userId: action.data.id,
+				upcomingTrips: action.data.upcoming_trips,
+				pastTrips: action.data.past_trips,
+				nextTrip: action.data.next_trip
 			};
 
 		case "TRIP_CREATED":
