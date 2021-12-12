@@ -6,15 +6,18 @@ const tripReducer = (
 		// upcomingTrips: [],
 		// pastTrips: [],
 		// nextTrip: null,
+		// fetchingTrip: false,
+		userTripsFetched: false,
 		fetchedTrip: initialTripState,
 		places: []
 	},
 	action
 ) => {
 	switch (action.type) {
-		case "TRIPS_FETCHED":
+		case "USER_TRIPS_FETCHED":
 			return {
-				...state
+				...state,
+				userTripsFetched: true
 				// userId: action.data.id
 				// upcomingTrips: action.data.upcoming_trips,
 				// pastTrips: action.data.past_trips,

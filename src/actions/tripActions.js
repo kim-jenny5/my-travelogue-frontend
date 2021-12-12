@@ -15,7 +15,8 @@ export const fetchTrips = (userInfo) => {
 				// const fetchedUser = data.filter((user) => user.id === userInfo.id);
 				// const [user] = fetchedUser;
 				if (data.error) alert(data.error);
-				dispatch({ type: "TRIPS_FETCHED", data });
+				// dispatch({ type: "TRIPS_FETCHED", data });
+				dispatch({ type: "USER_TRIPS_FETCHED", data });
 			});
 	};
 };
