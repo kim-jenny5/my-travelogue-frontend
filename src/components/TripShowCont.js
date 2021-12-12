@@ -105,9 +105,6 @@ const mapDispatchToProps = (dispatch) => {
 		clearPlaceAddedStatus: () => dispatch({ type: "CLEAR_PLACE_ADDED_STATUS" }),
 		fetchTripModal: (modalInfo, tripInfo) =>
 			dispatch(fetchTripModal(modalInfo, tripInfo))
-		// refreshTripModal: () => dispatch()
-
-		// addPlace: (placeInfo) => dispatch({ type: "ADD_PLACE" }, placeInfo)
 	};
 };
 
