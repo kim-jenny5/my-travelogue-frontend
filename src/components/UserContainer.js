@@ -13,8 +13,8 @@ class UserContainer extends Component {
 			return <Login />;
 		} else if (this.props.location.pathname === "/signup") {
 			return <Signup />;
-		} else if (!this.props.isLoggedIn) {
-			return "Loading...";
+		} else {
+			return <Redirect to="/login" />;
 		}
 	}
 }

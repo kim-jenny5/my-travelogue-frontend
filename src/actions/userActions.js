@@ -66,11 +66,16 @@ export const createUser = (userInfo) => {
 				return resp.json();
 			})
 			.then((data) => {
-				debugger;
-				localStorage.setItem("user", JSON.stringify(data.user));
-				localStorage.setItem("token", data.jwt);
-				dispatch({ type: "SIGNUP_SUCCESS", data });
-				window.history.pushState(data.user, "", "/dashboard");
+				if (data.error) {
+					const key = Object.keys(data.error);
+					const errorMsg = data.error[key][0];
+					alert(errorMsg);
+				} else {
+					localStorage.setItem("user", JSON.stringify(data.user));
+					localStorage.setItem("token", data.jwt);
+					dispatch({ type: "SIGNUP_SUCCESS", data });
+					window.history.pushState(data.user, "", "/dashboard");
+				}
 			});
 	};
 };
