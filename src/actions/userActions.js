@@ -74,7 +74,7 @@ export const logInUser = (userInfo) => {
 export const createUser = (userInfo) => {
 	return (dispatch) => {
 		// debugger;
-		// dispatch({ type: "USER_CREATING", userInfo });
+		dispatch({ type: "SIGNING_UP", userInfo });
 		fetch("http://localhost:3000/signup", {
 			method: "POST",
 			headers: {
@@ -85,13 +85,14 @@ export const createUser = (userInfo) => {
 			body: JSON.stringify({ user: userInfo })
 		})
 			.then((resp) => {
-				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
+				debugger;
 				localStorage.setItem("user", JSON.stringify(data.user));
 				localStorage.setItem("token", data.jwt);
-				dispatch({ type: "LOGIN_SUCCESS", data });
+				// dispatch({ type: "LOGIN_SUCCESS", data });
+				dispatch({ type: "SIGNUP_SUCCESS" });
 				window.history.pushState(data.user, "", "/dashboard");
 			});
 	};

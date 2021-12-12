@@ -1,41 +1,17 @@
-const userReducer = (
-	// state = { user: null, isLoggingIn: false, isLoggedIn: false },
-	state = { user: null, isLoggedIn: false },
-	action
-) => {
+const userReducer = (state = { user: null, isLoggedIn: false }, action) => {
 	switch (action.type) {
-		// case "USER_CREATING":
-		// 	// localStorage.setItem("user", JSON.stringify(action.user_info.user));
-		// 	// localStorage.setItem("token", action.user_info.jwt);
+		case "SIGNING_UP":
+			return {
+				...state,
+				user: action.userInfo
+			};
 
-		// 	return {
-		// 		...state
-		// 		// user: null,
-		// 		// isLoggingIn: true
-		// 		// isLoggedIn: false
-		// 	};
-
-		// case "LOGIN_ATTEMPTING":
-		// 	debugger;
-		// 	localStorage.setItem("user", JSON.stringify(action.data.user));
-		// 	localStorage.setItem("token", action.data.jwt);
-
-		// 	return {
-		// 		...state,
-		// 		// user: null,
-		// 		isLoggingIn: true
-		// 		// isLoggedIn: false
-		// 	};
+		case "SIGNUP_SUCCESS":
+			return { ...state, isLoggedIn: true };
 
 		case "LOGIN_SUCCESS":
-			// localStorage.setItem("user", JSON.stringify(action.data.user));
-			// localStorage.setItem("token", action.data.jwt);
-			// debugger;
-
 			return {
-				// ...state,
 				user: action.data,
-				// isLoggingIn: true,
 				isLoggedIn: true
 			};
 
@@ -51,7 +27,6 @@ const userReducer = (
 		// 	};
 
 		case "LOGGED_OUT":
-			// debugger;
 			return { ...state, user: null, isLoggedIn: false };
 
 		// case "LOGIN_FAIL":
