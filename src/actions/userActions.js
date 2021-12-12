@@ -92,7 +92,7 @@ export const createUser = (userInfo) => {
 				localStorage.setItem("user", JSON.stringify(data.user));
 				localStorage.setItem("token", data.jwt);
 				// dispatch({ type: "LOGIN_SUCCESS", data });
-				dispatch({ type: "SIGNUP_SUCCESS" });
+				dispatch({ type: "SIGNUP_SUCCESS", data });
 				window.history.pushState(data.user, "", "/dashboard");
 			});
 	};
