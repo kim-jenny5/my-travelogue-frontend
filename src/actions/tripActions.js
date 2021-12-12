@@ -72,7 +72,7 @@ export const addPlace = (placeInfo) => {
 			})
 			.then((data) => {
 				// console.log(data);
-				debugger;
+				// debugger;
 				if (data.error) alert(data.error);
 				// dispatch({ type: "ADD_PLACE", data });
 				dispatch({ type: "ADD_PLACE_TO_TRIP", data });

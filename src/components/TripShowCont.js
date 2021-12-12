@@ -14,7 +14,15 @@ class TripShowCont extends Component {
 		place_name: ""
 	};
 
-	// componentDidUpdate() {}
+	// componentDidUpdate(prevProps) {
+	// 	debugger;
+	// 	// const user = this.props.user.user || this.props.user;
+
+	// 	// if (prevProps.newTripCreated !== this.props.newTripCreated) {
+	// 	// 	this.props.clearTripCreatedStatus();
+	// 	// 	this.props.refreshDashboard(user);
+	// 	// }
+	// }
 
 	handleChange = (e) => {
 		// this.setState({ place: e.target.value }, () => {
@@ -46,6 +54,7 @@ class TripShowCont extends Component {
 					{/* <TripShow trip={this.props.showFetchedTrip} /> */}
 					<div className="show-page title">{trip_name}</div>
 					<div>{DateFormatting(start_date, end_date)}</div>
+					<div>D-{days_left_till}</div>
 					Add to your itinerary here.
 					<form onSubmit={this.handleSubmit}>
 						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
@@ -60,6 +69,13 @@ class TripShowCont extends Component {
 							<CirclePlus strokeWidth={2} size={24} />
 						</IconButton>
 					</form>
+					{places.map((place, idx) => {
+						return (
+							<ul>
+								<li key={idx}>{place.place_name}</li>
+							</ul>
+						);
+					})}
 				</div>
 			);
 		} else return null;
