@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 // import { fetchATrip } from "../actions/tripActions";
 import { addPlace } from "../actions/tripActions";
 // import { addPlace } from "../actions/placeAction";
-import TripShow from "./TripShow";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import { CirclePlus } from "akar-icons";
@@ -64,33 +63,39 @@ class TripShowCont extends Component {
 			return (
 				<div className="show-page">
 					{/* <TripShow trip={this.props.showFetchedTrip} /> */}
-					<div className="title">{trip_name}</div>
-					<div>{DateFormatting(start_date, end_date)}</div>
-					{days_left_till !== "N/A" ? <div>D-{days_left_till}</div> : null}
-					<div className="subtitle-1">Where to?</div>
-					<div className="subtitle-2">Add to your itinerary here.</div>
-					<form onSubmit={this.handleSubmit}>
-						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
-						<TextField
-							id="outlined-basic"
-							// label="Outlined"
-							variant="outlined"
-							size="small"
-							value={this.state.place_name}
-							onChange={this.handleChange}
-						/>
-						<IconButton color="primary" type="submit">
-							<CirclePlus strokeWidth={2} size={24} />
-						</IconButton>
-					</form>
-					<div className="subtitle-1">Current Itinerary</div>
-					{places.map((place, idx) => {
-						return (
-							<ul>
-								<li key={idx}>{place.place_name}</li>
-							</ul>
-						);
-					})}
+					<div className="quick-info-container">
+						<div className="quick-info">
+							<div className="title">{trip_name}</div>
+							<div>{DateFormatting(start_date, end_date)}</div>
+							{days_left_till !== "N/A" ? <div>D-{days_left_till}</div> : null}
+						</div>
+					</div>
+					<div className="details">
+						<div className="subtitle-1">Where to?</div>
+						<div className="subtitle-2">Add to your itinerary here.</div>
+						<form onSubmit={this.handleSubmit}>
+							{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
+							<TextField
+								id="outlined-basic"
+								// label="Outlined"
+								variant="outlined"
+								size="small"
+								value={this.state.place_name}
+								onChange={this.handleChange}
+							/>
+							<IconButton color="primary" type="submit">
+								<CirclePlus strokeWidth={2} size={24} />
+							</IconButton>
+						</form>
+						<div className="subtitle-1">Current Itinerary</div>
+						{places.map((place, idx) => {
+							return (
+								<ul>
+									<li key={idx}>{place.place_name}</li>
+								</ul>
+							);
+						})}
+					</div>
 				</div>
 			);
 		} else return null;
