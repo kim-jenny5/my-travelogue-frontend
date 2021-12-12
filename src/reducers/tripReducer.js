@@ -2,10 +2,10 @@ const initialTripState = { tripName: null, startDate: null, endDate: null };
 
 const tripReducer = (
 	state = {
-		userId: null,
-		upcomingTrips: [],
-		pastTrips: [],
-		nextTrip: null,
+		// userId: null,
+		// upcomingTrips: [],
+		// pastTrips: [],
+		// nextTrip: null,
 		fetchedTrip: initialTripState,
 		places: []
 	},
@@ -14,18 +14,18 @@ const tripReducer = (
 	switch (action.type) {
 		case "TRIPS_FETCHED":
 			return {
-				...state,
-				userId: action.data.id,
-				upcomingTrips: action.data.upcoming_trips,
-				pastTrips: action.data.past_trips,
-				nextTrip: action.data.next_trip
+				...state
+				// userId: action.data.id
+				// upcomingTrips: action.data.upcoming_trips,
+				// pastTrips: action.data.past_trips,
+				// nextTrip: action.data.next_trip
 			};
 
 		case "TRIP_CREATED":
 			return {
-				...state,
-				userId: action.data.user_id,
-				upcomingTrips: [...state.upcomingTrips, action.data]
+				...state
+				// userId: action.data.user_id
+				// upcomingTrips: [...state.upcomingTrips, action.data]
 			};
 
 		case "FETCH_A_TRIP":

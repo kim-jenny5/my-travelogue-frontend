@@ -30,8 +30,18 @@ class DashboardContainer extends Component {
 	};
 
 	render() {
-		const { first_name, last_name, joined } =
-			this.props.user.user || this.props.user;
+		// const { first_name, last_name, joined } =
+		// 	this.props.user.user || this.props.user;
+		const {
+			first_name,
+			last_name,
+			joined,
+			next_trip,
+			past_trips,
+			upcoming_trips
+		} = this.props.user.user || this.props.user;
+
+		// debugger;
 
 		return (
 			<div className="dashboard">
@@ -44,7 +54,8 @@ class DashboardContainer extends Component {
 							Joined <b>{joined}</b>
 						</div>
 						<div className="total-trips text">
-							Taken <b>{this.props.pastTrips.length}</b> trips
+							{/* Taken <b>{this.props.pastTrips.length}</b> trips */}
+							Taken <b>{past_trips.length}</b> trips
 						</div>
 						<div className="logout-btn container">
 							<button onClick={this.logOutUser} className="logout-btn">
@@ -65,17 +76,20 @@ class DashboardContainer extends Component {
 							/>
 						</LocalizationProvider>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
-						<NextTrip trip={this.props.nextTrip} />
+						{/* <NextTrip trip={this.props.nextTrip} /> */}
+						<NextTrip trip={next_trip} />
 					</div>
 				</div>
 				<div className="all-trips-container">
 					<div className="upcoming-trips-container">
 						<div className="titles">Upcoming Trips</div>
-						<TripCard trips={this.props.upcomingTrips} />
+						{/* <TripCard trips={this.props.upcomingTrips} /> */}
+						<TripCard trips={upcoming_trips} />
 					</div>
 					<div className="past-trips-container">
 						<div className="titles">Past Trips</div>
-						<TripCard trips={this.props.pastTrips} />
+						{/* <TripCard trips={this.props.pastTrips} /> */}
+						<TripCard trips={past_trips} />
 					</div>
 				</div>
 				<button onClick={this.handleClick} className="new-trip-btn">
@@ -89,10 +103,10 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user,
-	upcomingTrips: state.trips.upcomingTrips,
-	pastTrips: state.trips.pastTrips,
-	nextTrip: state.trips.nextTrip
+	user: state.user.user
+	// upcomingTrips: state.trips.upcomingTrips,
+	// pastTrips: state.trips.pastTrips,
+	// nextTrip: state.trips.nextTrip
 });
 
 const mapDispatchToProps = (dispatch) => {
