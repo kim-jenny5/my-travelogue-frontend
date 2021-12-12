@@ -34,7 +34,7 @@ export const fetchCurrentUser = () => {
 	};
 };
 
-export const logInUser = (user_info) => {
+export const logInUser = (userInfo) => {
 	return (dispatch) => {
 		// dispatch({ type: "LOGIN_ATTEMPTING", user_info });
 		fetch("http://localhost:3000/login", {
@@ -44,7 +44,7 @@ export const logInUser = (user_info) => {
 				Accept: "application/json",
 				Authorization: localStorage.token
 			},
-			body: JSON.stringify(user_info)
+			body: JSON.stringify({ session: userInfo })
 		})
 			.then((resp) => {
 				// console.log(resp);
@@ -71,9 +71,10 @@ export const logInUser = (user_info) => {
 	};
 };
 
-export const createUser = (user_info) => {
+export const createUser = (userInfo) => {
 	return (dispatch) => {
-		dispatch({ type: "USER_CREATING", user_info });
+		// debugger;
+		// dispatch({ type: "USER_CREATING", userInfo });
 		fetch("http://localhost:3000/signup", {
 			method: "POST",
 			headers: {
@@ -81,12 +82,15 @@ export const createUser = (user_info) => {
 				Accept: "application/json",
 				Authorization: localStorage.token
 			},
-			body: JSON.stringify(user_info)
+			body: JSON.stringify({ user: userInfo })
 		})
 			.then((resp) => {
 				debugger;
 				return resp.json();
 			})
-			.then((data) => console.log(data));
+			.then((data) => {
+				debugger;
+				console.log(data);
+			});
 	};
 };
