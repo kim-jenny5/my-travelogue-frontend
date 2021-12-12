@@ -58,12 +58,14 @@ class NewTripFormCont extends Component {
 										value={this.state.start_date}
 										onChange={(e) => this.handleChange("start_date", e)}
 										renderInput={(params) => <TextField {...params} />}
+										className="new-trip-date-picker"
 									/>
 									<DatePicker
 										label="End Date"
 										value={this.state.end_date}
 										onChange={(e) => this.handleChange("end_date", e)}
 										renderInput={(params) => <TextField {...params} />}
+										className="new-trip-date-picker"
 									/>
 								</Stack>
 							</LocalizationProvider>

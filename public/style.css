@@ -444,9 +444,20 @@ a:visited {
 	cursor: default;
 }
 
+.ReactModal__Body--open .css-ktxc6a {
+	margin: 0;
+}
+
+.ReactModal__Body--open .css-k008qs * {
+	display: block;
+}
+
 .PrivatePickersFadeTransitionGroup-root.MuiCalendarPicker-viewTransitionContainer.css-1wvgxus-MuiCalendarPicker-viewTransitionContainer {
 	overflow: hidden;
 }
+
+/* .new-trip-date-picker {
+} */
 
 /* NOTE: TRIP CARDS */
 .trip-card.container {
