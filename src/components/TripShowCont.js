@@ -1,28 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 // import { fetchATrip } from "../actions/tripActions";
+// import { addPlace } from "../actions/tripActions";
+import { addPlace } from "../actions/placeAction";
 import TripShow from "./TripShow";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
-import { Plus, CirclePlus } from "akar-icons";
+import { CirclePlus } from "akar-icons";
 
 class TripShowCont extends Component {
 	state = {
-		place: ""
+		place_name: ""
 	};
 
 	handleChange = (e) => {
-		this.setState({ place: e.target.value }, () => {
-			console.log(this.state);
-		});
+		// this.setState({ place: e.target.value }, () => {
+		// 	console.log(this.state);
+		// });
+		this.setState({ place_name: e.target.value });
 	};
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		debugger;
-		console.log("yolo");
-		this.props.addPlace(this.state);
-		this.setState({ place: "" });
+		this.props.addPlace({ ...this.state, trip_id: this.props.fetchedTrip.id });
+		this.setState({ place_name: "" });
 	};
 
 	render() {
@@ -55,6 +56,11 @@ class TripShowCont extends Component {
 }
 const mapStateToProps = (state) => ({ fetchedTrip: state.trips.fetchedTrip });
 
-// const mapDispatchToProps = (dispatch) => ({ addPlace: state. });
+const mapDispatchToProps = (dispatch) => {
+	return {
+		addPlace: (placeInfo) => dispatch(addPlace(placeInfo))
+		// addPlace: (placeInfo) => dispatch({ type: "ADD_PLACE" }, placeInfo)
+	};
+};
 
-export default connect(mapStateToProps)(TripShowCont);
+export default connect(mapStateToProps, mapDispatchToProps)(TripShowCont);

@@ -38,17 +38,3 @@ export const createTrip = (tripInfo) => {
 			});
 	};
 };
-
-export const addPlace = () => {
-	return (dispatch) => {
-		fetch(`http://localhost:3000/trips/${id}`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-				Authorization: localStorage.token
-			},
-			body: JSON.stringify({ trip: tripInfo })
-		});
-	};
-};

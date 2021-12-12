@@ -1,7 +1,12 @@
-import React from "react";
+const placeReducer = (state = { placeName: null }, action) => {
+	switch (action.type) {
+		case "ADD_PLACE":
+			debugger;
+			return;
 
-const placeReducer = () => {
-	return <div></div>;
+		default:
+			return state;
+	}
 };
 
 export default placeReducer;

@@ -28,11 +28,12 @@ const tripReducer = (
 			};
 
 		case "FETCH_A_TRIP":
-			const { trip_name, start_date, end_date } = action.data;
+			const { id, trip_name, start_date, end_date } = action.data;
 
 			return {
 				...state,
 				fetchedTrip: {
+					id,
 					tripName: trip_name,
 					startDate: start_date,
 					endDate: end_date
