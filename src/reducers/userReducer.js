@@ -14,19 +14,9 @@ const userReducer = (state = { user: null, isLoggedIn: false }, action) => {
 		case "LOGGED_OUT":
 			return { ...state, user: null, isLoggedIn: false };
 
-		// case "LOGIN_FAIL":
-		// 	return {
-		// 		...state,
-		// 		user: action.data.user,
-		// 		isLoggingIn: false,
-		// 		isLoggedIn: false
-		// 	};
-
 		case "REFRESH_DASHBOARD":
 			const user = action.data.user || action.data;
-			// debugger;
 			return { ...state, user };
-		// return;
 
 		default:
 			return state;

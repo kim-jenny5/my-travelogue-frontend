@@ -11,7 +11,6 @@ export const fetchTripModal = (modalInfo, tripInfo) => {
 		fetch(`http://localhost:3000/trips/${id}`)
 			.then((resp) => resp.json())
 			.then((data) => {
-				// debugger;
 				dispatch({ type: "FETCH_A_TRIP", data });
 			});
 

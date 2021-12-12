@@ -21,7 +21,6 @@ body {
 }
 
 ::selection {
-	/* color: #000; */
 	color: #f2f2f2;
 	background-color: #62676b;
 }
@@ -60,7 +59,6 @@ a:visited {
 .nav {
 	position: fixed;
 	background-color: white;
-	/* background-color: lightgray; */
 }
 
 .main-nav {
@@ -146,7 +144,6 @@ a:visited {
 .footer.user {
 	position: fixed;
 	width: 100%;
-	/* height: 80px; */
 	height: 8.7%;
 	bottom: 0;
 	background: #ffffff;
@@ -155,7 +152,6 @@ a:visited {
 }
 
 .footer.user .container {
-	/* vertical-align: middle; */
 	padding-top: 5px;
 }
 
@@ -177,7 +173,6 @@ a:visited {
 }
 
 .login-signup {
-	/* padding-top: 7%; */
 	margin-top: 55px;
 	height: 100%;
 	padding-left: 65%;
@@ -201,7 +196,6 @@ a:visited {
 	border: 1px solid #62676b;
 	width: 17vw;
 	height: 5vh;
-	/* font-family: "Poppins"; */
 	font-weight: 300;
 	display: block;
 	margin: auto;
@@ -261,20 +255,15 @@ a:visited {
 	position: relative;
 	height: 100vh;
 	width: 100vw;
-	/* overflow: hidden; */
 }
 
 .dashboard .info.container {
 	position: absolute;
-	/* margin-left: 3em; */
 	left: 3em;
 	top: 5em;
-	/* margin-top: 5em; */
 	width: 31vw;
 	height: 64.3vh;
-	/* height: 20em; */
 	text-align: center;
-	/* position: relative; */
 }
 
 .dashboard .info.container .user {
@@ -366,7 +355,6 @@ a:visited {
 .new-trip-btn {
 	position: absolute;
 	padding: 0.5em 0.75em 0.5em 0.75em;
-	/* right: 10em; */
 	right: 10vw;
 	top: 4em;
 	background: #0f43f9;
@@ -411,10 +399,7 @@ a:visited {
 .MuiCalendarPicker-root.css-169iwlq-MuiCalendarPicker-root {
 	background: #f2f2f2;
 	transform: scale(0.85);
-	/* height: 40vh;
-	width: 30vw; */
 	border-radius: 15px;
-	/* padding: 0px 10px 0px 10px; */
 }
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-dekaj2-MuiButtonBase-root-MuiPickersDay-root {
@@ -423,7 +408,6 @@ a:visited {
 
 .MuiTypography-root.MuiTypography-caption.css-1d8508y-MuiTypography-root {
 	color: #0f43f9;
-	/* font-weight: bold; */
 }
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-dekaj2-MuiButtonBase-root-MuiPickersDay-root {
@@ -431,7 +415,6 @@ a:visited {
 }
 
 .css-1dozdou {
-	/* padding-top: 30px; */
 	padding-top: 2em;
 }
 
@@ -456,9 +439,6 @@ a:visited {
 	overflow: hidden;
 }
 
-/* .new-trip-date-picker {
-} */
-
 /* NOTE: TRIP CARDS */
 .trip-card.container {
 	/* left: 0; */
@@ -467,20 +447,16 @@ a:visited {
 }
 
 .trip-card {
-	/* font-size: 0.875em; */
 	font-size: 0.875em;
-	/* margin-top: 1em; */
 	width: 20em;
 	min-width: min-content;
 	margin-right: 1em;
 	height: 10em;
-	/* text-align: end; */
 	text-align: start;
 }
 
 .trip-card .title {
 	font-size: 0.9rem;
-	/* font-weight: 500; */
 }
 
 .past-trips-container {
@@ -501,7 +477,6 @@ a:visited {
 	font-size: 1.5rem;
 	font-weight: 500;
 	text-align: center;
-	/* margin-left: 1.75em; */
 	margin-top: 10em;
 }
 
@@ -516,7 +491,6 @@ a:visited {
 	height: 40em;
 	width: 50em;
 	margin: auto;
-	/* background-color: white; */
 }
 
 .new-trip-form {
@@ -536,31 +510,22 @@ a:visited {
 }
 
 .trip-name {
-	/* background-color: white; */
 	background-color: #f2f2f2;
-
 	width: 20em;
 }
 
 .trip-dates {
-	/* position: absolute; */
-
 	display: flex;
 	margin-left: 9.2em;
-	/* align-items: center; */
 }
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
 	margin-top: 2em;
-	/* background-color: white; */
 	background-color: #f2f2f2;
 }
 
 .submit-btn {
-	/* position: absolute; */
 	margin-top: 2em;
-	/* margin: auto; */
-	/* text-align: center; */
 }
 
 /* NOTE: TRIP SHOW MODAL */
@@ -570,20 +535,12 @@ a:visited {
 	background-color: white;
 	border-bottom: 3px solid #e0e0e0;
 	z-index: 1;
-	/* padding-bottom: 1em; */
-	padding: 3em 0 2em 4em;
-	/* padding-left: 4em; */
-
-	/* width: 70em; */
+	padding: 2em 0 2em 4em;
 }
 
 .quick-info {
 	width: max-content;
-	/* margin-left: 2em; */
 }
-
-/* .show-page {
-} */
 
 .show-page .title {
 	font-weight: bold;
@@ -604,14 +561,9 @@ a:visited {
 	margin-left: 4em;
 }
 
-/* .new-place-form {
-	display: inline-block !important;
-	height: min-content !important;
-} */
-
 .new-place-form
 	.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
-	margin-top: 1em;
+	margin: 1em 0 1em 0;
 }
 
 .new-place-form
@@ -620,10 +572,14 @@ a:visited {
 }
 
 .add-btn {
-	/* vertical-align: middle !important; */
-	margin-top: 1.315em !important;
+	margin-top: 0.7em !important;
 }
 
-/* .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary.MuiIconButton-sizeMedium.css-zy7prk-MuiButtonBase-root-MuiIconButton-root {
-	margin-top: 1.315em;
-} */
+.place-list {
+	line-height: 0.75em;
+}
+
+.d-day {
+	color: #0f43f9;
+	font-weight: 500;
+}

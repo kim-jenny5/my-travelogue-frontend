@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
@@ -83,8 +82,7 @@ class NewTripFormCont extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	userId: state.user.user.id,
-	isLoggedIn: state.user.isLoggedIn
+	userId: state.user.user.id
 });
 
 const mapDispatchToProps = (dispatch) => {
