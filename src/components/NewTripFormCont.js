@@ -2,27 +2,17 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import { createTrip } from "../actions/tripActions";
-import { nanoid } from "nanoid";
-import { Redirect } from "react-router";
-// import UserHeader from "./UserHeader";
-// import DateRangePicker from "react-daterange-picker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import TextField from "@mui/material/TextField";
 import DatePicker from "@mui/lab/DatePicker";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-// import DateRangePicker from "@mui/lab/DateRangePicker";
-// import DatePicker from "./DatePicker";
-// import { MuiPickersUtilsProvider, DatePicker } from "material-ui-pickers";
 
 class NewTripFormCont extends Component {
 	state = {
 		user_id: "",
 		trip_name: "",
-		// start_date: "",
-		// end_date: "",
 		start_date: new Date(),
 		end_date: new Date()
 	};
@@ -54,7 +44,6 @@ class NewTripFormCont extends Component {
 							<TextField
 								id="outlined-basic"
 								label="Name of your trip"
-								// name="trip_name"
 								variant="outlined"
 								placeholder="Roadtrip with the girls 👯"
 								onChange={(e) => this.handleChange("trip_name", e)}
@@ -67,15 +56,12 @@ class NewTripFormCont extends Component {
 									<DatePicker
 										label="Start Date"
 										value={this.state.start_date}
-										// name="start_date"
 										onChange={(e) => this.handleChange("start_date", e)}
 										renderInput={(params) => <TextField {...params} />}
 									/>
 									<DatePicker
 										label="End Date"
 										value={this.state.end_date}
-										// name="end_date"
-										// onChange={this.handleChange}
 										onChange={(e) => this.handleChange("end_date", e)}
 										renderInput={(params) => <TextField {...params} />}
 									/>
@@ -91,13 +77,11 @@ class NewTripFormCont extends Component {
 				</div>
 			</div>
 		);
-		// }
 	}
 }
 
 const mapStateToProps = (state) => ({
 	userId: state.user.user.id,
-	// user: state.user.user,
 	isLoggedIn: state.user.isLoggedIn
 });
 

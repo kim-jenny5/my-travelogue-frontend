@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { SecondNav } from "./SecondNav";
-import { NavLink, Route, Redirect, Switch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { logInUser } from "../actions/userActions";
-import DashboardContainer from "./DashboardContainer";
-import NewTripFormCont from "./NewTripFormCont";
 import { MainFooter } from "./MainFooter";
-
-// TODO: IMPORT ACTION FOR USER INTO HERE SO THAT HANDLESUBMIT CAN DISPATCH ACTIONS TO THE REDUCER
 
 class Login extends Component {
 	state = {
@@ -23,19 +19,10 @@ class Login extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(this.props);
 		this.props.logInUser(this.state);
 	};
 
 	render() {
-		// console.log(this.props);
-		// if (this.props.isLoggedIn) {
-		// 	// debugger;
-		// 	return <Redirect to="/dashboard" />;
-		// }
-		// if (this.props.isLoggedIn)
-		// 	return <Route to="/dashboard" component={DashboardContainer} />;
-
 		return (
 			<div className="login-page">
 				<SecondNav />
@@ -80,7 +67,4 @@ const mapDispatchToProps = (dispatch) => {
 	return { logInUser: (user_info) => dispatch(logInUser(user_info)) };
 };
 
-// export default connect(mapStateToProps)(Login);
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
-// export default connect(null, { logInUser })(Login);
-// export default Login;

@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Switch, Route, Redirect, Link } from "react-router-dom";
 import { fetchTrips } from "../actions/tripActions";
 import { UserFooter } from "./UserFooter";
-// import UserHeader from "./UserHeader";
-// import UpcomingTrips from "./UpcomingTrips";
-// import PastTrips from "./PastTrips";
 import NextTrip from "./NextTrip";
-// import TripDetails from "./TripDetails";
-import NewTripFormCont from "./NewTripFormCont";
 import { showModal } from "../actions/modalActions";
 import ModalContainer from "./ModalContainer";
 
@@ -16,30 +10,16 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
 import TripCard from "./TripCard";
-import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-
-// import TripCard from "../components/TripCard";
-// import NewTripFormCont from "../components/NewTripFormCont";
 
 class DashboardContainer extends Component {
 	componentDidMount() {
 		const user = this.props.user.user || this.props.user;
-		// this.props.fetchTrips(this.props.user);
 		this.props.fetchTrips(user);
 	}
 
 	handleClick = () => {
-		// debugger;
-		// window.history.pushState(this.props.user, "", "/dashboard/trips/new");
-		// return <NewTripFormCont />;
-		// const modalInfo = { open: true, title: "New Trip Modal" };
-		// const modalInfo = { title: "New Trip Modal" };
-		// this.props.showModal(modalInfo);
-
-		// this.props.showModal({ type: "New Trip Modal" });
 		this.props.showModal({ type: "new trip" });
-		// this.props.newTripFormModal();
 	};
 
 	logOutUser = () => {
@@ -55,7 +35,6 @@ class DashboardContainer extends Component {
 
 		return (
 			<div className="dashboard">
-				{/* <UserHeader /> */}
 				<div className="info container">
 					<div className="user">
 						<div className="name">
@@ -86,27 +65,17 @@ class DashboardContainer extends Component {
 							/>
 						</LocalizationProvider>
 						<div className="upcoming-trip title">Upcoming Trip 🚗</div>
-						{/* <div className="next-trip-container"> */}
 						<NextTrip trip={this.props.nextTrip} />
-						{/* </div> */}
 					</div>
 				</div>
 				<div className="all-trips-container">
 					<div className="upcoming-trips-container">
 						<div className="titles">Upcoming Trips</div>
-						{/* <UpcomingTrips trips={this.props.upcomingTrips} /> */}
-						<TripCard
-							trips={this.props.upcomingTrips}
-							// showModal={this.props.showModal({ type: "show trip" })}
-						/>
+						<TripCard trips={this.props.upcomingTrips} />
 					</div>
 					<div className="past-trips-container">
 						<div className="titles">Past Trips</div>
-						{/* <PastTrips trips={this.props.pastTrips} /> */}
-						<TripCard
-							trips={this.props.pastTrips}
-							// showModal={this.props.showModal({ type: "show trip" })}
-						/>
+						<TripCard trips={this.props.pastTrips} />
 					</div>
 				</div>
 				<button onClick={this.handleClick} className="new-trip-btn">
@@ -124,19 +93,14 @@ const mapStateToProps = (state) => ({
 	upcomingTrips: state.trips.upcomingTrips,
 	pastTrips: state.trips.pastTrips,
 	nextTrip: state.trips.nextTrip
-	// isLoggedIn: state.user.isLoggedIn,
-	// trips: state.trips.trips
 });
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
-		// showModal: () => dispatch({ type: "SHOW_MODAL" })
 		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
-		// newTripFormModal: () => dispatch(showModal()),
 		logOutUser: () => dispatch({ type: "LOGGED_OUT" })
 	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
-// export default connect(mapStateToProps)(DashboardContainer);
