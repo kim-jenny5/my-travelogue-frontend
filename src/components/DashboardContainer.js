@@ -24,10 +24,9 @@ import TextField from "@mui/material/TextField";
 
 class DashboardContainer extends Component {
 	componentDidMount() {
-		let user = this.props.user.user || this.props.user;
-		debugger;
+		const user = this.props.user.user || this.props.user;
 		// this.props.fetchTrips(this.props.user);
-		if (user) this.props.fetchTrips(user);
+		this.props.fetchTrips(user);
 	}
 
 	handleClick = () => {
