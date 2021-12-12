@@ -550,3 +550,9 @@ a:visited {
 	/* margin: auto; */
 	/* text-align: center; */
 }
+
+/* NOTE: TRIP SHOW MODAL */
+.show-page.title {
+	font-weight: bold;
+	font-size: 1.5em;
+}

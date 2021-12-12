@@ -6,7 +6,7 @@ export default function TripShow(props) {
 
 	return (
 		<div>
-			<div>{tripName}</div>
+			<div className="show-page title">{tripName}</div>
 			<div>{DateFormatting(startDate, endDate)}</div>
 		</div>
 	);

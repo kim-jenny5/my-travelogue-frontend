@@ -43,7 +43,7 @@ export const createTrip = (tripInfo) => {
 	// debugger;
 	return (dispatch) => {
 		// dispatch({ type: "CREATING_TRIP", tripInfo });
-		fetch("http://localhost:3000/newtrip", {
+		fetch("http://localhost:3000/trips/new", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
