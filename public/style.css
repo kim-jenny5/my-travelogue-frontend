@@ -582,9 +582,8 @@ a:visited {
 	/* margin-left: 2em; */
 }
 
-.show-page {
-	/* padding-left: 4em; */
-}
+/* .show-page {
+} */
 
 .show-page .title {
 	font-weight: bold;
@@ -599,3 +598,32 @@ a:visited {
 .show-page .subtitle-2 {
 	font-size: 0.875em;
 }
+
+.show-page .details {
+	margin-top: 1em;
+	margin-left: 4em;
+}
+
+/* .new-place-form {
+	display: inline-block !important;
+	height: min-content !important;
+} */
+
+.new-place-form
+	.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+	margin-top: 1em;
+}
+
+.new-place-form
+	.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputSizeSmall.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+	width: 20em;
+}
+
+.add-btn {
+	/* vertical-align: middle !important; */
+	margin-top: 1.315em !important;
+}
+
+/* .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary.MuiIconButton-sizeMedium.css-zy7prk-MuiButtonBase-root-MuiIconButton-root {
+	margin-top: 1.315em;
+} */

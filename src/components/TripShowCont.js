@@ -68,24 +68,44 @@ class TripShowCont extends Component {
 							<div className="title">{trip_name}</div>
 							<div>{DateFormatting(start_date, end_date)}</div>
 							{days_left_till !== "N/A" ? <div>D-{days_left_till}</div> : null}
+							{/* <form onSubmit={this.handleSubmit} className="new-place-form">
+								<span>
+									<TextField
+										id="outlined-basic"
+										// label="Outlined"
+										variant="outlined"
+										size="small"
+										value={this.state.place_name}
+										onChange={this.handleChange}
+									/>
+								</span>
+								<span>
+									<IconButton color="primary" type="submit" className="add-btn">
+										<CirclePlus strokeWidth={2} size={24} />
+									</IconButton>
+								</span>
+							</form> */}
 						</div>
 					</div>
 					<div className="details">
 						<div className="subtitle-1">Where to?</div>
 						<div className="subtitle-2">Add to your itinerary here.</div>
-						<form onSubmit={this.handleSubmit}>
-							{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
-							<TextField
-								id="outlined-basic"
-								// label="Outlined"
-								variant="outlined"
-								size="small"
-								value={this.state.place_name}
-								onChange={this.handleChange}
-							/>
-							<IconButton color="primary" type="submit">
-								<CirclePlus strokeWidth={2} size={24} />
-							</IconButton>
+						<form onSubmit={this.handleSubmit} className="new-place-form">
+							<span>
+								<TextField
+									id="outlined-basic"
+									// label="Outlined"
+									variant="outlined"
+									size="small"
+									value={this.state.place_name}
+									onChange={this.handleChange}
+								/>
+							</span>
+							<span>
+								<IconButton color="primary" type="submit" className="add-btn">
+									<CirclePlus strokeWidth={2} size={24} />
+								</IconButton>
+							</span>
 						</form>
 						<div className="subtitle-1">Current Itinerary</div>
 						{places.map((place, idx) => {
