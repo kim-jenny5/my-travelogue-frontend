@@ -7,16 +7,17 @@ export default function NextTrip(props) {
 		return (
 			<>
 				{/* <div className="next-trip-container-cont"> */}
-				<span className="circle">
-					<div className="text">{days_left_till}</div>
-				</span>
-				{/* <span className="text container"> */}
-				<div className="upcoming-text">
-					<div>{trip_name}</div>
-					<div>{DateFormatting(start_date, end_date)}</div>
+				<div className="next-trip-container">
+					<span className="circle">
+						<div className="text">{days_left_till}</div>
+					</span>
+					{/* <span className="text container"> */}
+					<div className="upcoming-text">
+						<div>{trip_name}</div>
+						<div>{DateFormatting(start_date, end_date)}</div>
+					</div>
+					{/* </span> */}
 				</div>
-				{/* </span> */}
-				{/* </div> */}
 			</>
 		);
 	} else {

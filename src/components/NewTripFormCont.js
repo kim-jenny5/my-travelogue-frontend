@@ -97,6 +97,7 @@ class NewTripFormCont extends Component {
 
 const mapStateToProps = (state) => ({
 	userId: state.user.user.id,
+	// user: state.user.user,
 	isLoggedIn: state.user.isLoggedIn
 });
 
