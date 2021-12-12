@@ -360,6 +360,7 @@ a:visited {
 	padding: 0.25em 0.75em 0.25em 0.75em;
 	border-radius: 5px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .new-trip-btn {
