@@ -21,8 +21,8 @@ class Signup extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(this.state);
 		this.props.createUser(this.state);
+		this.setState({ first_name: "", last_name: "", email: "", password: "" });
 	};
 
 	render() {
@@ -75,7 +75,6 @@ class Signup extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.user.user,
-	isLoggingIn: state.user.isLoggingIn,
 	isLoggedIn: state.user.isLoggedIn
 });
 
