@@ -5,7 +5,7 @@ import { UserFooter } from "./UserFooter";
 import NextTrip from "./NextTrip";
 import { showModal } from "../actions/modalActions";
 import ModalContainer from "./ModalContainer";
-
+import { refreshDashboard } from "../actions/userActions";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
@@ -16,6 +16,15 @@ class DashboardContainer extends Component {
 	componentDidMount() {
 		const user = this.props.user.user || this.props.user;
 		this.props.fetchTrips(user);
+	}
+
+	componentDidUpdate(prevProps) {
+		const user = this.props.user.user || this.props.user;
+
+		if (prevProps.newTripCreated !== this.props.newTripCreated) {
+			this.props.clearTripCreatedStatus();
+			this.props.refreshDashboard(user);
+		}
 	}
 
 	handleClick = () => {
@@ -103,17 +112,17 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	user: state.user.user
-	// upcomingTrips: state.trips.upcomingTrips,
-	// pastTrips: state.trips.pastTrips,
-	// nextTrip: state.trips.nextTrip
+	user: state.user.user,
+	newTripCreated: state.trips.newTripCreated
 });
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
 		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
-		logOutUser: () => dispatch({ type: "LOGGED_OUT" })
+		logOutUser: () => dispatch({ type: "LOGGED_OUT" }),
+		clearTripCreatedStatus: () => dispatch({ type: "CLEAR_TRIP_CREATED" }),
+		refreshDashboard: (userInfo) => dispatch(refreshDashboard(userInfo))
 	};
 };
 

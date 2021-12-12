@@ -79,3 +79,22 @@ export const createUser = (userInfo) => {
 			});
 	};
 };
+
+export const refreshDashboard = (userInfo) => {
+	return (dispatch) => {
+		const { id } = userInfo;
+
+		fetch(`http://localhost:3000/users/${id}`)
+			.then((resp) => {
+				// debugger;
+				return resp.json();
+			})
+			.then((data) => {
+				// const fetchedUser = data.filter((user) => user.id === userInfo.id);
+				// const [user] = fetchedUser;
+				if (data.error) alert(data.error);
+				// dispatch({ type: "TRIPS_FETCHED", data });
+				dispatch({ type: "REFRESH_DASHBOARD", data });
+			});
+	};
+};

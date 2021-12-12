@@ -22,19 +22,19 @@ class TripShowCont extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.addPlace({ ...this.state, trip_id: this.props.fetchedTrip.id });
+		this.props.addPlace({ ...this.state, trip_id: this.props.fetchATrip.id });
 		this.setState({ place_name: "" });
 	};
 
 	render() {
-		const notNull = Object.values(this.props.fetchedTrip).every(
+		const notNull = Object.values(this.props.fetchATrip).every(
 			(value) => value !== null
 		);
 
 		if (notNull) {
 			return (
 				<div>
-					<TripShow trip={this.props.fetchedTrip} />
+					<TripShow trip={this.props.fetchATrip} />
 					Add to your itinerary here.
 					<form onSubmit={this.handleSubmit}>
 						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
@@ -54,7 +54,7 @@ class TripShowCont extends Component {
 		} else return null;
 	}
 }
-const mapStateToProps = (state) => ({ fetchedTrip: state.trips.fetchedTrip });
+const mapStateToProps = (state) => ({ fetchATrip: state.trips.fetchATrip });
 
 const mapDispatchToProps = (dispatch) => {
 	return {

@@ -37,8 +37,6 @@ export const createTrip = (tripInfo) => {
 				return resp.json();
 			})
 			.then((data) => {
-				// debugger;
-				// console.log(data);
 				if (data.error) alert(data.error);
 				dispatch({ type: "TRIP_CREATED", data });
 			});

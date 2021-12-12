@@ -22,6 +22,10 @@ const userReducer = (state = { user: null, isLoggedIn: false }, action) => {
 		// 		isLoggedIn: false
 		// 	};
 
+		case "REFRESH_DASHBOARD":
+			return { ...state, user: action.data };
+		// return;
+
 		default:
 			return state;
 	}

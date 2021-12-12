@@ -8,7 +8,7 @@ const tripReducer = (
 		// nextTrip: null,
 		// fetchingTrip: false,
 		userTripsFetched: false,
-		fetchedTrip: initialTripState,
+		fetchATrip: initialTripState,
 		places: []
 	},
 	action
@@ -26,17 +26,21 @@ const tripReducer = (
 
 		case "TRIP_CREATED":
 			return {
-				...state
+				...state,
+				newTripCreated: true
 				// userId: action.data.user_id
 				// upcomingTrips: [...state.upcomingTrips, action.data]
 			};
+
+		case "CLEAR_TRIP_CREATED":
+			return { ...state, newTripCreated: false };
 
 		case "FETCH_A_TRIP":
 			const { id, trip_name, start_date, end_date } = action.data;
 
 			return {
 				...state,
-				fetchedTrip: {
+				fetchATrip: {
 					id,
 					tripName: trip_name,
 					startDate: start_date,
@@ -47,7 +51,7 @@ const tripReducer = (
 		case "CLEAR_FETCHED_TRIP":
 			return {
 				...state,
-				fetchedTrip: initialTripState
+				fetchATrip: initialTripState
 			};
 
 		case "ADD_PLACE_TO_TRIP":
