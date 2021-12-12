@@ -121,7 +121,8 @@ const mapDispatchToProps = (dispatch) => {
 		fetchTrips: (userInfo) => dispatch(fetchTrips(userInfo)),
 		showModal: (modalInfo) => dispatch(showModal(modalInfo)),
 		logOutUser: () => dispatch({ type: "LOGGED_OUT" }),
-		clearTripCreatedStatus: () => dispatch({ type: "CLEAR_TRIP_CREATED" }),
+		clearTripCreatedStatus: () =>
+			dispatch({ type: "CLEAR_TRIP_CREATED_STATUS" }),
 		refreshDashboard: (userInfo) => dispatch(refreshDashboard(userInfo))
 	};
 };

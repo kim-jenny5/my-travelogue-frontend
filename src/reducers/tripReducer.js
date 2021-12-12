@@ -8,6 +8,8 @@ const tripReducer = (
 		// nextTrip: null,
 		// fetchingTrip: false,
 		userTripsFetched: false,
+		newTripCreated: false,
+		newPlaceAdded: false,
 		showFetchedTrip: null
 		// places: []
 	},
@@ -32,7 +34,7 @@ const tripReducer = (
 				// upcomingTrips: [...state.upcomingTrips, action.data]
 			};
 
-		case "CLEAR_TRIP_CREATED":
+		case "CLEAR_TRIP_CREATED_STATUS":
 			return { ...state, newTripCreated: false };
 
 		case "FETCH_A_TRIP":
@@ -51,7 +53,13 @@ const tripReducer = (
 
 		case "ADD_PLACE_TO_TRIP":
 			debugger;
-			return { ...state };
+			return { ...state, newPlaceAdded: true };
+
+		case "CLEAR_PLACE_ADDED_STATUS":
+			return {
+				...state,
+				newPlaceAdded: false
+			};
 
 		default:
 			return state;

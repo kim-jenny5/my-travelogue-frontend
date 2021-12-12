@@ -14,7 +14,7 @@ class TripShowCont extends Component {
 		place_name: ""
 	};
 
-	componentDidUpdate() {}
+	// componentDidUpdate() {}
 
 	handleChange = (e) => {
 		// this.setState({ place: e.target.value }, () => {
