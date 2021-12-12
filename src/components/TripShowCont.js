@@ -7,11 +7,14 @@ import TripShow from "./TripShow";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import { CirclePlus } from "akar-icons";
+import DateFormatting from "./DateFormatting";
 
 class TripShowCont extends Component {
 	state = {
 		place_name: ""
 	};
+
+	componentDidUpdate() {}
 
 	handleChange = (e) => {
 		// this.setState({ place: e.target.value }, () => {
@@ -34,11 +37,15 @@ class TripShowCont extends Component {
 		// const notNull = Object.values(this.props.showFetchedTrip).every(
 		// 	(value) => value !== null
 		// );
-
 		if (this.props.showFetchedTrip) {
+			const { trip_name, start_date, end_date, places, days_left_till } =
+				this.props.showFetchedTrip;
+
 			return (
 				<div>
-					<TripShow trip={this.props.showFetchedTrip} />
+					{/* <TripShow trip={this.props.showFetchedTrip} /> */}
+					<div className="show-page title">{trip_name}</div>
+					<div>{DateFormatting(start_date, end_date)}</div>
 					Add to your itinerary here.
 					<form onSubmit={this.handleSubmit}>
 						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
