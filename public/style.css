@@ -331,15 +331,15 @@ a:visited {
 	background-color: white;
 	border-radius: 50%;
 	font-weight: bold;
-	text-align: center;
 	left: 1.5em;
 	top: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .next-trip-container .circle .text {
 	position: absolute;
-	bottom: 1.05em;
-	left: 1.38em;
 	color: #0f43f9;
 }
 
