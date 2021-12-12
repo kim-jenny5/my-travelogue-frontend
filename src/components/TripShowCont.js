@@ -54,7 +54,7 @@ class TripShowCont extends Component {
 					{/* <TripShow trip={this.props.showFetchedTrip} /> */}
 					<div className="show-page title">{trip_name}</div>
 					<div>{DateFormatting(start_date, end_date)}</div>
-					<div>D-{days_left_till}</div>
+					{days_left_till !== "N/A" ? <div>D-{days_left_till}</div> : null}
 					Add to your itinerary here.
 					<form onSubmit={this.handleSubmit}>
 						{/* <TextField id="standard-basic" label="Place" variant="standard" /> */}
