@@ -71,10 +71,14 @@ export const createUser = (userInfo) => {
 					const errorMsg = data.error[key][0];
 					alert(errorMsg);
 				} else {
+					// const { user } = data;
+					// debugger;
 					localStorage.setItem("user", JSON.stringify(data.user));
+					// localStorage.setItem("user", JSON.stringify(user));
 					localStorage.setItem("token", data.jwt);
 					dispatch({ type: "SIGNUP_SUCCESS", data });
 					window.history.pushState(data.user, "", "/dashboard");
+					dispatch({ type: "REFRESH_DASHBOARD", data });
 				}
 			});
 	};
