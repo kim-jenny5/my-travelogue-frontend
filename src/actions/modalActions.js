@@ -1,14 +1,8 @@
 export const showModal = (modalInfo) => {
 	return (dispatch) => {
-		// debugger;
 		dispatch({ type: "SHOW_MODAL", modalInfo });
 	};
-	// return { type: "SHOW_MODAL", modalInfo };
 };
-
-// export const newTripFormModal = () => {
-
-// };
 
 export const fetchTripModal = (modalInfo, tripInfo) => {
 	return (dispatch) => {
@@ -22,6 +16,5 @@ export const fetchTripModal = (modalInfo, tripInfo) => {
 			});
 
 		dispatch({ type: "SHOW_MODAL", modalInfo });
-		// showModal(modalInfo);
 	};
 };

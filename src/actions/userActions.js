@@ -1,5 +1,4 @@
 export const fetchCurrentUser = () => {
-	// debugger;
 	return (dispatch) => {
 		return fetch("http://localhost:3000/authorized", {
 			headers: {
@@ -9,7 +8,6 @@ export const fetchCurrentUser = () => {
 			}
 		})
 			.then((resp) => {
-				// debugger;
 				return resp.json();
 			})
 			.then((data) => {
