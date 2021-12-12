@@ -52,7 +52,7 @@ const tripReducer = (
 			};
 
 		case "ADD_PLACE_TO_TRIP":
-			debugger;
+			// debugger;
 			return { ...state, newPlaceAdded: true };
 
 		case "CLEAR_PLACE_ADDED_STATUS":

@@ -8,21 +8,33 @@ import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import { CirclePlus } from "akar-icons";
 import DateFormatting from "./DateFormatting";
+import { fetchTripModal } from "../actions/modalActions";
 
 class TripShowCont extends Component {
 	state = {
 		place_name: ""
 	};
 
-	// componentDidUpdate(prevProps) {
-	// 	debugger;
-	// 	// const user = this.props.user.user || this.props.user;
+	componentDidUpdate(prevProps) {
+		// const user = this.props.user.user || this.props.user;
 
-	// 	// if (prevProps.newTripCreated !== this.props.newTripCreated) {
-	// 	// 	this.props.clearTripCreatedStatus();
-	// 	// 	this.props.refreshDashboard(user);
-	// 	// }
-	// }
+		if (prevProps.newPlaceAdded !== this.props.newPlaceAdded) {
+			// debugger;
+			this.props.clearPlaceAddedStatus();
+			// this.fetchTripModal();
+
+			this.props.fetchTripModal(
+				{ type: "show trip" },
+				this.props.showFetchedTrip
+			);
+			// this.setState({ place_name: "" });
+
+			// this.props.refreshTripModal();
+
+			// this.props.clearTripCreatedStatus();
+			// this.props.refreshDashboard(user);
+		}
+	}
 
 	handleChange = (e) => {
 		// this.setState({ place: e.target.value }, () => {
@@ -63,6 +75,7 @@ class TripShowCont extends Component {
 							// label="Outlined"
 							variant="outlined"
 							size="small"
+							value={this.state.place_name}
 							onChange={this.handleChange}
 						/>
 						<IconButton color="primary" type="submit">
@@ -82,12 +95,18 @@ class TripShowCont extends Component {
 	}
 }
 const mapStateToProps = (state) => ({
-	showFetchedTrip: state.trips.showFetchedTrip
+	showFetchedTrip: state.trips.showFetchedTrip,
+	newPlaceAdded: state.trips.newPlaceAdded
 });
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		addPlace: (placeInfo) => dispatch(addPlace(placeInfo))
+		addPlace: (placeInfo) => dispatch(addPlace(placeInfo)),
+		clearPlaceAddedStatus: () => dispatch({ type: "CLEAR_PLACE_ADDED_STATUS" }),
+		fetchTripModal: (modalInfo, tripInfo) =>
+			dispatch(fetchTripModal(modalInfo, tripInfo))
+		// refreshTripModal: () => dispatch()
+
 		// addPlace: (placeInfo) => dispatch({ type: "ADD_PLACE" }, placeInfo)
 	};
 };

@@ -7,7 +7,7 @@ export default function Modals(props) {
 	if (props.type === "new trip") {
 		return <NewTripFormCont />;
 	} else if (props.type === "show trip") {
-		return <TripShowCont trip={props.trip} />;
+		return <TripShowCont />;
 	} else {
 		return ErrorModal();
 	}
