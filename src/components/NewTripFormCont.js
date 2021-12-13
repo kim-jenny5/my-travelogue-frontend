@@ -26,9 +26,10 @@ class NewTripFormCont extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+		const user = this.props.user.user || this.props.user;
 		this.props.createTrip({
 			...this.state,
-			user_id: this.props.userId
+			user_id: user.id
 		});
 		this.props.hideModal();
 	};
@@ -82,7 +83,7 @@ class NewTripFormCont extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	userId: state.user.user.id
+	user: state.user.user
 });
 
 const mapDispatchToProps = (dispatch) => {

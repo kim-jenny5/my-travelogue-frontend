@@ -7,13 +7,17 @@ export const fetchTrips = (userInfo) => {
 				return resp.json();
 			})
 			.then((data) => {
-				if (data.error) alert(data.error);
-				dispatch({ type: "USER_TRIPS_FETCHED", data });
+				if (data.error) {
+					alert(data.error);
+				} else {
+					dispatch({ type: "USER_TRIPS_FETCHED", data });
+				}
 			});
 	};
 };
 
 export const createTrip = (tripInfo) => {
+	debugger;
 	return (dispatch) => {
 		fetch("http://localhost:3000/trips/new", {
 			method: "POST",
@@ -28,8 +32,11 @@ export const createTrip = (tripInfo) => {
 				return resp.json();
 			})
 			.then((data) => {
-				if (data.error) alert(data.error);
-				dispatch({ type: "TRIP_CREATED", data });
+				if (data.error) {
+					alert(data.error);
+				} else {
+					dispatch({ type: "TRIP_CREATED", data });
+				}
 			});
 	};
 };

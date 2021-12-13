@@ -90,8 +90,11 @@ export const refreshDashboard = (userInfo) => {
 				return resp.json();
 			})
 			.then((data) => {
-				if (data.error) alert(data.error);
-				dispatch({ type: "REFRESH_DASHBOARD", data });
+				if (data.error) {
+					alert(data.error);
+				} else {
+					dispatch({ type: "REFRESH_DASHBOARD", data });
+				}
 			});
 	};
 };
