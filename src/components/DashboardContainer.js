@@ -12,8 +12,6 @@ import StaticDatePicker from "@mui/lab/StaticDatePicker";
 import TripCard from "./TripCard";
 import TextField from "@mui/material/TextField";
 
-import CodeChallenge from "./CodeChallenge";
-
 class DashboardContainer extends Component {
 	componentDidMount() {
 		const user = this.props.user.user || this.props.user;
@@ -99,8 +97,6 @@ class DashboardContainer extends Component {
 					+ New Trip
 				</button>
 				<UserFooter firstName={first_name} />
-				<CodeChallenge />
-
 				<ModalContainer />
 			</div>
 		);
