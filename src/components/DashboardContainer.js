@@ -35,7 +35,7 @@ class DashboardContainer extends Component {
 		this.props.logOutUser();
 		localStorage.removeItem("token");
 		localStorage.removeItem("user");
-		window.history.pushState(this.props.user, "", "/login");
+		window.history.back();
 	};
 
 	render() {

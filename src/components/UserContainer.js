@@ -15,6 +15,7 @@ class UserContainer extends Component {
 			return <Signup />;
 		} else {
 			return <Redirect to="/login" />;
+			// return <Redirect to="/" />;
 		}
 	}
 }
