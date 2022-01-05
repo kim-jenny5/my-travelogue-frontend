@@ -385,9 +385,13 @@ a:visited {
 	z-index: -1;
 }
 
-.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
-	/* background-color: #0f43f9;
-	color: white !important; */
+/* .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
+	background-color: #0f43f9;
+	color: white !important;
+	border: solid 2px #0f43f9 !important;
+} */
+
+.css-nqdk58.Mui-selected {
 	border: solid 2px #0f43f9 !important;
 }
 
