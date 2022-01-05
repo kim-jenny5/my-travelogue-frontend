@@ -527,6 +527,7 @@ a:visited {
 .trip-dates {
 	display: flex;
 	margin-left: 9.2em;
+	margin-top: 2em;
 }
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
@@ -582,7 +583,7 @@ a:visited {
 }
 
 .add-btn {
-	margin-top: 0.7em !important;
+	/* margin-top: 0.7em !important; */
 }
 
 .place-list {
