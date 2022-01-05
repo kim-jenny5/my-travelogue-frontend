@@ -1,6 +1,7 @@
 export const fetchCurrentUser = () => {
 	return (dispatch) => {
-		return fetch("http://localhost:3000/authorized", {
+		// return fetch("http://localhost:3000/authorized", {
+		return fetch("https://my-travelogue.herokuapp.com/authorized", {
 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json",
@@ -25,7 +26,8 @@ export const fetchCurrentUser = () => {
 export const logInUser = (userInfo) => {
 	return (dispatch) => {
 		dispatch({ type: "LOGGING_IN", userInfo });
-		fetch("http://localhost:3000/login", {
+		// fetch("http://localhost:3000/login", {
+		fetch("https://my-travelogue.herokuapp.com/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -53,7 +55,8 @@ export const logInUser = (userInfo) => {
 export const createUser = (userInfo) => {
 	return (dispatch) => {
 		dispatch({ type: "SIGNING_UP", userInfo });
-		fetch("http://localhost:3000/signup", {
+		// fetch("http://localhost:3000/signup", {
+		fetch("https://my-travelogue.herokuapp.com/signup", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -85,7 +88,8 @@ export const refreshDashboard = (userInfo) => {
 	return (dispatch) => {
 		const { id } = userInfo;
 
-		fetch(`http://localhost:3000/users/${id}`)
+		// fetch(`http://localhost:3000/users/${id}`)
+		fetch(`https://my-travelogue.herokuapp.com/users/${id}`)
 			.then((resp) => {
 				return resp.json();
 			})

@@ -2,7 +2,8 @@ export const fetchTrips = (userInfo) => {
 	return (dispatch) => {
 		const { id } = userInfo;
 
-		fetch(`http://localhost:3000/users/${id}`)
+		// fetch(`http://localhost:3000/users/${id}`)
+		fetch(`https://my-travelogue.herokuapp.com/users/${id}`)
 			.then((resp) => {
 				return resp.json();
 			})
@@ -19,7 +20,8 @@ export const fetchTrips = (userInfo) => {
 export const createTrip = (tripInfo) => {
 	debugger;
 	return (dispatch) => {
-		fetch("http://localhost:3000/trips/new", {
+		// fetch("http://localhost:3000/trips/new", {
+		fetch("https://my-travelogue.herokuapp.com/trips/new", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -43,7 +45,8 @@ export const createTrip = (tripInfo) => {
 
 export const addPlace = (placeInfo) => {
 	return (dispatch) => {
-		fetch("http://localhost:3000/places/new", {
+		// fetch("http://localhost:3000/places/new", {
+		fetch("https://my-travelogue.herokuapp.com/places/new", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
