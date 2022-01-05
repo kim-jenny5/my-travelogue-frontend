@@ -295,11 +295,13 @@ a:visited {
 .logout-btn.container {
 	position: absolute;
 	margin-top: 6em;
+	margin-bottom: 3em;
 }
 
 .dashboard .info.container .upcoming-trip.title {
 	position: absolute;
-	margin-top: 30em;
+	/* margin-top: 30em; */
+	margin-top: 24em;
 }
 
 .next-trip-container {
@@ -309,7 +311,8 @@ a:visited {
 	background: #0f43f9;
 	color: white;
 	border-radius: 20px;
-	margin-top: 32em;
+	/* margin-top: 32em; */
+	margin-top: 26em;
 	z-index: -1;
 }
 
@@ -414,8 +417,13 @@ a:visited {
 	color: #62676b;
 }
 
+.css-1brzq0m {
+	margin-top: 6em;
+}
+
 .css-1dozdou {
-	padding-top: 2em;
+	/* padding-top: 2em; */
+	padding-top: 10em;
 }
 
 .css-ktxc6a {
