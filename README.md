@@ -16,8 +16,8 @@ To view the website live and in action:
 - To view a sample account:
   - Click "Log In"
   - Enter the following information:
-    - Username: jennykimdev@gmail.com
-    - Password: 1234
+    - Username: **jennykimdev@gmail.com**
+    - Password: **1234**
 - Otherwise, please explore by creating your own account.
 
 To view the web app locally:
