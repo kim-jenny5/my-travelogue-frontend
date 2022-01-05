@@ -10,9 +10,17 @@ The [backend](https://github.com/kim-jenny5/my-travelogue-backend) was created w
 
 ## Usage
 
-Live website is coming...
+To view the website live and in action:
 
-In the meantime, to view the web app locally:
+- Visit [my travelogue](https://my-travelogue.netlify.app)
+- To view a sample account:
+  - Click "Log In"
+  - Enter the following information:
+    - Username: jennykimdev@gmail.com
+    - Password: 1234
+- Otherwise, please explore by creating your own account.
+
+To view the web app locally:
 
 1. Start up the backend API with the instructions provided in the [backend repo](https://github.com/kim-jenny5/my-travelogue-backend)
 2. Clone this repo
