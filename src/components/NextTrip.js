@@ -1,5 +1,5 @@
 import React from "react";
-import DateFormatting from "./DateFormatting";
+import DateFormatting from "./dateFormatting";
 
 export default function NextTrip(props) {
 	if (props.trip) {

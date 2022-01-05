@@ -4,7 +4,7 @@ import { addPlace } from "../actions/tripActions";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import { CirclePlus } from "akar-icons";
-import DateFormatting from "./DateFormatting";
+import DateFormatting from "./dateFormatting";
 import { fetchTripModal } from "../actions/modalActions";
 
 class TripShowCont extends Component {
