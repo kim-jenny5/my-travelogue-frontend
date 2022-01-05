@@ -111,8 +111,7 @@ a:visited {
 .main-content .subtitle {
 	font-weight: bold;
 	font-size: 64px;
-	/* padding-top: calc(100vh - (100vh / 1.5)); */
-	margin-top: 1em;
+	padding-top: calc(100vh - (100vh / 1.5));
 	color: #ffffff;
 	text-align: center;
 }
@@ -562,6 +561,7 @@ a:visited {
 .show-page .subtitle-1 {
 	font-size: 1.125em;
 	font-weight: bold;
+	margin-top: 1em;
 }
 
 .show-page .subtitle-2 {
