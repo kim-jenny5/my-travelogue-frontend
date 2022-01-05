@@ -386,13 +386,10 @@ a:visited {
 }
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
-	background-color: #0f43f9;
-	color: white !important;
+	/* background-color: #0f43f9;
+	color: white !important; */
+	border: solid 2px rgb(15, 67, 249);
 }
-
-/* .css-nqdk58.Mui-selected  {
-	color: white !important;
-} */
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1mtjxtk-MuiButtonBase-root-MuiPickersDay-root
 	.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
