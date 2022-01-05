@@ -385,7 +385,8 @@ a:visited {
 	z-index: -1;
 }
 
-.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
+/* .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root { */
+.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today {
 	background-color: #0f43f9;
 	color: white;
 }
@@ -423,7 +424,7 @@ a:visited {
 
 .css-1dozdou {
 	/* padding-top: 2em; */
-	padding-top: 10em;
+	padding-top: 9em;
 }
 
 .css-ktxc6a {
