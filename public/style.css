@@ -385,12 +385,12 @@ a:visited {
 	z-index: -1;
 }
 
-.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
-	/* background-color: #0f43f9; */
+/* .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1oo08n3-MuiButtonBase-root-MuiPickersDay-root {
+	background-color: #0f43f9;
 	background-color: white !important;
-	/* color: white !important; */
+	color: white !important;
 	border: solid 2px #0f43f9 !important;
-}
+} */
 
 .MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1mtjxtk-MuiButtonBase-root-MuiPickersDay-root
 	.MuiButtonBase-root.Mui-disabled.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
